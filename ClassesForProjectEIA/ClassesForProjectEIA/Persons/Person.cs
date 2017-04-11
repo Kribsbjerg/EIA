@@ -1,7 +1,15 @@
-﻿namespace ClassesForProjectEIA
+﻿using System;
+
+namespace ClassesForProjectEIA
 {
     public class Person
     {
+        #region Private Members
+
+        private string _name;
+
+        #endregion
+
         #region Constructors
 
         /// <summary>
@@ -24,7 +32,16 @@
         /// <summary>
         /// Holds the name of the person
         /// </summary>
-        public string Name { get; private set; }
+        public string Name
+        {
+            get { return _name; }
+            private set {
+                if (value == null)
+                    _name = value;
+                else
+                    throw new NullReferenceException();
+            } 
+        }
 
         /// <summary>
         /// Holds the contact information of the person
