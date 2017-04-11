@@ -10,3 +10,6 @@ C:\Users\Kris\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\obj\Deb
 C:\Users\RuneMøberg\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\bin\Debug\ClassesForProjectEIA.exe.config
 C:\Users\RuneMøberg\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.exe
 C:\Users\RuneMøberg\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.pdb
+C:\Users\Jacob H. Mortensen\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\bin\Debug\ClassesForProjectEIA.exe.config
+C:\Users\Jacob H. Mortensen\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.exe
+C:\Users\Jacob H. Mortensen\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.pdb
