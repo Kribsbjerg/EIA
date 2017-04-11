@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ClassesForProjectEIA
+﻿namespace ClassesForProjectEIA
 {
     class TreatmentFacility
     {
@@ -20,7 +14,7 @@ namespace ClassesForProjectEIA
 
         #endregion
 
-        #region Properties
+        #region Public Properties
 
         /// <summary>
         /// Holds the name of the facility

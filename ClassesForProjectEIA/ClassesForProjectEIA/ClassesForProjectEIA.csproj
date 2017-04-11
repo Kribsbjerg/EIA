@@ -53,6 +53,7 @@
     <Compile Include="BaseViewModel.cs" />
     <Compile Include="ContactHours.cs" />
     <Compile Include="ContactInformation.cs" />
+    <Compile Include="Date.cs" />
     <Compile Include="Persons\Patient.cs" />
     <Compile Include="Persons\Person.cs" />
     <Compile Include="Persons\Practioner.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Persons\ReferringAuthority.cs" />
     <Compile Include="RelayCommand.cs" />
+    <Compile Include="Room.cs" />
     <Compile Include="Translator.cs" />
     <Compile Include="TreatmentFacility.cs" />
   </ItemGroup>
