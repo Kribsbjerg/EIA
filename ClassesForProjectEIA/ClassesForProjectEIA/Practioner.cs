@@ -10,8 +10,6 @@
         /// <param name="name"></param>
         /// <param name="contact"></param>
         /// <param name="address"></param>
-
-        
         public Practitioner(string name, ContactInformation contact, AddressInformation address) 
             : base(name, contact, address) { }
 
