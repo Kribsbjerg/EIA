@@ -14,7 +14,7 @@
 
         #endregion
 
-        #region Properties
+        #region Public Properties
 
         /// <summary>
         /// Holds the name of the facility

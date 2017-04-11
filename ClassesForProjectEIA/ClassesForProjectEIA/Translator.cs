@@ -5,7 +5,7 @@ namespace ClassesForProjectEIA
     class Translator
     {
        
-        #region Constructor
+        #region Constructors
         /// <summary>
         /// The default constructor
         /// </summary>

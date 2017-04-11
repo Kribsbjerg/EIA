@@ -21,7 +21,7 @@ namespace ClassesForProjectEIA
 
         #endregion
 
-        #region Properties
+        #region Public Properties
 
         /// <summary>
         /// Holds the room number
