@@ -7,3 +7,6 @@ C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\OOP\OOP\Test pr
 C:\Users\Kris\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\bin\Debug\ClassesForProjectEIA.exe.config
 C:\Users\Kris\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.exe
 C:\Users\Kris\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.pdb
+C:\Users\RuneMøberg\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\bin\Debug\ClassesForProjectEIA.exe.config
+C:\Users\RuneMøberg\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.exe
+C:\Users\RuneMøberg\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.pdb
