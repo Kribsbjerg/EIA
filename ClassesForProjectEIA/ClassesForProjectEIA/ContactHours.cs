@@ -4,7 +4,7 @@ namespace ClassesForProjectEIA
 {
     class ContactHours
     {
-        #region Properties
+        #region Public Properties
 
         /// <summary>
         /// Holds the time for the first possible contact hour 

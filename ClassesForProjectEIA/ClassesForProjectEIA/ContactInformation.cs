@@ -2,7 +2,7 @@
 {
     public class ContactInformation
     {
-        #region Properties
+        #region Public Properties
         /// <summary>
         /// Holds the telephone number for work
         /// </summary>
