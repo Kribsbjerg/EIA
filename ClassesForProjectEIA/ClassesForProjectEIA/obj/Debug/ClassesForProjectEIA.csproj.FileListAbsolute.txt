@@ -1,0 +1,6 @@
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\OOP\OOP\Test programmer\ClassesForProjectEIA\ClassesForProjectEIA\bin\Debug\ClassesForProjectEIA.exe.config
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\OOP\OOP\Test programmer\ClassesForProjectEIA\ClassesForProjectEIA\bin\Debug\ClassesForProjectEIA.exe
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\OOP\OOP\Test programmer\ClassesForProjectEIA\ClassesForProjectEIA\bin\Debug\ClassesForProjectEIA.pdb
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\OOP\OOP\Test programmer\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.csprojResolveAssemblyReference.cache
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\OOP\OOP\Test programmer\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.exe
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\OOP\OOP\Test programmer\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.pdb
