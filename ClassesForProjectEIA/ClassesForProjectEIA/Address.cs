@@ -1,7 +1,26 @@
 ﻿namespace ClassesForProjectEIA
 {
     public class AddressInformation
-    {
+    { 
+        #region Constructors
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
+        /// <param name="streetName"></param>
+        /// <param name="streetNumber"></param>
+        /// <param name="city"></param>
+        /// <param name="zipCode"></param>
+        /// <param name="country"></param>
+        public AddressInformation(string streetName, string streetNumber, string city, int zipCode, string country)
+        {
+            StreetName = streetName;
+            StreetNumber = streetNumber;
+            City = city;
+            ZipCode = zipCode;
+            Country = country;
+        }
+        #endregion
+
         #region Public Properties
         /// <summary>
         /// Property holding the street name for the house, facility or hospital
@@ -23,25 +42,6 @@
         /// Property holding the country of the house, facility or hospital
         /// </summary>
         public string Country { get; set; }
-        #endregion
-        
-        #region Constructors
-        /// <summary>
-        /// Default Constructor
-        /// </summary>
-        /// <param name="streetName"></param>
-        /// <param name="streetNumber"></param>
-        /// <param name="city"></param>
-        /// <param name="zipCode"></param>
-        /// <param name="country"></param>
-        public AddressInformation(string streetName, string streetNumber, string city, int zipCode, string country)
-        {
-            StreetName = streetName;
-            StreetNumber = streetNumber;
-            City = city;
-            ZipCode = zipCode;
-            Country = country;
-        }
         #endregion
     }
 }
