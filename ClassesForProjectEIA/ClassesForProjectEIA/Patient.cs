@@ -22,7 +22,7 @@ namespace ClassesForProjectEIA
         public enum Gender { Male, Female };
 
         /// <summary>
-        /// Hej allesammen
+        /// Hej diller
         /// </summary>
         /// <param name="name"></param>
         /// <param name="contact"></param>
