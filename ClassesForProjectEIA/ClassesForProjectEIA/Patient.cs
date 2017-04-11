@@ -21,6 +21,18 @@ namespace ClassesForProjectEIA
 
         public enum Gender { Male, Female };
 
+        /// <summary>
+        /// Hej diller
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="contact"></param>
+        /// <param name="address"></param>
+        /// <param name="anamnesis"></param>
+        /// <param name="diagnosis"></param>
+        /// <param name="cpr"></param>
+        /// <param name="translationInformation"></param>
+        /// <param name="referralAuthority"></param>
+        /// <param name="hoursToContact"></param>
         public Patient(string name, ContactInformation contact, AddressInformation address, 
                        string anamnesis, string diagnosis, int cpr, Translator translationInformation,
                        ReferringAuthority referralAuthority, ContactHours hoursToContact)

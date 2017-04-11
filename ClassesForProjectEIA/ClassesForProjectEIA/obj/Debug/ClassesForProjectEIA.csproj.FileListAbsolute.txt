@@ -4,6 +4,3 @@ C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\OOP\OOP\Test pr
 C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\OOP\OOP\Test programmer\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.csprojResolveAssemblyReference.cache
 C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\OOP\OOP\Test programmer\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.exe
 C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\OOP\OOP\Test programmer\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.pdb
-C:\Users\Jacob H. Mortensen\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\bin\Debug\ClassesForProjectEIA.exe.config
-C:\Users\Jacob H. Mortensen\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.exe
-C:\Users\Jacob H. Mortensen\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.pdb
