@@ -2,7 +2,7 @@
 {
     public class Person
     {
-        #region Constructors
+        #region Constructor
 
         /// <summary>
         /// Default Constructor
