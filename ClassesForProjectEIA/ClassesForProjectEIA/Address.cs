@@ -2,12 +2,38 @@
 {
     public class AddressInformation
     {
+        #region Public Properties
+        /// <summary>
+        /// Property holding the street name for the house, facility or hospital
+        /// </summary>
         public string StreetName { get; private set; }
+        /// <summary>
+        /// Property holding the street number including floor and letter
+        /// </summary>
         public string StreetNumber { get; private set; }
+        /// <summary>
+        /// Property holding the city where the house, facility or hospital
+        /// </summary>
         public string City { get; private set; }
+        /// <summary>
+        /// Property holding the zip code for the city
+        /// </summary>
         public int ZipCode { get; private set; }
+        /// <summary>
+        /// Property holding the country of the house, facility or hospital
+        /// </summary>
         public string Country { get; set; }
-
+        #endregion
+        
+        #region Constructors
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
+        /// <param name="streetName"></param>
+        /// <param name="streetNumber"></param>
+        /// <param name="city"></param>
+        /// <param name="zipCode"></param>
+        /// <param name="country"></param>
         public AddressInformation(string streetName, string streetNumber, string city, int zipCode, string country)
         {
             StreetName = streetName;
@@ -16,5 +42,6 @@
             ZipCode = zipCode;
             Country = country;
         }
+        #endregion
     }
 }
