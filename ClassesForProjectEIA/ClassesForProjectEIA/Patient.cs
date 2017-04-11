@@ -1,28 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ClassesForProjectEIA
+﻿namespace ClassesForProjectEIA
 {
     class Patient : Person
     {
-        public string Anamnesis { get; private set; }
-        public string Diagnosis { get; set; }
-        public int Cpr { get; private set; }
-        public int Age { get; private set; }
-
-        public Gender PatientGender { get; set; }
-        
-        public Translator TranslationInformation { get; set; }
-        public ReferringAuthority ReferralAuthority { get; set; }
-        public ContactHours HoursToContact { get; set; }
-
-        public enum Gender { Male, Female };
+        #region Constructors
 
         /// <summary>
-        /// Hej diller
+        /// Default Constructor
+        /// Calls <see cref="GetAgeOfPatient"/> that returns the age for the patient
+        /// Calls <see cref="GetGenderOfPatient"/> that returns an enum with the gender of a patient 
         /// </summary>
         /// <param name="name"></param>
         /// <param name="contact"></param>
@@ -48,13 +33,71 @@ namespace ClassesForProjectEIA
             HoursToContact = hoursToContact;
         }
 
-        private int GetAgeOfPatient()
-        {
-            return int.Parse(Cpr.ToString().Substring(0, 6));
-            
+        #endregion
 
-        }
+        #region Enums
 
+        /// <summary>
+        /// Enumerator for the gender of a patient
+        /// </summary>
+        public enum Gender { Male, Female };
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Property holding the medical history of a patient (Anamnesis)
+        /// </summary>
+        public string Anamnesis { get; private set; }
+        /// <summary>
+        /// Property holding the diagnosis of a patient
+        /// </summary>
+        public string Diagnosis { get; set; }
+        /// <summary>
+        /// The social security number of the  patient
+        /// </summary>
+        public int Cpr { get; private set; }
+        /// <summary>
+        /// The age of the patient
+        /// </summary>
+        public int Age { get; private set; }
+
+        /// <summary>
+        /// Property holding the gender of the patient
+        /// </summary>
+        public Gender PatientGender { get; set; }
+
+        /// <summary>
+        /// Property holding translator information about the patient
+        /// </summary>
+        public Translator TranslationInformation { get; set; }
+        /// <summary>
+        /// Property holding information about referral authority
+        /// </summary>
+        public ReferringAuthority ReferralAuthority { get; set; }
+        /// <summary>
+        /// Property holding the hours the patient is possible to contact
+        /// </summary>
+        public ContactHours HoursToContact { get; set; }
+
+        #endregion
+
+        #region Private methods
+
+        /// <summary>
+        /// Returns the age of the patient
+        /// </summary>
+        /// <returns></returns>
+        private int GetAgeOfPatient() => 20;
+
+        /// <summary>
+        /// Returns the gender of the patient based on the social security number
+        /// Female is even numbered in the last digit, male uneven. 
+        /// </summary>
+        /// <returns></returns>
         private Gender GetGenderOfPatient() => (Cpr % 10) % 2 == 0 ? Gender.Female : Gender.Male;
+
+        #endregion
     }
 }
