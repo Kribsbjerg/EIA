@@ -4,7 +4,6 @@ namespace ClassesForProjectEIA
 {
     class Translator
     {
-       
         #region Constructors
         /// <summary>
         /// The default constructor
@@ -35,6 +34,5 @@ namespace ClassesForProjectEIA
         public List<string> LanguageList = new List<string>();
 
         #endregion
-
     }
 }

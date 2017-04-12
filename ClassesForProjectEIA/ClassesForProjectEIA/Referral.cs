@@ -60,6 +60,7 @@ namespace ClassesForProjectEIA
         /// Holds the referring authority
         /// </summary>
         public ReferringAuthority Authority { get; private set; }
+
         #endregion
     }
 }
