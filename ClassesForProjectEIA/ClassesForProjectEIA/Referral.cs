@@ -14,15 +14,21 @@ namespace ClassesForProjectEIA
         /// </summary>
         /// <param name="referralNumber"></param>
         /// <param name="currentPatient"></param>
-        /// <param name="contact"></param>
-        /// <param name="address"></param>
-        /// <param name="hours"></param>
         /// <param name="authority"></param>
-        public Referral(int referralNumber, Patient currentPatient, ReferringAuthority authority)
+        /// <param name="anamnesis"></param>
+        /// <param name="pregnancy"></param>
+        /// <param name="allergiesAndMedicine"></param>
+        /// <param name="dato"></param>
+        public Referral(int referralNumber, Patient currentPatient, ReferringAuthority authority, string anamnesis, string pregnancy, string allergiesAndMedicine, DateTime dato)
         {
             ReferralNumber = referralNumber;
             CurrentPatient = currentPatient;
             Authority = authority;
+            Anamnesis = anamnesis;
+            Pregnancy = pregnancy;
+            AllergiesAndMedicine = allergiesAndMedicine;
+            Dato = dato;
+
         }
         #endregion
 
@@ -42,6 +48,27 @@ namespace ClassesForProjectEIA
         /// Holds the referring authority
         /// </summary>
         public ReferringAuthority Authority { get; private set; }
+
+        /// <summary>
+        /// Holds the anamnesis 
+        /// </summary>
+        public string Anamnesis { get; private set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Pregnancy { get; private set; }
+
+        /// <summary>
+        /// Holds information about allergies / medicine that are relevant
+        /// </summary>
+        public string AllergiesAndMedicine { get; private set; }
+
+        /// <summary>
+        /// That date of the referral
+        /// </summary>
+        public DateTime dato { get; private set; }
+
         #endregion
     }
 }
