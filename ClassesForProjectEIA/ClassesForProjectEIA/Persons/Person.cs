@@ -36,7 +36,7 @@ namespace ClassesForProjectEIA
         {
             get { return _name; }
             private set {
-                if (value == null)
+                if (value != null)
                     _name = value;
                 else
                     throw new NullReferenceException();
