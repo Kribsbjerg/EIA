@@ -105,7 +105,7 @@ namespace ClassesForProjectEIA
             get { return _eMail; }
             private set
             {
-                if (value.Contains("@"))
+                if (value.Contains("@") && value.Contains("."))
                     _eMail = value;
                 else
                     throw new ArgumentOutOfRangeException();

@@ -33,6 +33,7 @@ namespace ClassesForProjectEIA
         /// The list of languages the patient can speak
         /// </summary>
         public List<string> LanguageList = new List<string>();
+
         #endregion
 
     }
