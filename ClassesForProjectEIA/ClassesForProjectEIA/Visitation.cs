@@ -37,10 +37,12 @@ namespace ClassesForProjectEIA
 
         public Practitioner TreatingPractitioner { get; private set; }
 
+        public Referral PatientReferral { get; set; }
+
         //public DateTime TreatmentDay
         //{
         //    get { return _treatmentDay; }
-        //    set { if (value.Date < PatientReferral)}
+        //    set { if (value.Date < PatientReferral.)}
         //}
 
         #endregion
