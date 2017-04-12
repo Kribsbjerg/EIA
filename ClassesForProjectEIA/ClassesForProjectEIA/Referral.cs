@@ -10,14 +10,15 @@ namespace ClassesForProjectEIA
     {
         #region Constructors
         /// <summary>
-        /// Default constructor
+        /// Default constructors
         /// </summary>
+        /// <param name="referralNumber"></param>
         /// <param name="currentPatient"></param>
         /// <param name="contact"></param>
         /// <param name="address"></param>
         /// <param name="hours"></param>
         /// <param name="authority"></param>
-        public Referral(Patient currentPatient, ContactInformation contact, AddressInformation address, ContactHours hours, ReferringAuthority authority)
+        public Referral(int referralNumber, Patient currentPatient, ContactInformation contact, AddressInformation address, ContactHours hours, ReferringAuthority authority)
             :base (currentPatient, contact, address, hours, authority)
         #endregion
     }
