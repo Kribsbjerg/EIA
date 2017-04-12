@@ -99,7 +99,5 @@
         private Gender GetGenderOfPatient() => (Cpr % 10) % 2 == 0 ? Gender.Female : Gender.Male;
 
         #endregion
-
-        //TEST
     }
 }
