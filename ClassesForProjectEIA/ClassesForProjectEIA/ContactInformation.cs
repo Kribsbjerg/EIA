@@ -1,27 +1,28 @@
-﻿namespace ClassesForProjectEIA
+﻿using System;
+
+namespace ClassesForProjectEIA
 {
     public class ContactInformation
     {
-        #region Public Properties
-        /// <summary>
-        /// Holds the telephone number for work
-        /// </summary>
-        public int WorkNumber { get; private set; }
+        #region Private Members
 
         /// <summary>
-        /// Holds the landline telephone number
+        /// Backing field for the work number
         /// </summary>
-        public int LandLineNumber { get; private set; }
+        private int _workNumber;
+        /// <summary>
+        /// Backing field for the Landline number
+        /// </summary>
+        private int _landLineNumber;
+        /// <summary>
+        /// Backing field for the mobile phone number
+        /// </summary>
+        private int _mobilNumber;
+        /// <summary>
+        /// Backing field for the email
+        /// </summary>
+        public string _eMail;
 
-        /// <summary>
-        /// Holds the mobile telephone number
-        /// </summary>
-        public int MobileNumber { get; private set; }
-        
-        /// <summary>
-        /// Holds the E-mail address
-        /// </summary>
-        public string Email { get; private set; }
         #endregion
 
         #region Constructors
@@ -48,6 +49,69 @@
             WorkNumber = workNumber;
             LandLineNumber = landLineNumber;  
         }
+        #endregion
+
+        #region Public Properties
+        /// <summary>
+        /// Holds the telephone number for work
+        /// </summary>
+        public int WorkNumber
+        {
+            get { return _workNumber; }
+            private set
+            {
+                if (value >= 10000000 && value <= 99999999)
+                    _workNumber = value;
+                else
+                    throw new ArgumentOutOfRangeException();              
+            }
+        }
+
+        /// <summary>
+        /// Holds the landline telephone number
+        /// </summary>
+        public int LandLineNumber
+        {
+            get { return _landLineNumber; }
+            private set
+            {
+                if (value >= 10000000 && value <= 99999999)
+                    _landLineNumber = value;
+                else
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        /// <summary>
+        /// Holds the mobile telephone number
+        /// </summary>
+        public int MobileNumber
+        {
+            get { return _mobilNumber; }
+            private set
+            {
+                if (value >= 10000000 && value <= 99999999)
+                    _mobilNumber = value;
+                else
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        /// <summary>
+        /// Holds the E-mail address
+        /// </summary>
+        public string Email
+        {
+            get { return _eMail; }
+            private set
+            {
+                if (value.Contains("@") && value.Contains("."))
+                    _eMail = value;
+                else
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
         #endregion
     }
 }
