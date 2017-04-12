@@ -8,6 +8,11 @@ namespace ClassesForProjectEIA
 {
     class Referral
     {
+        /// <summary>
+        /// Dumme Jacob
+        /// </summary>
+        int i;
+
         #region Constructors
         /// <summary>
         /// Default constructors
