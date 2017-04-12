@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassesForProjectEIA
 {
-    class TreatmentPlan
+    class Visitation
     {
         #region Private Members
 
@@ -21,10 +21,9 @@ namespace ClassesForProjectEIA
         /// </summary>
         /// <param name="facility"></param>
         /// <param name="patientReferral"></param>
-        public TreatmentPlan(TreatmentFacility facility, Referral patientReferral)
+        public Visitation(TreatmentFacility facility, Referral patientReferral)
         {
             Facility = facility;
-            PatientReferral = patientReferral;
         }
 
         #endregion
@@ -36,10 +35,7 @@ namespace ClassesForProjectEIA
         /// </summary>
         public TreatmentFacility Facility { get; private set; }
 
-        /// <summary>
-        /// Holds the referral of the patient
-        /// </summary>
-        public Referral PatientReferral { get; private set; }
+        public Practitioner TreatingPractitioner { get; private set; }
 
         //public DateTime TreatmentDay
         //{

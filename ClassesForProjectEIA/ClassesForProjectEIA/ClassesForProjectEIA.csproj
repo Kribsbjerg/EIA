@@ -54,6 +54,7 @@
     <Compile Include="BaseViewModel.cs" />
     <Compile Include="ContactHours.cs" />
     <Compile Include="ContactInformation.cs" />
+    <Compile Include="Date.cs" />
     <Compile Include="Persons\Patient.cs" />
     <Compile Include="Persons\Person.cs" />
     <Compile Include="Persons\Practioner.cs" />
@@ -65,7 +66,7 @@
     <Compile Include="Room.cs" />
     <Compile Include="Translator.cs" />
     <Compile Include="TreatmentFacility.cs" />
-    <Compile Include="TreatmentPlan.cs" />
+    <Compile Include="Visitation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

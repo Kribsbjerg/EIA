@@ -14,22 +14,15 @@ namespace ClassesForProjectEIA
         /// </summary>
         /// <param name="referralNumber"></param>
         /// <param name="currentPatient"></param>
+        /// <param name="contact"></param>
+        /// <param name="address"></param>
+        /// <param name="hours"></param>
         /// <param name="authority"></param>
-        /// <param name="anamnesis"></param>
-        /// <param name="pregnancy"></param>
-        /// <param name="allergiesAndMedicine"></param>
-        /// <param name="dato"></param>
-        /// <param name="other"></param>
-        public Referral(int referralNumber, Patient currentPatient, ReferringAuthority authority, string anamnesis, string pregnancy, string allergiesAndMedicine, DateTime dato, string other)
+        public Referral(int referralNumber, Patient currentPatient, ReferringAuthority authority)
         {
             ReferralNumber = referralNumber;
             CurrentPatient = currentPatient;
             Authority = authority;
-            Anamnesis = anamnesis;
-            Pregnancy = pregnancy;
-            AllergiesAndMedicine = allergiesAndMedicine;
-            Dato = dato;
-            Other = other;
         }
         #endregion
 
@@ -49,31 +42,6 @@ namespace ClassesForProjectEIA
         /// Holds the referring authority
         /// </summary>
         public ReferringAuthority Authority { get; private set; }
-
-        /// <summary>
-        /// Holds the anamnesis 
-        /// </summary>
-        public string Anamnesis { get; private set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public string Pregnancy { get; private set; }
-
-        /// <summary>
-        /// Holds information about allergies / medicine that are relevant
-        /// </summary>
-        public string AllergiesAndMedicine { get; private set; }
-
-        /// <summary>
-        /// The date of the referral
-        /// </summary>
-        public DateTime Dato { get; private set; }
-
-        /// <summary>
-        /// Holds information about other considerations about the referal
-        /// </summary>
-        public string Other { get; private set; }
 
         #endregion
     }

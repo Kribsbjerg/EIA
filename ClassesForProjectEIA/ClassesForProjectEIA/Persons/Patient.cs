@@ -47,17 +47,14 @@
         /// Property holding the medical history of a patient (Anamnesis)
         /// </summary>
         public string Anamnesis { get; private set; }
-
         /// <summary>
         /// Property holding the diagnosis of a patient
         /// </summary>
         public string Diagnosis { get; set; }
-
         /// <summary>
         /// The social security number of the  patient
         /// </summary>
         public int Cpr { get; private set; }
-
         /// <summary>
         /// The age of the patient
         /// </summary>
