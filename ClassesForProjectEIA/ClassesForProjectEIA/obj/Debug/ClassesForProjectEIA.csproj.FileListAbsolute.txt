@@ -16,3 +16,6 @@ C:\Users\Jacob H. Mortensen\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProj
 C:\Users\RuneMøberg\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\bin\Debug\ClassesForProjectEIA.exe
 C:\Users\RuneMøberg\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\bin\Debug\ClassesForProjectEIA.pdb
 C:\Users\RuneMøberg\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.csprojResolveAssemblyReference.cache
+C:\Users\Kris\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\obj\Debug\ClassesForProjectEIA.csprojResolveAssemblyReference.cache
+C:\Users\Kris\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\bin\Debug\ClassesForProjectEIA.exe
+C:\Users\Kris\Source\Repos\EIA\ClassesForProjectEIA\ClassesForProjectEIA\bin\Debug\ClassesForProjectEIA.pdb
