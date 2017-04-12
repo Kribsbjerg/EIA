@@ -8,11 +8,11 @@ namespace ClassesForProjectEIA
 {
     class Date
     {
+        DateTime date1 = new DateTime(int year, int month, int day, int time, int minute);
         public DateTime Date { get; set; }
         Console.WriteLine(date1.ToString("f", 
                         CultureInfo.CreateSpecificCulture("da-DK")));
 
-            /// https://msdn.microsoft.com/en-us/library/az4se3k1(v=vs.110).aspx?cs-save-lang=1&cs-lang=csharp#code-snippet-6
 
         {
             
