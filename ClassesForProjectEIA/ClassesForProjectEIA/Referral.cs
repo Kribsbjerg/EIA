@@ -19,7 +19,8 @@ namespace ClassesForProjectEIA
         /// <param name="pregnancy"></param>
         /// <param name="allergiesAndMedicine"></param>
         /// <param name="dato"></param>
-        public Referral(int referralNumber, Patient currentPatient, ReferringAuthority authority, string anamnesis, string pregnancy, string allergiesAndMedicine, DateTime dato)
+        /// <param name="other"></param>
+        public Referral(int referralNumber, Patient currentPatient, ReferringAuthority authority, string anamnesis, string pregnancy, string allergiesAndMedicine, DateTime dato, string other)
         {
             ReferralNumber = referralNumber;
             CurrentPatient = currentPatient;
@@ -28,7 +29,7 @@ namespace ClassesForProjectEIA
             Pregnancy = pregnancy;
             AllergiesAndMedicine = allergiesAndMedicine;
             Dato = dato;
-
+            Other = other;
         }
         #endregion
 
@@ -65,9 +66,14 @@ namespace ClassesForProjectEIA
         public string AllergiesAndMedicine { get; private set; }
 
         /// <summary>
-        /// That date of the referral
+        /// The date of the referral
         /// </summary>
-        public DateTime dato { get; private set; }
+        public DateTime Dato { get; private set; }
+
+        /// <summary>
+        /// Holds information about other considerations about the referal
+        /// </summary>
+        public string Other { get; private set; }
 
         #endregion
     }
