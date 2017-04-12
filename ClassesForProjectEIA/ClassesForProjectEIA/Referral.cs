@@ -19,7 +19,6 @@ namespace ClassesForProjectEIA
         /// <param name="hours"></param>
         /// <param name="authority"></param>
         public Referral(int referralNumber, Patient currentPatient, ContactInformation contact, AddressInformation address, ContactHours hours, ReferringAuthority authority)
-            :base (referralNumber, currentPatient, contact, address, hours, authority)
         {
             ReferralNumber = referralNumber;
             CurrentPatient = currentPatient;
@@ -35,7 +34,7 @@ namespace ClassesForProjectEIA
         /// <summary>
         /// Holds the referral number of the patient
         /// </summary>
-        public ReferralNumber { get; private set; }
+        public int ReferralNumber { get; private set; }
 
         /// <summary>
         /// Holds the patient of the current referral
@@ -46,6 +45,11 @@ namespace ClassesForProjectEIA
         /// Holds the contact information of the person
         /// </summary>
         public ContactInformation Contact { get; private set; }
+
+        /// <summary>
+        /// Hold the hours where the patient can be contacted
+        /// </summary>
+        public ContactHours Hours { get; private set; }
 
         /// <summary>
         /// Holds the address information of the person
