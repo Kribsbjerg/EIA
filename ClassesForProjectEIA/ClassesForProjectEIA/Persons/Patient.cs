@@ -16,11 +16,9 @@
         /// <param name="diagnosis"></param>
         /// <param name="cpr"></param>
         /// <param name="translationInformation"></param>
-        /// <param name="referralAuthority"></param>
         /// <param name="hoursToContact"></param>
         public Patient(string name, ContactInformation contact, AddressInformation address, 
-                       string anamnesis, string diagnosis, int cpr, Translator translationInformation,
-                       ReferringAuthority referralAuthority, ContactHours hoursToContact)
+                       string anamnesis, string diagnosis, int cpr, Translator translationInformation, ContactHours hoursToContact)
             :base(name, contact, address)
         {
             Anamnesis = anamnesis;
@@ -29,7 +27,6 @@
             Age = GetAgeOfPatient();
             PatientGender = GetGenderOfPatient();
             TranslationInformation = translationInformation;
-            ReferralAuthority = referralAuthority;
             HoursToContact = hoursToContact;
         }
 
@@ -72,10 +69,7 @@
         /// Property holding translator information about the patient
         /// </summary>
         public Translator TranslationInformation { get; set; }
-        /// <summary>
-        /// Property holding information about referral authority
-        /// </summary>
-        public ReferringAuthority ReferralAuthority { get; set; }
+
         /// <summary>
         /// Property holding the hours the patient is possible to contact
         /// </summary>
