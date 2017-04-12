@@ -4,8 +4,14 @@ namespace ClassesForProjectEIA
 {
     public class AddressInformation
     {
+        #region Private Members
 
+        /// <summary>
+        /// Backingfield for Zipcode
+        /// </summary>
         int _zipcode;
+
+        #endregion
 
         #region Constructors
         /// <summary>
@@ -24,6 +30,7 @@ namespace ClassesForProjectEIA
             ZipCode = zipCode;
             Country = country;
         }
+
         #endregion
 
         #region Public Properties
@@ -62,6 +69,7 @@ namespace ClassesForProjectEIA
         /// Property holding the country of the house, facility or hospital
         /// </summary>
         public string Country { get; set; }
+        
         #endregion
     }
 }
