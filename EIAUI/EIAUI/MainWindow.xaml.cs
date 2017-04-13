@@ -25,7 +25,7 @@ namespace EIAUI
         {
             InitializeComponent();
 
-            this.DataContext = new MenuSystem(this);
+            this.DataContext = new WindowViewModel(this);
         }
     }
 }

@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:EIAUI">
+
+    <Color x:Key="PrimaryColour">#20566d</Color>
+    <SolidColorBrush x:Key="PrimaryColourBrush" Color="{StaticResource PrimaryColour}" />
+
+    <Color x:Key="SecondaryColour">#c0c2ce</Color>
+    <SolidColorBrush x:Key="SecondaryColourBrush" Color="{StaticResource SecondaryColour}" />
+
+    <Color x:Key="ActiveColour">#2070b2</Color>
+    <SolidColorBrush x:Key="ActiveColourBrush" Color="{StaticResource ActiveColour}" />
+
+    <Color x:Key="AccentGreenColour">#43da86</Color>
+    <SolidColorBrush x:Key="AccentGreenColourBrush" Color="{StaticResource AccentGreenColour}" />
+
+    <Color x:Key="AccentYellowColour">#ffb721</Color>
+    <SolidColorBrush x:Key="AccentYellowColourBrush" Color="{StaticResource AccentYellowColour}" />
+
+    <Color x:Key="AccentRedColour">#f2405d</Color>
+    <SolidColorBrush x:Key="AccentRedColourBrush" Color="{StaticResource AccentRedColour}" />
+
+    <Color x:Key="BlackColour">#121738</Color>
+    <SolidColorBrush x:Key="BlackColourBrush" Color="{StaticResource BlackColour}" />
+
+    <Color x:Key="WhiteColour">#ffffff</Color>
+    <SolidColorBrush x:Key="WhiteColourBrush" Color="{StaticResource WhiteColour}" />
+
+    <Color x:Key="BackgroundColour">#fafafa</Color>
+    <SolidColorBrush x:Key="BackgroundColourBrush" Color="{StaticResource BackgroundColour}" />
+
+</ResourceDictionary>

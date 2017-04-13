@@ -6,9 +6,15 @@
         xmlns:local="clr-namespace:EIAUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525"
-        BorderThickness="{Binding MyWindow.BorderThickness}"
         >
-    <Canvas>
-        <Button x:Name="Knap" Content="{Binding TestText}" Command="{Binding CountUp}" Width="100" Height="40"></Button>
-    </Canvas>
+    <StackPanel>
+        <TextBlock Text="Hello, World!" FontSize="40" FontFamily="{StaticResource LatoLight}"></TextBlock>
+        <TextBlock Text="Hello, World!" FontSize="40" FontFamily="{StaticResource LatoRegular}"></TextBlock>
+        <TextBlock Text="Hello, World!" FontSize="40" FontFamily="{StaticResource LatoBold}"></TextBlock>
+        <TextBlock Text="Hello, World!" FontSize="40" FontFamily="{StaticResource LatoBlack}"></TextBlock>
+
+        <Button Content="{Binding TestString}" Height="30" />
+
+    </StackPanel>
+    
 </Window>
