@@ -5,16 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EIAUI"
         mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        x:Name="AppWindow"
         Title="MainWindow" Height="350" Width="525"
         >
-    <StackPanel>
-        <TextBlock Text="Hello, World!" FontSize="40" FontFamily="{StaticResource LatoLight}"></TextBlock>
-        <TextBlock Text="Hello, World!" FontSize="40" FontFamily="{StaticResource LatoRegular}"></TextBlock>
-        <TextBlock Text="Hello, World!" FontSize="40" FontFamily="{StaticResource LatoBold}"></TextBlock>
-        <TextBlock Text="Hello, World!" FontSize="40" FontFamily="{StaticResource LatoBlack}"></TextBlock>
 
-        <Button Content="{Binding TestString}" Height="30" />
+  
+  <WindowChrome.WindowChrome>
+      <WindowChrome
+          ResizeBorderThickness="{Binding ResizeBorderThickness}"
+          CaptionHeight="{Binding TitleHeight}"
+          GlassFrameThickness="0"
+          />
+  </WindowChrome.WindowChrome>
 
-    </StackPanel>
+  <Border CornerRadius="{Binding WindowCornerRadius}">
+      
+  </Border>
     
 </Window>
