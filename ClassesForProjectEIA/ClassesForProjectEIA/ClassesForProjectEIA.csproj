@@ -50,11 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs" />
+    <Compile Include="AddressInformation.cs" />
     <Compile Include="BaseViewModel.cs" />
     <Compile Include="ContactHours.cs" />
     <Compile Include="ContactInformation.cs" />
-    <Compile Include="Date.cs" />
     <Compile Include="Persons\Patient.cs" />
     <Compile Include="Persons\Person.cs" />
     <Compile Include="Persons\Practioner.cs" />
