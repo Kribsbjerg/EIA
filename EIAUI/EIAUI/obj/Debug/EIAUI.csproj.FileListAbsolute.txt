@@ -1,0 +1,16 @@
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\Project\VS\EIAUI\EIAUI\bin\Debug\EIAUI.exe.config
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\Project\VS\EIAUI\EIAUI\bin\Debug\EIAUI.exe
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\Project\VS\EIAUI\EIAUI\bin\Debug\EIAUI.pdb
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\Project\VS\EIAUI\EIAUI\bin\Debug\Microsoft.Windows.Shell.dll
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\Project\VS\EIAUI\EIAUI\bin\Debug\Microsoft.Windows.Shell.pdb
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\Project\VS\EIAUI\EIAUI\obj\Debug\EIAUI.csprojResolveAssemblyReference.cache
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\Project\VS\EIAUI\EIAUI\obj\Debug\MainWindow.g.cs
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\Project\VS\EIAUI\EIAUI\obj\Debug\App.g.cs
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\Project\VS\EIAUI\EIAUI\obj\Debug\EIAUI_MarkupCompile.cache
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\Project\VS\EIAUI\EIAUI\obj\Debug\EIAUI_MarkupCompile.lref
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\Project\VS\EIAUI\EIAUI\obj\Debug\MainWindow.baml
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\Project\VS\EIAUI\EIAUI\obj\Debug\EIAUI.g.resources
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\Project\VS\EIAUI\EIAUI\obj\Debug\EIAUI.Properties.Resources.resources
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\Project\VS\EIAUI\EIAUI\obj\Debug\EIAUI.csproj.GenerateResource.Cache
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\Project\VS\EIAUI\EIAUI\obj\Debug\EIAUI.exe
+C:\Users\RuneMøberg\OneDrive - Aalborg Universitet\4th Semester\Project\VS\EIAUI\EIAUI\obj\Debug\EIAUI.pdb
