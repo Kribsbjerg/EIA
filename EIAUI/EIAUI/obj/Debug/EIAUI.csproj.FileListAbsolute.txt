@@ -37,3 +37,6 @@ C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.csproj.Generat
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.exe
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.pdb
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\bin\Debug\EIAUI.exe.config
+C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.exe
+C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.pdb
