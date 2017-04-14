@@ -36,3 +36,4 @@ C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.Properties.Res
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.csproj.GenerateResource.Cache
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.exe
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.pdb
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\GeneratedInternalTypeHelper.g.cs

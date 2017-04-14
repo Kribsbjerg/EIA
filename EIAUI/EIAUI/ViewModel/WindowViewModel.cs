@@ -25,7 +25,7 @@ namespace EIAUI
         /// <summary>
         /// The radius of the edges of the windows
         /// </summary>
-        private int _windowRadius = 10;
+        private int _windowRadius = 3;
 
         #endregion
 
@@ -106,10 +106,14 @@ namespace EIAUI
         public CornerRadius WindowCornerRadius { get { return new CornerRadius(WindowRadius); } }
 
         /// <summary>
-        /// The height of thhe title bar / caption of the window
+        /// The height of the title bar / caption of the window
         /// </summary>
         public int TitleHeight { get; set; } = 40;
 
+        /// <summary>
+        /// The height of the title bar / caption of the window
+        /// </summary>
+        public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight); } }
         #endregion
 
     }
