@@ -73,16 +73,7 @@
                                     </Grid>
 
                                     <Grid Grid.Row="2" Background="{StaticResource BackgroundColourBrush}">
-                                        <StackPanel>
-                                            <Border Margin="0 10 0 0" Background="{StaticResource AccentRedColourBrush}" CornerRadius="{Binding WindowCornerRadius}" Width="300" Height="100">
-                                                <Border.Effect>
-                                                    <DropShadowEffect ShadowDepth="0" Opacity="0.4" />
-                                                </Border.Effect>
-                                                <Button Style="{StaticResource Hoverless}" Command="{Binding CloseCommand}">
-                                                    
-                                                </Button>
-                                            </Border>
-                                        </StackPanel>
+                                        
                                     </Grid>
 
                                 </Grid>
