@@ -49,6 +49,11 @@ namespace EIAUI
                 OnPropertyChanged(nameof(WindowRadius));
                 OnPropertyChanged(nameof(WindowCornerRadius));
             };
+
+            // Create commands
+            MinimizeCommand = new RelayCommand(() => _window.WindowState = WindowState.Minimized);
+            MaximizeCommand = new RelayCommand(() => _window.WindowState ^= WindowState.Maximized);
+            CloseCommand = new RelayCommand(() => _window.Close());
         }
 
         #endregion
@@ -108,12 +113,31 @@ namespace EIAUI
         /// <summary>
         /// The height of the title bar / caption of the window
         /// </summary>
-        public int TitleHeight { get; set; } = 40;
+        public int TitleHeight { get; set; } = 30;
 
         /// <summary>
         /// The height of the title bar / caption of the window
         /// </summary>
         public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight); } }
+        #endregion
+
+        #region Commands
+
+        /// <summary>
+        /// The command to minimize the window
+        /// </summary>
+        public ICommand MinimizeCommand { get; set; }
+
+        /// <summary>
+        /// The command to maximize the window
+        /// </summary>
+        public ICommand MaximizeCommand { get; set; }
+
+        /// <summary>
+        /// The command to close the window
+        /// </summary>
+        public ICommand CloseCommand { get; set; }
+
         #endregion
 
     }

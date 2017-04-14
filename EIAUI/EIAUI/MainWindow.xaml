@@ -8,7 +8,7 @@
         WindowStyle="None"
         AllowsTransparency="True"
         x:Name="AppWindow"
-        Title="MainWindow" Height="350" Width="525"
+        Title="MainWindow" Height="700" Width="600"
         >
     <Window.Resources>
         <Style TargetType="{x:Type local:MainWindow}">
@@ -23,7 +23,7 @@
 
                                 <!-- Main window with resizable outline margin -->
                                 <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}"
-                                        Background="{StaticResource PrimaryColourBrush}">
+                                        Background="{StaticResource SecondaryColourBrush}">
                                     <Border.Effect>
                                         <DropShadowEffect ShadowDepth="0" Opacity="0.4" />
                                     </Border.Effect>
@@ -33,7 +33,7 @@
                                 <Grid>
 
                                     <Grid.RowDefinitions>
-                                        
+
                                         <!-- Title Bar -->
                                         <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=40}" />
 
@@ -41,7 +41,7 @@
                                         <RowDefinition Height="*" />
 
                                     </Grid.RowDefinitions>
-                                    
+
                                     <!-- Title Bar -->
                                     <Grid Grid.Column="0" Panel.ZIndex="1">
 
@@ -53,16 +53,26 @@
                                             <!-- Windows buttons -->
                                             <ColumnDefinition Width="Auto" />
                                         </Grid.ColumnDefinitions>
-                                        
+
                                         <!-- Icon -->
-                                        <TextBlock Text="EIA" Width="40" FontSize="25" Foreground="{StaticResource WhiteColourBrush}"></TextBlock>
-                                        
-                                        <!-- -->
-                                        
+                                        <TextBlock Text="EIA" Width="40" FontSize="25" Margin="6 0 0 0" Background="{StaticResource SecondaryColourBrush}"></TextBlock>
+
+                                        <!-- Title -->
+                                        <Viewbox Grid.Column="1" Margin="0">
+                                            <TextBlock Style="{StaticResource HeaderText}" Text="EIA bids you Welcome!" />
+                                        </Viewbox>
+
+                                        <!-- Windows Buttons -->
+                                        <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                            <Button Command="{Binding MinimizeCommand}" Content="_" Style="{StaticResource WindowControlButton}" />
+                                            <Button Command="{Binding MaximizeCommand}" Content="[ ]" Style="{StaticResource WindowControlButton}" />
+                                            <Button Command="{Binding CloseCommand}" Content="X" Style="{StaticResource WindowCloseButton}" />
+                                        </StackPanel>
+
                                     </Grid>
-                                    
+
                                 </Grid>
-                                
+
                             </Grid>
                         </Border>
                     </ControlTemplate>
@@ -70,7 +80,7 @@
             </Setter>
         </Style>
     </Window.Resources>
-  
+
     <WindowChrome.WindowChrome>
         <WindowChrome
             ResizeBorderThickness="{Binding ResizeBorderThickness}"
@@ -80,8 +90,4 @@
             />
     </WindowChrome.WindowChrome>
 
-    <Border CornerRadius="{Binding WindowCornerRadius}">
-      
-    </Border>
-    
 </Window>
