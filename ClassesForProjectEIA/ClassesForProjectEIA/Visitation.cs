@@ -21,9 +21,12 @@ namespace ClassesForProjectEIA
         /// </summary>
         /// <param name="facility"></param>
         /// <param name="patientReferral"></param>
-        public Visitation(TreatmentFacility facility, Referral patientReferral)
+        /// <param name="patientPractitioner"></param>
+        public Visitation(TreatmentFacility facility, Referral patientReferral, Practitioner treatingPractitioner)
         {
             Facility = facility;
+            PatientReferral = patientReferral;
+            TreatingPractitioner = treatingPractitioner;
         }
 
         #endregion
