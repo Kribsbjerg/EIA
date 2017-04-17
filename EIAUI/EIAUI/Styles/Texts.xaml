@@ -23,9 +23,17 @@
 
     <Style TargetType="{x:Type TextBox}" x:Key="LabelField" BasedOn="{StaticResource InputField}">
         <Setter Property="IsEnabled" Value="False" />
+        <Setter Property="Background" Value="{StaticResource WhiteColourBrush}" />
     </Style>
-    
-    
+
+    <Style TargetType="{x:Type Border}" x:Key="FieldBorder">
+        <Setter Property="Background" Value="{StaticResource WhiteColourBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource SecondaryColourBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="4" />
+        <Setter Property="Padding" Value="2" />
+    </Style>
+           
 
 
 </ResourceDictionary>
