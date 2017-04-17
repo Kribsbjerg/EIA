@@ -22,11 +22,6 @@
                             
                             <!-- Main Window outline -->
                             <Grid>
-                                
-                                <!-- Opacity mask for corners on grid -->
-                                <Border x:Name="Container"
-                                        Background="{StaticResource BackgroundColourBrush}"
-                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}" />
 
                                 <!-- Main window with resizable outline margin -->
                                 <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}"
@@ -38,11 +33,6 @@
 
                                 <!-- The main window content -->
                                 <Grid>
-                                    
-                                    <!-- Corner Clipping -->
-                                    <Grid.OpacityMask>
-                                        <VisualBrush Visual="{Binding ElementName=Container}" />
-                                    </Grid.OpacityMask>
 
                                     <Grid.RowDefinitions>
 
