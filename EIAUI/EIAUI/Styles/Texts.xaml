@@ -9,20 +9,27 @@
         <Setter Property="Margin" Value="0 4" />
     </Style>
 
+
+
     <Style TargetType="{x:Type TextBox}" x:Key="InputField" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
+        <Setter Property="Background" Value="{StaticResource WhiteColourBrush}" />
+        <Setter Property="Padding" Value="0" />
         <Setter Property="Foreground" Value="{StaticResource BlackColourBrush}" />
-        <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="IsEnabled" Value="True" />
 
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="TextBox">
-                    <Border CornerRadius="1" BorderBrush="{StaticResource SecondaryColourBrush}" BorderThickness="1">
-                        <ContentPresenter x:Name="contentPresenter" />
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" CornerRadius="4" BorderThickness="1" BorderBrush="{StaticResource SecondaryColourBrush}">
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type TextBox}" x:Key="LabelField" BasedOn="{StaticResource InputField}">
+        <Setter Property="IsEnabled" Value="False" />
     </Style>
 
 </ResourceDictionary>

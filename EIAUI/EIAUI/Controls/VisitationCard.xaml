@@ -26,7 +26,7 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBox Style="{StaticResource InputField}" Grid.Column="0" />
-                <TextBox Grid.Column="2" />
+                <TextBox Style="{StaticResource LabelField}" Grid.Column="2" />
                 <Button Grid.Column="4" Style="{StaticResource VisitationAcceptButton}" />
 
 
