@@ -33,7 +33,7 @@
                     <TextBox Style="{StaticResource LabelField}"/>
                 </Border>
 
-                <Button Grid.Column="4" Style="{StaticResource VisitationAcceptButton}" Content="✓"/>
+                <Button Grid.Column="4" Style="{StaticResource VisitationAcceptButton}" />
 
             </Grid>
 
@@ -54,7 +54,7 @@
                     <TextBox Style="{StaticResource LabelField}"/>
                 </Border>
 
-                <Button Grid.Column="4" Style="{StaticResource VisitationEditButton}" Content="/"/>
+                <Button Grid.Column="4" Style="{StaticResource VisitationEditButton}"/>
 
             </Grid>
 
