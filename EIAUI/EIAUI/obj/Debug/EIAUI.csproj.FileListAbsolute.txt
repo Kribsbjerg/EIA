@@ -40,3 +40,5 @@ C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\GeneratedInternalTyp
 C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\bin\Debug\EIAUI.exe.config
 C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.exe
 C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.pdb
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCard.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCard.baml
