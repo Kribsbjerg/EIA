@@ -99,7 +99,7 @@
     <!-- Visitation edit button -->
     <Style TargetType="{x:Type Button}" x:Key="VisitationEditButton" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
-        <Setter Property="Background" Value="{StaticResource AccentRedColourBrush}" />
+        <Setter Property="Background" Value="{StaticResource AccentYellowColourBrush}" />
         <Setter Property="Padding" Value="5" />
         <Setter Property="Foreground" Value="{StaticResource WhiteColourBrush}" />
 
