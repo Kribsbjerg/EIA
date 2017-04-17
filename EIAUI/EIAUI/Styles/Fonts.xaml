@@ -6,6 +6,7 @@
     <FontFamily x:Key="LatoRegular">pack://application,,,/Fonts/#Lato Regular</FontFamily>
     <FontFamily x:Key="LatoBlack">pack://application,,,/Fonts/#Lato Black</FontFamily>
     <FontFamily x:Key="LatoBold">pack://application,,,/Fonts/#Lato Bold</FontFamily>
+    <FontFamily x:Key="MaterialIcon">pack://application,,,/Fonts/#Material-Design-Iconic-Font</FontFamily>
 
     <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
         <Setter Property="FontFamily" Value="{StaticResource LatoRegular}" />
