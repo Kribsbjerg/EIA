@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows;
 using System.Windows.Forms;
 
@@ -16,7 +17,7 @@ namespace EIAUI
             this.DataContext = new WindowViewModel(this);
 
             NotifyIcon ni = new NotifyIcon();
-            ni.Icon = new System.Drawing.Icon("Main.ico");
+            ni.Icon = new Icon("Main.ico");
             ni.Visible = true;
             ni.DoubleClick +=
                 delegate (object sender, EventArgs args)
