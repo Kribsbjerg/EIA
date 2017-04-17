@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
 
-    <Border Background="{StaticResource BackgroundColourBrush}" Padding="5" CornerRadius="7" Height="100" Width="300">
+    <Border Background="{StaticResource BackgroundColourBrush}" Padding="5 5 0 5" CornerRadius="7" Height="100" Width="300">
         <Border.Effect>
             <DropShadowEffect ShadowDepth="0" Opacity="0.4" />
         </Border.Effect>
@@ -25,9 +25,10 @@
                     <ColumnDefinition Width="3*" />
                 </Grid.ColumnDefinitions>
 
-                <TextBox Grid.Column="0" />
+                <TextBox Style="{StaticResource InputField}" Grid.Column="0" />
                 <TextBox Grid.Column="2" />
-                <Button Style="{StaticResource VisitationAcceptButton}" Grid.Column="4" />
+                <Button Grid.Column="4" Style="{StaticResource VisitationAcceptButton}" />
+
 
             </Grid>
 

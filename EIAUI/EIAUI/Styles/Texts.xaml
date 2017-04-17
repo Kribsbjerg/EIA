@@ -8,5 +8,21 @@
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="Margin" Value="0 4" />
     </Style>
-    
+
+    <Style TargetType="{x:Type TextBox}" x:Key="InputField" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="Foreground" Value="{StaticResource BlackColourBrush}" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border CornerRadius="1" BorderBrush="{StaticResource SecondaryColourBrush}" BorderThickness="1">
+                        <ContentPresenter x:Name="contentPresenter" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>
