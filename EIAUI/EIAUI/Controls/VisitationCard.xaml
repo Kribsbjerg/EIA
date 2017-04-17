@@ -5,16 +5,16 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EIAUI"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="400">
 
-    <Border Background="{StaticResource BackgroundColourBrush}" Padding="5 5 0 5" CornerRadius="7" Height="100" Width="300">
+    <Border Background="{StaticResource BackgroundColourBrush}" Padding="9 7 0 7" CornerRadius="7" Height="100" Width="400">
         <Border.Effect>
             <DropShadowEffect ShadowDepth="0" Opacity="0.4" />
         </Border.Effect>
 
         <StackPanel>
             
-            <TextBlock Text="090164-4527" />
+            <TextBlock Text="090164-4527" Margin="0 0 0 3" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource SecondaryColourBrush}"/>
             
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -25,12 +25,40 @@
                     <ColumnDefinition Width="3*" />
                 </Grid.ColumnDefinitions>
 
-                <TextBox Style="{StaticResource InputField}" Grid.Column="0" />
-                <TextBox Style="{StaticResource LabelField}" Grid.Column="2" />
-                <Button Grid.Column="4" Style="{StaticResource VisitationAcceptButton}" />
+                <Border Grid.Column="0" Background="{StaticResource WhiteColourBrush}" BorderBrush="{StaticResource SecondaryColourBrush}" BorderThickness="1" CornerRadius="4" Padding="2">
+                    <TextBox Style="{StaticResource InputField}" />
+                </Border>
 
+                <Border Grid.Column="2" Background="{StaticResource WhiteColourBrush}" BorderBrush="{StaticResource SecondaryColourBrush}" BorderThickness="1" CornerRadius="4" Padding="2">
+                    <TextBox Style="{StaticResource LabelField}"/>
+                </Border>
+                
+                <Button Grid.Column="4" Style="{StaticResource VisitationAcceptButton}" Content="v"/>
 
             </Grid>
+
+            <Grid Margin="0 5 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" Background="{StaticResource WhiteColourBrush}" BorderBrush="{StaticResource SecondaryColourBrush}" BorderThickness="1" CornerRadius="4" Padding="2">
+                    <TextBox Style="{StaticResource InputField}" />
+                </Border>
+
+                <Border Grid.Column="2" Background="{StaticResource WhiteColourBrush}" BorderBrush="{StaticResource SecondaryColourBrush}" BorderThickness="1" CornerRadius="4" Padding="2">
+                    <TextBox Style="{StaticResource LabelField}"/>
+                </Border>
+
+                <Button Grid.Column="4" Style="{StaticResource VisitationEditButton}" Content="v"/>
+
+            </Grid>
+
+
 
 
         </StackPanel>

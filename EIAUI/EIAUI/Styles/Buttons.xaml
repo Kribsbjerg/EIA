@@ -71,13 +71,38 @@
         </Style.Triggers>
     </Style>
 
-    <!-- Window Control Button -->
+    <!-- Visitation accept button -->
     <Style TargetType="{x:Type Button}" x:Key="VisitationAcceptButton" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
         <Setter Property="Background" Value="{StaticResource AccentGreenColourBrush}" />
         <Setter Property="Padding" Value="5" />
         <Setter Property="Foreground" Value="{StaticResource WhiteColourBrush}" />
  
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" CornerRadius="4 0 0 4">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{TemplateBinding Content}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource ActiveColourBrush}" />
+                <Setter Property="Cursor" Value="Hand" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Visitation edit button -->
+    <Style TargetType="{x:Type Button}" x:Key="VisitationEditButton" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
+        <Setter Property="Background" Value="{StaticResource AccentRedColourBrush}" />
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteColourBrush}" />
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">

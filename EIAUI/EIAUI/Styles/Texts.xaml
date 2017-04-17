@@ -17,19 +17,15 @@
         <Setter Property="Padding" Value="0" />
         <Setter Property="Foreground" Value="{StaticResource BlackColourBrush}" />
         <Setter Property="IsEnabled" Value="True" />
-
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type TextBox}">
-                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" CornerRadius="4" BorderThickness="1" BorderBrush="{StaticResource SecondaryColourBrush}">
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
 
     <Style TargetType="{x:Type TextBox}" x:Key="LabelField" BasedOn="{StaticResource InputField}">
         <Setter Property="IsEnabled" Value="False" />
     </Style>
+    
+    
+
 
 </ResourceDictionary>
