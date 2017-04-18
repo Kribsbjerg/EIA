@@ -64,3 +64,5 @@ C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Styles\Fonts.baml
 C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.g.resources
 C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.Properties.Resources.resources
 C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.csproj.GenerateResource.Cache
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCardList.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCardList.baml
