@@ -25,12 +25,12 @@
                                 
                                 <!-- Opacity mask for corners on grid -->
                                 <Border x:Name="Container"
-                                        Background="{StaticResource BackgroundColourBrush}"
+                                        Background="{StaticResource BackgroundColorBrush}"
                                         CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}" />
 
                                 <!-- Main window with resizable outline margin -->
                                 <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}"
-                                        Background="{StaticResource SecondaryColourBrush}">
+                                        Background="{StaticResource LightTextColorBrush}">
                                     <Border.Effect>
                                         <DropShadowEffect ShadowDepth="0" Opacity="0.4" />
                                     </Border.Effect>
@@ -65,7 +65,7 @@
                                         </Grid.ColumnDefinitions>
 
                                         <!-- Icon -->
-                                        <TextBlock Text="EIA" Width="40" FontSize="25" Margin="6 0 0 0" Background="{StaticResource SecondaryColourBrush}"></TextBlock>
+                                        <TextBlock Text="EIA" Width="40" FontSize="25" Margin="6 0 0 0" Background="{StaticResource LightTextColorBrush}"/>
 
                                         <!-- Title -->
                                         <Viewbox Grid.Column="1" Margin="0">
@@ -79,7 +79,7 @@
                                             <Button Command="{Binding CloseCommand}" Content="X" Style="{StaticResource WindowCloseButton}" />
                                         </StackPanel>
                                     </Grid>
-                                    <Grid Grid.Row="1" Background="{StaticResource WhiteColourBrush}">
+                                    <Grid Grid.Row="1" Background="{StaticResource BackgroundColorBrush}">
                                         <local:VisitationCardList VerticalAlignment="Top"/>
                                     </Grid>
                                 </Grid>

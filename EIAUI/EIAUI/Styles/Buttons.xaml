@@ -55,7 +55,7 @@
 
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{StaticResource ActiveColourBrush}" />
+                <Setter Property="Background" Value="{StaticResource BlueColorBrush}" />
                 <Setter Property="Cursor" Value="Hand" />
             </Trigger>
         </Style.Triggers>
@@ -65,8 +65,8 @@
     <Style TargetType="{x:Type Button}" x:Key="WindowCloseButton" BasedOn="{StaticResource WindowControlButton}">
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{StaticResource AccentRedColourBrush}" />
-                <Setter Property="Foreground" Value="{StaticResource WhiteColourBrush}" />
+                <Setter Property="Background" Value="{StaticResource RedColorBrush}" />
+                <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -74,9 +74,9 @@
     <!-- Visitation accept button -->
     <Style TargetType="{x:Type Button}" x:Key="VisitationAcceptButton" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
-        <Setter Property="Background" Value="{StaticResource AccentGreenColourBrush}" />
+        <Setter Property="Background" Value="{StaticResource GreenColorBrush}" />
         <Setter Property="Padding" Value="5" />
-        <Setter Property="Foreground" Value="{StaticResource WhiteColourBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
  
         <Setter Property="Template">
             <Setter.Value>
@@ -90,7 +90,7 @@
 
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{StaticResource ActiveColourBrush}" />
+                <Setter Property="Background" Value="{StaticResource BlueColorBrush}" />
                 <Setter Property="Cursor" Value="Hand" />
             </Trigger>
         </Style.Triggers>
@@ -99,9 +99,9 @@
     <!-- Visitation edit button -->
     <Style TargetType="{x:Type Button}" x:Key="VisitationEditButton" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
-        <Setter Property="Background" Value="{StaticResource AccentYellowColourBrush}" />
+        <Setter Property="Background" Value="{StaticResource YellowColorBrush}" />
         <Setter Property="Padding" Value="5" />
-        <Setter Property="Foreground" Value="{StaticResource WhiteColourBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
 
         <Setter Property="Template">
             <Setter.Value>
@@ -115,7 +115,7 @@
 
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{StaticResource ActiveColourBrush}" />
+                <Setter Property="Background" Value="{StaticResource BlueColorBrush}" />
                 <Setter Property="Cursor" Value="Hand" />
             </Trigger>
         </Style.Triggers>
