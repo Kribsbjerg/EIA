@@ -2,31 +2,37 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:EIAUI">
 
-    <Color x:Key="PrimaryColour">#20566d</Color>
-    <SolidColorBrush x:Key="PrimaryColourBrush" Color="{StaticResource PrimaryColour}" />
+    <Color x:Key="PrimaryColor">#20566D</Color>
+    <SolidColorBrush x:Key="PrimaryColourBrush" Color="{StaticResource PrimaryColor}" />
 
-    <Color x:Key="SecondaryColour">#c0c2ce</Color>
-    <SolidColorBrush x:Key="SecondaryColourBrush" Color="{StaticResource SecondaryColour}" />
+    <Color x:Key="DarkTextColor">#121738</Color>
+    <SolidColorBrush x:Key="DarkTextColorBrush" Color="{StaticResource DarkTextColor}" />
 
-    <Color x:Key="ActiveColour">#2070b2</Color>
-    <SolidColorBrush x:Key="ActiveColourBrush" Color="{StaticResource ActiveColour}" />
+    <Color x:Key="MediumTextColor">#121738</Color>
+    <SolidColorBrush x:Key="MediumTextColorBrush" Color="{StaticResource MediumTextColor}" Opacity="0.5" />
 
-    <Color x:Key="AccentGreenColour">#43da86</Color>
-    <SolidColorBrush x:Key="AccentGreenColourBrush" Color="{StaticResource AccentGreenColour}" />
+    <Color x:Key="LightTextColor">#121738</Color>
+    <SolidColorBrush x:Key="LightTextColorBrush" Color="{StaticResource LightTextColor}" Opacity="0.3" />
 
-    <Color x:Key="AccentYellowColour">#ffb721</Color>
-    <SolidColorBrush x:Key="AccentYellowColourBrush" Color="{StaticResource AccentYellowColour}" />
+    <Color x:Key="BorderLineColor">#121738</Color>
+    <SolidColorBrush x:Key="BorderLineColorBrush" Color="{StaticResource BorderLineColor}" Opacity="0.12" />
 
-    <Color x:Key="AccentRedColour">#f2405d</Color>
-    <SolidColorBrush x:Key="AccentRedColourBrush" Color="{StaticResource AccentRedColour}" />
+    <Color x:Key="TealColor">#009688</Color>
+    <SolidColorBrush x:Key="TealColorBrush" Color="{StaticResource TealColor}" />
 
-    <Color x:Key="BlackColour">#121738</Color>
-    <SolidColorBrush x:Key="BlackColourBrush" Color="{StaticResource BlackColour}" />
+    <Color x:Key="BlueColor">#547dce</Color>
+    <SolidColorBrush x:Key="BlueColorBrush" Color="{StaticResource BlueColor}" />
 
-    <Color x:Key="WhiteColour">#ffffff</Color>
-    <SolidColorBrush x:Key="WhiteColourBrush" Color="{StaticResource WhiteColour}" />
+    <Color x:Key="GreenColor">#56b68b</Color>
+    <SolidColorBrush x:Key="GreenColorBrush" Color="{StaticResource GreenColor}" />
 
-    <Color x:Key="BackgroundColour">#fafafa</Color>
-    <SolidColorBrush x:Key="BackgroundColourBrush" Color="{StaticResource BackgroundColour}" />
+    <Color x:Key="RedColor">#e96875</Color>
+    <SolidColorBrush x:Key="RedColorBrush" Color="{StaticResource RedColor}" />
+
+    <Color x:Key="YellowColor">#ffd06b</Color>
+    <SolidColorBrush x:Key="YellowColorBrush" Color="{StaticResource YellowColor}" />
+
+    <Color x:Key="BackgroundColor">#fafafa</Color>
+    <SolidColorBrush x:Key="BackgroundColorBrush" Color="{StaticResource BackgroundColor}" />
 
 </ResourceDictionary>
