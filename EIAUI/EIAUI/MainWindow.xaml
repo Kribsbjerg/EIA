@@ -80,7 +80,7 @@
                                         </StackPanel>
                                     </Grid>
 
-                                    <Grid Grid.Row="2" Background="{StaticResource BackgroundColourBrush}">
+                                    <Grid Grid.Row="2" Background="{StaticResource WhiteColourBrush}">
                                         <local:VisitationCard>
 
                                         </local:VisitationCard>

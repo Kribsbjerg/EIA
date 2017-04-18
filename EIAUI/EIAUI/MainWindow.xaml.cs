@@ -27,6 +27,7 @@ namespace EIAUI
                 };
         }
 
+    
         protected override void OnStateChanged(EventArgs e)
         {
             if (WindowState == WindowState.Minimized)
