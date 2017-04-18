@@ -3,7 +3,7 @@
                     xmlns:local="clr-namespace:EIAUI">
 
     <Style TargetType="{x:Type TextBlock}" x:Key="HeaderText" BasedOn="{StaticResource BaseTextBlockStyle}">
-        <Setter Property="Foreground" Value="{StaticResource BlackColourBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource DarkTextColorBrush}" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="Margin" Value="0 4" />
@@ -13,9 +13,9 @@
 
     <Style TargetType="{x:Type TextBox}" x:Key="InputField" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
-        <Setter Property="Background" Value="{StaticResource WhiteColourBrush}" />
+        <Setter Property="Background" Value="{StaticResource BackgroundColorBrush}" />
         <Setter Property="Padding" Value="0" />
-        <Setter Property="Foreground" Value="{StaticResource BlackColourBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource DarkTextColorBrush}" />
         <Setter Property="IsEnabled" Value="True" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="VerticalAlignment" Value="Center" />
@@ -23,12 +23,12 @@
 
     <Style TargetType="{x:Type TextBox}" x:Key="LabelField" BasedOn="{StaticResource InputField}">
         <Setter Property="IsEnabled" Value="False" />
-        <Setter Property="Background" Value="{StaticResource WhiteColourBrush}" />
+        <Setter Property="Background" Value="{StaticResource BackgroundColorBrush}" />
     </Style>
 
     <Style TargetType="{x:Type Border}" x:Key="FieldBorder">
-        <Setter Property="Background" Value="{StaticResource WhiteColourBrush}" />
-        <Setter Property="BorderBrush" Value="{StaticResource SecondaryColourBrush}" />
+        <Setter Property="Background" Value="{StaticResource BackgroundColorBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource MediumTextColorBrush}" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="CornerRadius" Value="4" />
         <Setter Property="Padding" Value="2" />
