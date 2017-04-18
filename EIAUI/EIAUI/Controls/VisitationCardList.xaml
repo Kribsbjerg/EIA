@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:EIAUI"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid Background="{StaticResource WhiteColourBrush}">
+    <Grid Background="{StaticResource BackgroundColorBrush}">
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <ItemsControl>
                 <ItemsControl.ItemTemplate>
@@ -16,5 +16,5 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
-        </Grid>
+     </Grid>
 </UserControl>
