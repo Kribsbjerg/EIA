@@ -66,3 +66,5 @@ C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.Properties.Resources.
 C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.csproj.GenerateResource.Cache
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCardList.g.cs
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCardList.baml
+C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCardList.g.cs
+C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCardList.baml

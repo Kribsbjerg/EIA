@@ -1,9 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace EIAUI.ViewModel.Visitation
+namespace EIAUI
 {
-    class VisitationCardListViewModel : BaseViewModel
+    public class VisitationCardListViewModel : BaseViewModel
     {
-        public List<VisitationCardViewModel> Items { get; set; }
+        public List<VisitationCardViewModel> VisitationCards { get; set; }
     }
 }

@@ -79,14 +79,9 @@
                                             <Button Command="{Binding CloseCommand}" Content="X" Style="{StaticResource WindowCloseButton}" />
                                         </StackPanel>
                                     </Grid>
-
-                                    <Grid Grid.Row="2" Background="{StaticResource WhiteColourBrush}">
-                                        <local:VisitationCard>
-
-                                        </local:VisitationCard>
-
+                                    <Grid Grid.Row="1" Background="{StaticResource WhiteColourBrush}">
+                                        <local:VisitationCardList VerticalAlignment="Top"/>
                                     </Grid>
-
                                 </Grid>
 
                             </Grid>

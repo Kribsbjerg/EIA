@@ -73,6 +73,8 @@
     </Compile>
     <Compile Include="ViewModel\Base\BaseViewModel.cs" />
     <Compile Include="ViewModel\Visitation\Design\VisitationCardDesignModel.cs" />
+    <Compile Include="ViewModel\Visitation\Design\VisitationCardListDesignModel.cs" />
+    <Compile Include="ViewModel\Visitation\VisitationCardListViewModel.cs" />
     <Compile Include="ViewModel\Visitation\VisitationCardViewModel.cs" />
     <Compile Include="ViewModel\WindowViewModel.cs" />
     <Compile Include="ViewModel\Base\RelayCommand.cs" />
