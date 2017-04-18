@@ -5,18 +5,17 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EIAUI"
              mc:Ignorable="d" 
-             Height="100"
              d:DesignHeight="300" d:DesignWidth="400">
 
     <Grid DataContext="{x:Static local:VisitationCardDesignModel.Instance}" >
-        <Border Background="{StaticResource BackgroundColourBrush}" Padding="9 7 0 7" CornerRadius="7" Height="100" Width="400">
+        <Border Background="{StaticResource BackgroundColorBrush}" Padding="9 7 0 7" CornerRadius="7" Height="100" Width="400">
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="0" Opacity="0.4" />
             </Border.Effect>
 
             <StackPanel>
 
-                <TextBlock Text="{Binding Cpr}" Margin="0 0 0 3" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource SecondaryColourBrush}"/>
+                <TextBlock Text="{Binding Cpr}" Margin="0 0 0 3" FontFamily="{StaticResource LatoBlack}" Foreground="White"/>
 
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -28,11 +27,11 @@
                     </Grid.ColumnDefinitions>
 
                     <Border Grid.Column="0" Style="{StaticResource FieldBorder}">
-                        <TextBox Text="{Binding Diagnose}" Style="{StaticResource LabelField}" />
+                        <TextBox Style="{StaticResource LabelField}" />
                     </Border>
 
                     <Border Grid.Column="2" Style="{StaticResource FieldBorder}">
-                        <TextBox Text="{Binding TreatmentType}" Style="{StaticResource LabelField}"/>
+                        <TextBox Text="{Binding Diagnose}" Style="{StaticResource LabelField}"/>
                     </Border>
 
                     <Button Grid.Column="4" Style="{StaticResource VisitationAcceptButton}" />
@@ -49,11 +48,11 @@
                     </Grid.ColumnDefinitions>
 
                     <Border Grid.Column="0" Style="{StaticResource FieldBorder}">
-                        <TextBox Text="{Binding ReferralCause}" Style="{StaticResource LabelField}" />
+                        <TextBox Style="{StaticResource LabelField}" />
                     </Border>
 
                     <Border Grid.Column="2" Style="{StaticResource FieldBorder}">
-                        <TextBox Text="{Binding TreatmentTime}" Style="{StaticResource LabelField}"/>
+                        <TextBox Style="{StaticResource LabelField}"/>
                     </Border>
 
                     <Button Grid.Column="4" Style="{StaticResource VisitationEditButton}"/>
