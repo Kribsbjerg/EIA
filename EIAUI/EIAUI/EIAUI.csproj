@@ -68,10 +68,18 @@
     <Compile Include="Controls\VisitationCard.xaml.cs">
       <DependentUpon>VisitationCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\VisitationCardList.xaml.cs">
+      <DependentUpon>VisitationCardList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\Base\BaseViewModel.cs" />
+    <Compile Include="ViewModel\Visitation\VisitationCardViewModel.cs" />
     <Compile Include="ViewModel\WindowViewModel.cs" />
     <Compile Include="ViewModel\Base\RelayCommand.cs" />
     <Page Include="Controls\VisitationCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\VisitationCardList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
