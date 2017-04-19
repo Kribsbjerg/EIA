@@ -23,7 +23,8 @@
         public VisitationCardDesignModel()
         {
             Cpr = 0901644527;
-            Diagnose = "Hello diagnosis!";
+            Diagnose = "Ondt i hovedet";
+            TreatmentType = "Kaffe";
         }
 
         #endregion
