@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EIAUI"
              mc:Ignorable="d" 
+             Height="100"
              d:DesignHeight="300" d:DesignWidth="400">
 
     <Grid DataContext="{x:Static local:VisitationCardDesignModel.Instance}" >
@@ -27,11 +28,11 @@
                     </Grid.ColumnDefinitions>
 
                     <Border Grid.Column="0" Style="{StaticResource FieldBorder}">
-                        <TextBox Style="{StaticResource LabelField}" />
+                        <TextBox Text="{Binding Diagnose}" Style="{StaticResource LabelField}" />
                     </Border>
 
                     <Border Grid.Column="2" Style="{StaticResource FieldBorder}">
-                        <TextBox Text="{Binding Diagnose}" Style="{StaticResource LabelField}"/>
+                        <TextBox Text="{Binding TreatmentType}" Style="{StaticResource LabelField}"/>
                     </Border>
 
                     <Button Grid.Column="4" Style="{StaticResource VisitationAcceptButton}" />
@@ -48,11 +49,11 @@
                     </Grid.ColumnDefinitions>
 
                     <Border Grid.Column="0" Style="{StaticResource FieldBorder}">
-                        <TextBox Style="{StaticResource LabelField}" />
+                        <TextBox Text="{Binding ReferralCause}" Style="{StaticResource LabelField}" />
                     </Border>
 
                     <Border Grid.Column="2" Style="{StaticResource FieldBorder}">
-                        <TextBox Style="{StaticResource LabelField}"/>
+                        <TextBox Text="{Binding TreatmentTime}" Style="{StaticResource LabelField}"/>
                     </Border>
 
                     <Button Grid.Column="4" Style="{StaticResource VisitationEditButton}"/>
