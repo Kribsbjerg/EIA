@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EIAUI"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
              mc:Ignorable="d" 
              Height="100"
              d:DesignHeight="300" d:DesignWidth="400">
@@ -35,7 +36,13 @@
                         <TextBox Text="{Binding TreatmentType}" Style="{StaticResource LabelField}"/>
                     </Border>
 
-                    <Button Grid.Column="4" Style="{StaticResource VisitationAcceptButton}" />
+                    <Button Grid.Column="4" Style="{StaticResource VisitationAcceptButton}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseEnter">
+                                <i:InvokeCommandAction Command="{Binding MinimizeCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
 
                 </Grid>
 

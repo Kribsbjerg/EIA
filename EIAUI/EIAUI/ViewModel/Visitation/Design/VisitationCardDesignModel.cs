@@ -5,7 +5,6 @@
     /// </summary>
     public class VisitationCardDesignModel : VisitationCardViewModel
     {
-
         #region Public Properties
 
         /// <summary>

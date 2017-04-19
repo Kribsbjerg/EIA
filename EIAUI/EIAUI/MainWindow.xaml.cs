@@ -17,6 +17,11 @@ namespace EIAUI
             this.DataContext = new WindowViewModel(this);
         }
 
+        private void Button_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+
+        }
+
         //    NotifyIcon ni = new NotifyIcon();
         //    ni.Icon = new Icon("Main.ico");
         //    ni.Visible = true;
@@ -28,7 +33,7 @@ namespace EIAUI
         //        };
         //}
 
-    
+
         //protected override void OnStateChanged(EventArgs e)
         //{
         //    if (WindowState == WindowState.Minimized)

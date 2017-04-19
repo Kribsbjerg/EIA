@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Input;
 
 namespace EIAUI
 {
@@ -7,6 +8,13 @@ namespace EIAUI
     /// </summary>
     public class VisitationCardViewModel : BaseViewModel
     {
+        public VisitationCardViewModel()
+        {
+            MinimizeCommand = new RelayCommand(() => System.Windows.Forms.MessageBox.Show("Test"));
+        }
+
+        public ICommand MinimizeCommand { get; set; }
+
         #region Public Properties
 
         /// <summary>
