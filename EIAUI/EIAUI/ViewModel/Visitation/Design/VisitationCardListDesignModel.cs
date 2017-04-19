@@ -26,7 +26,7 @@ namespace EIAUI
         {
             VisitationCards = new List<VisitationCardViewModel>
             {
-                new VisitationCardViewModel
+                new VisitationCardViewModel()
                 {
                     Cpr = 0901644527,
                     Diagnose = "Ondt i hovedet",

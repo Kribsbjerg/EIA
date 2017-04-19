@@ -23,6 +23,7 @@ namespace EIAUI
         public VisitationCard()
         {
             InitializeComponent();
+            this.DataContext = new VisitationCardListViewModel();
         }
     }
 }
