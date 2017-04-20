@@ -102,9 +102,14 @@
         </Border>
 
         <Popup IsOpen="{Binding PopupOpen}" AllowsTransparency="True" Width="200" Height="100" HorizontalOffset="{Binding PopUpX}" VerticalOffset="{Binding PopUpY}">
-            <ContentControl Style="{StaticResource VisitationConsiderationPopup}">
-                <TextBlock Text="{Binding PopUpText}" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" />
-            </ContentControl>
+            <Border Width="140" Height="90" Background="{StaticResource BackgroundColorBrush}" CornerRadius="3">
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="0" Opacity="0.4" BlurRadius="5"/>
+                </Border.Effect>
+                <StackPanel>
+                    <TextBlock Text="{Binding PopUpText}" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" />
+                </StackPanel>
+            </Border>
         </Popup>
 
     </Grid>

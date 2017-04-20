@@ -12,11 +12,7 @@
         <Setter Property="ContentTemplate">
             <Setter.Value>
                 <DataTemplate>
-                    <Border Background="{StaticResource RedColorBrush}" CornerRadius="3">
-                        <Border.Effect>
-                            <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
-                        </Border.Effect>
-                    </Border>
+                    
                 </DataTemplate>
             </Setter.Value>
         </Setter>
