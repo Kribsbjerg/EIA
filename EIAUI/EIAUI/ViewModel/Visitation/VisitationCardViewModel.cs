@@ -40,6 +40,11 @@ namespace EIAUI
         public bool IsCertain { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public string SpecialConditions { get; set; }
+
+        /// <summary>
         /// The color of the suggestion in string format
         /// </summary>
         public string SuggestionColor => IsCertain ? "#43da86" : "#ffb721"; 

@@ -12,7 +12,7 @@
             <ItemsControl ItemsSource="{Binding VisitationCards}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <local:VisitationCard />
+                        <local:VisitationCardAlt />
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
