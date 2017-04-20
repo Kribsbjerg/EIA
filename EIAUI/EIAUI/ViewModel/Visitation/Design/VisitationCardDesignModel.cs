@@ -22,11 +22,8 @@
         public VisitationCardDesignModel()
         {
             Cpr = 0901644527;
-            Diagnose = "DI 10 - Blodtryksforhøjelse af ukendt årsag. \n\nDE 659 - Fedme u spec.";
-            TreatmentType = "Lumbalpunktur.\nENG/EMG.";
-            ReferralCause = "Hypertensionsudredning + behandling samt diætvejledning vedrørende overvægt";
-            SpecialConditions = "Ingen specielle forhold";
-
+            Diagnose = "Ondt i hovedet";
+            TreatmentType = "Kaffe";
         }
 
         #endregion
