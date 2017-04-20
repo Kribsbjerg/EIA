@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\
+C:\Users\Kris\Source\Repos\EIA\EIA\EIAUI\EIAUI\obj\Debug\
 EIAUI
 none
 false
 DEBUG;TRACE
-C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\App.xaml
-8-2087056148
+C:\Users\Kris\Source\Repos\EIA\EIA\EIAUI\EIAUI\App.xaml
+9-1418780726
 
-181010652545
-181912719919
-Controls\VisitationCard.xaml;Controls\VisitationCardList.xaml;MainWindow.xaml;Styles\Colours.xaml;Styles\Buttons.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;
+19-53126012
+18-2125912884
+Controls\VisitationAlt.xaml;Controls\VisitationCard.xaml;Controls\VisitationCardList.xaml;MainWindow.xaml;Styles\Colours.xaml;Styles\Buttons.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;
 
 False
 

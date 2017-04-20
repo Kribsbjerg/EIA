@@ -25,7 +25,7 @@ namespace EIAUI
         /// <summary>
         /// The radius of the edges of the windows
         /// </summary>
-        private int _windowRadius = 2;
+        private int _windowRadius = 3;
 
         #endregion
 
@@ -84,7 +84,7 @@ namespace EIAUI
                 _outerMarginSize = value;
             }
         }
-        
+
         /// <summary>
         /// The margin around the window to allow for a drop shadow
         /// </summary>
@@ -113,7 +113,7 @@ namespace EIAUI
         /// <summary>
         /// The height of the title bar / caption of the window
         /// </summary>
-        public int TitleHeight { get; set; } = 40;
+        public int TitleHeight { get; set; } = 30;
 
         /// <summary>
         /// The height of the title bar / caption of the window
