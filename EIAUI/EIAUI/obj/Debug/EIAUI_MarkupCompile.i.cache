@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\App.xaml
-9-1418780726
+10525682743
 
 20-487525910
 181912719919
-Controls\VisitationAlt.xaml;Controls\VisitationCard.xaml;Controls\VisitationCardList.xaml;MainWindow.xaml;Styles\Colours.xaml;Styles\Buttons.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;
+Controls\VisitationAlt.xaml;Controls\VisitationCard.xaml;Controls\VisitationCardList.xaml;MainWindow.xaml;Styles\Colours.xaml;Styles\Buttons.xaml;Styles\Popups.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;
 
-False
+True
 

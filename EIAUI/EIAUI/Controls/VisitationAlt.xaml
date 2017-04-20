@@ -101,10 +101,10 @@
             </StackPanel>
         </Border>
 
-        <Popup IsOpen="{Binding PopupOpen}" Width="200" Height="100" HorizontalOffset="{Binding PopUpX}" VerticalOffset="{Binding PopUpY}">
-            <TextBlock Text="{Binding PopUpText}" 
-                               TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" Background="AliceBlue" 
-                               Margin="2 2 2 2" Panel.ZIndex="1" />
+        <Popup IsOpen="{Binding PopupOpen}" AllowsTransparency="True" Width="200" Height="100" HorizontalOffset="{Binding PopUpX}" VerticalOffset="{Binding PopUpY}">
+            <ContentControl Style="{StaticResource VisitationConsiderationPopup}">
+                <TextBlock Text="{Binding PopUpText}" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" />
+            </ContentControl>
         </Popup>
 
     </Grid>

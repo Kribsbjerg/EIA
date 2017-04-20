@@ -121,3 +121,4 @@ C:\Users\Kris\Source\Repos\EIA\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.Properties.Resour
 C:\Users\Kris\Source\Repos\EIA\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.csproj.GenerateResource.Cache
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationAlt.g.cs
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationAlt.baml
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Styles\Popups.baml
