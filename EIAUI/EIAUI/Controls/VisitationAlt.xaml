@@ -86,10 +86,11 @@
                                Foreground="{StaticResource LightTextColorBrush}" FontStyle="Italic" />
                     <Button Grid.Column="1" Style="{StaticResource AltVisitationEditButton}" />
                     <Border Grid.Column="2" Margin="3" />
-                    <Button Grid.Column="3" Style="{StaticResource AltVisitationAcceptButton}">
+                    <Button x:Name="ThisButton" Grid.Column="3" Style="{StaticResource AltVisitationAcceptButton}">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="MouseEnter">
-                                <i:InvokeCommandAction Command="{Binding OpenPopupCommand}" CommandParameter="´Hello from view"/>
+                                <i:InvokeCommandAction Command="{Binding OpenPopupCommand}" 
+                                                       CommandParameter="{Binding ElementName=ThisButton}"/>
                             </i:EventTrigger>
                             <i:EventTrigger EventName="MouseLeave">
                                 <i:InvokeCommandAction Command="{Binding ClosePopupCommand}"/>
@@ -100,8 +101,8 @@
             </StackPanel>
         </Border>
 
-        <Popup IsOpen="{Binding PopupOpen}" Width="200" Height="100" HorizontalOffset="-500" VerticalOffset="-500">
-            <TextBlock Text="Hello there Hello there Hello there Hello there Hello there Hello there" 
+        <Popup IsOpen="{Binding PopupOpen}" Width="200" Height="100" HorizontalOffset="{Binding PopUpX}" VerticalOffset="{Binding PopUpY}">
+            <TextBlock Text="{Binding PopUpText}" 
                                TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" Background="AliceBlue" 
                                Margin="2 2 2 2" Panel.ZIndex="1" />
         </Popup>
