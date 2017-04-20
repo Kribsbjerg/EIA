@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace EIAUI
 {
@@ -7,6 +9,18 @@ namespace EIAUI
     /// </summary>
     public class VisitationCardViewModel : BaseViewModel
     {
+
+        public VisitationCardViewModel()
+        {
+            OpenPopupCommand = new RelayCommand(() => PopupOpen = true);
+            ClosePopupCommand = new RelayCommand(() => PopupOpen = false);
+        }
+
+        public ICommand OpenPopupCommand { get; set; }
+        public ICommand ClosePopupCommand { get; set; }
+
+        public bool PopupOpen { get; set; }
+
         #region Public Properties
 
         /// <summary>
