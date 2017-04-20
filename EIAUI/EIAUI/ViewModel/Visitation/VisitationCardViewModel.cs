@@ -16,6 +16,11 @@ namespace EIAUI
             ClosePopupCommand = new RelayCommand(() => PopupOpen = false);
         }
 
+        public void buttonisclicked(object sender)
+        {
+            System.Windows.Forms.MessageBox.Show("Test");
+        }
+
         public ICommand OpenPopupCommand { get; set; }
         public ICommand ClosePopupCommand { get; set; }
 
