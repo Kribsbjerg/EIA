@@ -51,6 +51,9 @@ namespace EIAUI
             };
 
             // Create commands
+            // SeachCommand + new RelayCommand(() => );
+            // NotificationCommand + new RelayCommand(() => );
+            // UserCommand + new RelayCommand(() => );
             MinimizeCommand = new RelayCommand(() => _window.WindowState = WindowState.Minimized);
             MaximizeCommand = new RelayCommand(() => _window.WindowState ^= WindowState.Maximized);
             CloseCommand = new RelayCommand(() => _window.Close());
