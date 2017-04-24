@@ -74,38 +74,25 @@
                                         </Grid.ColumnDefinitions>
 
                                         <!-- Icon -->
-                                        <Viewbox Grid.Column="1" Margin="0">
-                                            <Image Source="Images/Logo/@0,5xenversion-logo.png"/>
-                                        </Viewbox>
-
-                                        <!-- Post-Icon white space / Title? -->
-                                        <Viewbox Grid.Column="2" Margin="0">
-                                           
-                                        </Viewbox>
-
+                                            <Image Grid.Column="1" Source="Images/Logo/@0,5xenversion-logo.png"/>
+  
                                         <!-- Search Button -->
-                                        <Viewbox Grid.Column="3" Margin="0">
-                                            <Button Content="&#xf1c3;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowControlButton}" />
-                                            <!-- Insert above: Command="{Binding SearchCommand}" -->
-                                        </Viewbox>
+                                        <Button Grid.Column="3" Content="&#xf1c3;" Style="{StaticResource WindowControlButton}" />
+                                        <!-- Insert above: Command="{Binding SearchCommand}" -->
                                         
                                         <!-- Notification Button -->
-                                        <Viewbox Grid.Column="4" Margin="0">
-                                            <Button Content="&#xf1fe;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowControlButton}" />
-                                            <!-- Insert above: Command="{Binding NotificationCommand}" -->
-                                        </Viewbox>
+                                        <Button Grid.Column="4" Content="&#xf1fe;" Style="{StaticResource WindowControlButton}" />
+                                        <!-- Insert above: Command="{Binding NotificationCommand}" -->
                                       
                                         <!-- User Button --> 
-                                        <Viewbox Grid.Column="5" Margin="0">
-                                            <Button  Content="&#xf207;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowControlButton}" />
-                                            <!-- Insert above: Command="{Binding UserCommand}" -->
-                                        </Viewbox>
+                                        <Button Grid.Column="5" Content="&#xf207;" Style="{StaticResource WindowControlButton}" />
+                                        <!-- Insert above: Command="{Binding UserCommand}" -->
 
                                         <!-- Windows Buttons -->
                                         <StackPanel Grid.Column="6" Orientation="Horizontal">
-                                            <Button Command="{Binding MinimizeCommand}" Content="&#xf1eb;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowControlButton}" />
-                                            <Button Command="{Binding MaximizeCommand}" Content="&#xf16d;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowControlButton}" />
-                                            <Button Command="{Binding CloseCommand}" Content="&#xf136;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowCloseButton}">
+                                            <Button Command="{Binding MinimizeCommand}" Content="&#xf1eb;" Style="{StaticResource WindowControlButton}" />
+                                            <Button Command="{Binding MaximizeCommand}" Content="&#xf16d;" Style="{StaticResource WindowControlButton}" />
+                                            <Button Command="{Binding CloseCommand}" Content="&#xf136;" Style="{StaticResource WindowCloseButton}">
                                                 
                                             </Button>
                                         </StackPanel>

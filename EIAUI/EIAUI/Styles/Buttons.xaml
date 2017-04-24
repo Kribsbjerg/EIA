@@ -37,17 +37,11 @@
         <Setter Property="Padding" Value="8" />
         <Setter Property="Foreground" Value="{StaticResource PrimaryColourBrush}" />
 
-        <Setter Property="LayoutTransform">
-            <Setter.Value>
-                <ScaleTransform ScaleX="1.5" />
-            </Setter.Value>
-        </Setter>
-        
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}">
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{TemplateBinding Content}" />
+                        <TextBlock VerticalAlignment="Center" FontFamily="{StaticResource MaterialIcon}" HorizontalAlignment="Center" Text="{TemplateBinding Content}" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
