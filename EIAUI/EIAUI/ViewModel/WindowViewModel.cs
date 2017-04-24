@@ -137,6 +137,21 @@ namespace EIAUI
 
         #region Commands
 
+        /// <summery>
+        /// The command to search
+        /// </summery>
+        public ICommand SearchCommand { get; set; }
+
+        /// <summery>
+        /// The command to open notifications
+        /// </summery>
+        public ICommand NotificationCommand { get; set; }
+
+        /// <summery>
+        /// The command to open user
+        /// </summery>
+        public ICommand UserCommand{ get; set; }
+
         /// <summary>
         /// The command to minimize the window
         /// </summary>

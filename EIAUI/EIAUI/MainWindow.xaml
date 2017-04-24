@@ -85,20 +85,17 @@
 
                                         <!-- Search Button -->
                                         <Viewbox Grid.Column="3" Margin="0">
-                                            <Button Content="&#xf1c3;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowControlButton}" />
-                                            <!-- Insert above: Command="{Binding SearchCommand}" -->
+                                            <Button Command="{Binding SearchCommand}" Content="&#xf1c3;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowControlButton}" />
                                         </Viewbox>
                                         
                                         <!-- Notification Button -->
                                         <Viewbox Grid.Column="4" Margin="0">
-                                            <Button Content="&#xf1fe;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowControlButton}" />
-                                            <!-- Insert above: Command="{Binding NotificationCommand}" -->
+                                            <Button Command="{Binding NotificationCommand}" Content="&#xf1fe;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowControlButton}" />
                                         </Viewbox>
                                       
                                         <!-- User Button --> 
                                         <Viewbox Grid.Column="5" Margin="0">
-                                            <Button  Content="&#xf207;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowControlButton}" />
-                                            <!-- Insert above: Command="{Binding UserCommand}" -->
+                                            <Button Command="{Binding UserCommand}" Content="&#xf207;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowControlButton}" />
                                         </Viewbox>
 
                                         <!-- Windows Buttons -->
