@@ -9,7 +9,7 @@
         WindowStyle="None"
         AllowsTransparency="True"
         x:Name="AppWindow"
-        Title="MainWindow" Height="700" Width="700"
+        Title="MainWindow" Height="700" Width="800"
         MinWidth="{Binding WindowMinimumWidth}"
         MinHeight="{Binding WindowMinimumHeight}"
         >
@@ -57,27 +57,55 @@
                                     <Grid Grid.Column="0" Panel.ZIndex="1">
 
                                         <Grid.ColumnDefinitions>
+                                            <!-- Pre-Icon white space -->
+                                            <ColumnDefinition Width="*" />
                                             <!-- Icon -->
                                             <ColumnDefinition Width="Auto" />
-                                            <!-- Title -->
-                                            <ColumnDefinition Width="*" />
+                                            <!-- Post-Icon white space / Title? -->
+                                            <ColumnDefinition Width="8*" />
+                                            <!-- Search button -->
+                                            <ColumnDefinition Width="Auto" />
+                                            <!-- Notification button-->
+                                            <ColumnDefinition Width="Auto" />
+                                            <!-- User button -->
+                                            <ColumnDefinition Width="Auto" />
                                             <!-- Windows buttons -->
                                             <ColumnDefinition Width="Auto" />
                                         </Grid.ColumnDefinitions>
 
                                         <!-- Icon -->
-                                        <TextBlock Text="EIA" Width="40" FontSize="25" Margin="6 0 0 0" Background="{StaticResource LightTextColorBrush}"/>
-
-                                        <!-- Title -->
                                         <Viewbox Grid.Column="1" Margin="0">
-                                            <TextBlock Style="{StaticResource HeaderText}" Text="EIA bids you Welcome!" />
+                                            <Image Source="Images/Logo/@0,5xenversion-logo.png"/>
+                                        </Viewbox>
+
+                                        <!-- Post-Icon white space / Title? -->
+                                        <Viewbox Grid.Column="2" Margin="0">
+                                           
+                                        </Viewbox>
+
+                                        <!-- Search Button -->
+                                        <Viewbox Grid.Column="3" Margin="0">
+                                            <Button Content="&#xf1c3;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowControlButton}" />
+                                            <!-- Insert above: Command="{Binding SearchCommand}" -->
+                                        </Viewbox>
+                                        
+                                        <!-- Notification Button -->
+                                        <Viewbox Grid.Column="4" Margin="0">
+                                            <Button Content="&#xf1fe;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowControlButton}" />
+                                            <!-- Insert above: Command="{Binding NotificationCommand}" -->
+                                        </Viewbox>
+                                      
+                                        <!-- User Button --> 
+                                        <Viewbox Grid.Column="5" Margin="0">
+                                            <Button  Content="&#xf207;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowControlButton}" />
+                                            <!-- Insert above: Command="{Binding UserCommand}" -->
                                         </Viewbox>
 
                                         <!-- Windows Buttons -->
-                                        <StackPanel Grid.Column="2" Orientation="Horizontal">
-                                            <Button Command="{Binding MinimizeCommand}" Content="_" Style="{StaticResource WindowControlButton}" />
-                                            <Button Command="{Binding MaximizeCommand}" Content="[ ]" Style="{StaticResource WindowControlButton}" />
-                                            <Button Command="{Binding CloseCommand}" Content="X" Style="{StaticResource WindowCloseButton}">
+                                        <StackPanel Grid.Column="6" Orientation="Horizontal">
+                                            <Button Command="{Binding MinimizeCommand}" Content="&#xf1eb;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowControlButton}" />
+                                            <Button Command="{Binding MaximizeCommand}" Content="&#xf16d;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowControlButton}" />
+                                            <Button Command="{Binding CloseCommand}" Content="&#xf136;" FontFamily="{StaticResource MaterialIcon}" Style="{StaticResource WindowCloseButton}">
                                                 
                                             </Button>
                                         </StackPanel>
