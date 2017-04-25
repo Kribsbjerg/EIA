@@ -8,8 +8,7 @@ namespace ClassesForProjectEIA
 {
     class VisitationSuggestion
     {
-
-
+        
         #region Default Constructor
 
         public VisitationSuggestion(Referral suggestionReferral, Practitioner suggestionPractitioner, TreatmentFacility suggestionTreatmentFacility,

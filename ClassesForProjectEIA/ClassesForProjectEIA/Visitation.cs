@@ -8,46 +8,13 @@ namespace ClassesForProjectEIA
 {
     class Visitation
     {
-        #region Private Members
+        private List<VisitationSuggestion> VisitationSuggestionList { get; }
+        
 
-        private DateTime _treatmentDay;
-
-        #endregion
-
-        #region Constructors
-
-        /// <summary>
-        /// Default Constructor
-        /// </summary>
-        /// <param name="facility"></param>
-        /// <param name="patientReferral"></param>
-        /// <param name="patientPractitioner"></param>
-        public Visitation(TreatmentFacility facility, Referral patientReferral, Practitioner treatingPractitioner)
+        public void AddVisitationSuggestion(VisitationSuggestion visitationSuggestion)
         {
-            Facility = facility;
-            PatientReferral = patientReferral;
-            TreatingPractitioner = treatingPractitioner;
+            VisitationSuggestionList.Add(visitationSuggestion);
         }
 
-        #endregion
-
-        #region Public Properties
-
-        /// <summary>
-        /// Holds information of where the treatment takes place
-        /// </summary>
-        public TreatmentFacility Facility { get; private set; }
-
-        public Practitioner TreatingPractitioner { get; private set; }
-
-        public Referral PatientReferral { get; set; }
-
-        //public DateTime TreatmentDay
-        //{
-        //    get { return _treatmentDay; }
-        //    set { if (value.Date < PatientReferral.)}
-        //}
-
-        #endregion
     }
 }
