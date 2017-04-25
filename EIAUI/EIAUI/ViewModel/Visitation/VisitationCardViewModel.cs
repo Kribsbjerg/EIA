@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -9,10 +10,11 @@ namespace EIAUI
     /// </summary>
     public class VisitationCardViewModel : BaseViewModel
     {
+        Button _button;
 
         public VisitationCardViewModel()
         {
-            OpenPopupCommand = new RelayCommand(() => PopupOpen = true);
+            OpenPopupCommand = new RelayParameterCommand((parameter) => runButton((Button)parameter));
             ClosePopupCommand = new RelayCommand(() => PopupOpen = false);
         }
 
@@ -20,6 +22,23 @@ namespace EIAUI
         public ICommand ClosePopupCommand { get; set; }
 
         public bool PopupOpen { get; set; }
+
+        public double PopUpX { get; set; }
+        public double PopUpY { get; set; }
+        public string PopUpText { get; set; }
+
+        public void runButton(Button button)
+        {
+            _button = button;
+            Point location = _button.TransformToAncestor(Application.Current.MainWindow).Transform(new Point(0, 0));
+            PopUpX = -40 - (Application.Current.MainWindow.Width - 700) / 2;
+            PopUpY = location.Y > 180 ? -140 : 0;
+            PopUpText = $"X: {location.X}   Y: {location.Y}";
+            PopupOpen = true;
+            //System.Windows.Forms.MessageBox.Show(Application.Current.MainWindow.Width.ToString());
+        }
+
+
 
         #region Public Properties
 
