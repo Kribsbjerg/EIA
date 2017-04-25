@@ -67,6 +67,7 @@
     <Compile Include="TreatmentFacility.cs" />
     <Compile Include="Visitation.cs" />
     <Compile Include="VisitationConsiderations.cs" />
+    <Compile Include="VisitationSuggestion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
