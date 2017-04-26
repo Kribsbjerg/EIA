@@ -8,9 +8,24 @@ namespace ClassesForProjectEIA
 {
     class VisitationSuggestion
     {
-        
-        #region Default Constructor
+        #region Private Members
 
+        /// <summary>
+        /// List of visitation considerations
+        /// </summary>
+        private List<VisitationConsiderations> _considerationList = new List<VisitationConsiderations>();
+
+        #endregion
+
+        #region Constructors
+
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
+        /// <param name="suggestionReferral"></param>
+        /// <param name="suggestionPractitioner"></param>
+        /// <param name="suggestionTreatmentFacility"></param>
+        /// <param name="suggestionVisitationConsiderations"></param>
         public VisitationSuggestion(Referral suggestionReferral, Practitioner suggestionPractitioner, TreatmentFacility suggestionTreatmentFacility,
                                     VisitationConsiderations suggestionVisitationConsiderations)
         {
@@ -28,7 +43,8 @@ namespace ClassesForProjectEIA
         public Practitioner SuggestionPractitioner { get; set; }
         public TreatmentFacility SuggestionTreatmentFacility { get; set; }
         public VisitationConsiderations SuggestionVisitationConsiderations { get; set; }
-        
+        public List<VisitationConsiderations> ConsiderationList { get; }
+
         #endregion
 
     }
