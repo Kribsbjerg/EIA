@@ -16,13 +16,6 @@
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
-            <ScrollViewer.Resources>
-                <Style TargetType="{x:Type ScrollBar}">
-                    <Setter Property="Background" Value="Transparent"/>
-                    <Setter Property="BorderThickness" Value="0" />
-                    <Setter Property="Foreground" Value="{StaticResource LightTextColorBrush}" />
-                </Style>
-            </ScrollViewer.Resources>
         </ScrollViewer>
         </Grid>
 </UserControl>

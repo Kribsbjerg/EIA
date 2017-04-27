@@ -163,3 +163,4 @@ C:\Users\Jacob H. Mortensen\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Styles\Fonts.
 C:\Users\Jacob H. Mortensen\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.g.resources
 C:\Users\Jacob H. Mortensen\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.Properties.Resources.resources
 C:\Users\Jacob H. Mortensen\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.csproj.GenerateResource.Cache
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Styles\Scrollbar.baml
