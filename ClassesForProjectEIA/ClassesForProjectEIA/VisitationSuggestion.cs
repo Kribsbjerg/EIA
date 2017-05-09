@@ -22,14 +22,14 @@ namespace ClassesForProjectEIA
         /// <summary>
         /// Default Constructor
         /// </summary>
-        /// <param name="suggestionReferral"></param>
+        /// <param name="patientReferral"></param>
         /// <param name="suggestionPractitioner"></param>
         /// <param name="suggestionTreatmentFacility"></param>
         /// <param name="suggestionVisitationConsiderations"></param>
-        public VisitationSuggestion(Referral suggestionReferral, Practitioner suggestionPractitioner, TreatmentFacility suggestionTreatmentFacility,
+        public VisitationSuggestion(Referral patientReferral, Practitioner suggestionPractitioner, TreatmentFacility suggestionTreatmentFacility,
                                     VisitationConsiderations suggestionVisitationConsiderations)
         {
-            SuggestionReferral = suggestionReferral;
+            PatientReferral = patientReferral;
             SuggestionPractitioner = suggestionPractitioner;
             SuggestionTreatmentFacility = suggestionTreatmentFacility;
             SuggestionVisitationConsiderations = suggestionVisitationConsiderations;
@@ -39,7 +39,10 @@ namespace ClassesForProjectEIA
         
         #region Public Properties
 
-        public Referral SuggestionReferral { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public Referral PatientReferral { get; set; }
         public Practitioner SuggestionPractitioner { get; set; }
         public TreatmentFacility SuggestionTreatmentFacility { get; set; }
         public VisitationConsiderations SuggestionVisitationConsiderations { get; set; }

@@ -20,12 +20,12 @@ namespace EIAUI
         /// <summary>
         /// The margin around the window to allow for a drop shadow
         /// </summary>
-        private int _outerMarginSize = 10;
+        private int _outerMarginSize = 0; //10;
 
         /// <summary>
         /// The radius of the edges of the windows
         /// </summary>
-        private int _windowRadius = 3;
+        private int _windowRadius = 0;
 
         #endregion
 
@@ -43,7 +43,7 @@ namespace EIAUI
             _window.StateChanged += (sender, e) =>
             {
                 // Fire off events for all properties that are affected by a resize
-                OnPropertyChanged(nameof(ResizeBorderThickness));
+                //OnPropertyChanged(nameof(ResizeBorderThickness));
                 OnPropertyChanged(nameof(OuterMarginSize));
                 OnPropertyChanged(nameof(OuterMarginSizeThickness));
                 OnPropertyChanged(nameof(WindowRadius));
@@ -66,12 +66,12 @@ namespace EIAUI
         /// <summary>
         /// The size of the resize border arund the window
         /// </summary>
-        public int ResizeBorder { get; set; } = 6;
+        //public int ResizeBorder { get; set; } = 6;
 
         /// <summary>
         /// The size of the resize border arund the window, taking into account the outer margin
         /// </summary>
-        public Thickness ResizeBorderThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }
+        //public Thickness ResizeBorderThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }
 
         /// <summary>
         /// The margin around the window to allow for a drop shadow
@@ -126,12 +126,14 @@ namespace EIAUI
         /// <summary>
         /// The smallest width the window can go to
         /// </summary>
-        public double WindowMinimumWidth { get; set; } = 400;
+        public double WindowMinimumWidth { get; set; } = 1000;
 
         /// <summary>
         /// The smallest height the window can go to
         /// </summary>
-        public double WindowMinimumHeight { get; set; } = 400;
+        public double WindowMinimumHeight => SystemParameters.PrimaryScreenHeight;
+
+        public double WindowLeftPosition => SystemParameters.PrimaryScreenWidth - WindowMinimumWidth;
 
         #endregion
 

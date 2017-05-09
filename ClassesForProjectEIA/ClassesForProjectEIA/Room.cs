@@ -14,7 +14,7 @@ namespace ClassesForProjectEIA
         /// Default constructor
         /// </summary>
         /// <param name="roomNumber"></param>
-        public Room(int roomNumber)
+        public Room(string roomNumber)
         {
             RoomNumber = roomNumber;
         }
@@ -26,7 +26,7 @@ namespace ClassesForProjectEIA
         /// <summary>
         /// Holds the room number
         /// </summary>
-        public int RoomNumber { get; set; }
+        public string RoomNumber { get; set; }
 
         #endregion
     }

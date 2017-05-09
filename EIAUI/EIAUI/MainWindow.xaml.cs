@@ -17,10 +17,8 @@ namespace EIAUI
             this.DataContext = new WindowViewModel(this);
         }
 
-        private void Button_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
-        {
 
-        }
+
 
         //    NotifyIcon ni = new NotifyIcon();
         //    ni.Icon = new Icon("Main.ico");
