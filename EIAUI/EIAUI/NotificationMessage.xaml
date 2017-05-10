@@ -61,7 +61,7 @@
                                                    FontFamily="{StaticResource LatoRegular}"
                                                    FontSize="16"
                                                    />
-
+                                        <!-- White Space between Notification & Buttons -->
                                         <Grid Grid.Column="1" Opacity="0" />
 
                                         <!-- Notification Buttons -->
