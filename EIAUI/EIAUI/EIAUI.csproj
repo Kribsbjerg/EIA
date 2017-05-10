@@ -79,17 +79,17 @@
     <Compile Include="Controls\VisitationCardList.xaml.cs">
       <DependentUpon>VisitationCardList.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NotificationMessage.xaml.cs">
-      <DependentUpon>NotificationMessage.xaml</DependentUpon>
+    <Compile Include="Controls\VisitationCard_v2.xaml.cs">
+      <DependentUpon>VisitationCard_v2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\Base\BaseViewModel.cs" />
-    <Compile Include="ViewModels\Base\RelayParameterCommand.cs" />
-    <Compile Include="ViewModels\Visitation\Design\VisitationCardDesignModel.cs" />
-    <Compile Include="ViewModels\Visitation\Design\VisitationCardListDesignModel.cs" />
-    <Compile Include="ViewModels\Visitation\VisitationCardListViewModel.cs" />
-    <Compile Include="ViewModels\Visitation\VisitationCardViewModel.cs" />
-    <Compile Include="ViewModels\WindowViewModel.cs" />
-    <Compile Include="ViewModels\Base\RelayCommand.cs" />
+    <Compile Include="ViewModel\Base\BaseViewModel.cs" />
+    <Compile Include="ViewModel\Base\RelayParameterCommand.cs" />
+    <Compile Include="ViewModel\Visitation\Design\VisitationCardDesignModel.cs" />
+    <Compile Include="ViewModel\Visitation\Design\VisitationCardListDesignModel.cs" />
+    <Compile Include="ViewModel\Visitation\VisitationCardListViewModel.cs" />
+    <Compile Include="ViewModel\Visitation\VisitationCardViewModel.cs" />
+    <Compile Include="ViewModel\WindowViewModel.cs" />
+    <Compile Include="ViewModel\Base\RelayCommand.cs" />
     <Page Include="Controls\VisitationAlt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -99,6 +99,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\VisitationCardList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\VisitationCard_v2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -114,14 +118,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="NotificationMessage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Styles\Scrollbar.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Styles\Colours.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
