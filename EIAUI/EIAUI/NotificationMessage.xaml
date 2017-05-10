@@ -24,7 +24,6 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Window}">
-                        <!-- Outer border with the dropshadow margin -->
                         <Border Padding="{Binding OuterMarginSizeThickness}">
 
                             <!-- Notification window outline -->
@@ -34,11 +33,6 @@
                                 <Border x:Name="Container"
                                         Background="{StaticResource BackgroundColorBrush}"
                                         CornerRadius="{Binding WindowCornerRadius, FallbackValue=20}" />
-
-                                <!-- Main window with resizable outline margin -->
-                                <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=20}"
-                                        Opacity="1">
-                                </Border>
 
                                 <!-- The main window content -->
                                 <Grid>
@@ -77,9 +71,9 @@
                                                 <RowDefinition Height="2" />
                                                 <RowDefinition Height="*" />
                                             </Grid.RowDefinitions>
-                                            <Button Content="Vis" Foreground="{StaticResource BackgroundColorBrush}" Background="{StaticResource DarkTextColorBrush}" FontFamily="{StaticResource LatoRegular}" FontSize="16" />
+                                            <Button Content="VIS" Foreground="{StaticResource BackgroundColorBrush}" Background="{StaticResource DarkTextColorBrush}" FontFamily="{StaticResource LatoRegular}" FontSize="16" />
                                             <TextBlock Grid.Row="1" Opacity="0"/>
-                                            <Button Grid.Row="2" Content="Udsæt" Foreground="{StaticResource BackgroundColorBrush}" Background="{StaticResource DarkTextColorBrush}" FontFamily="{StaticResource LatoRegular}" FontSize="16"/>
+                                            <Button Grid.Row="2" Content="UDSÆT" Foreground="{StaticResource BackgroundColorBrush}" Background="{StaticResource DarkTextColorBrush}" FontFamily="{StaticResource LatoRegular}" FontSize="16"/>
                                         </Grid>
                                     </Grid>
                                 </Grid>
