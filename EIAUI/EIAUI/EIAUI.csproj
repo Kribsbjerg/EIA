@@ -79,6 +79,9 @@
     <Compile Include="Controls\VisitationCardList.xaml.cs">
       <DependentUpon>VisitationCardList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NotificationMessage.xaml.cs">
+      <DependentUpon>NotificationMessage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayParameterCommand.cs" />
     <Compile Include="ViewModels\Visitation\Design\VisitationCardDesignModel.cs" />
@@ -111,6 +114,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="NotificationMessage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\Scrollbar.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

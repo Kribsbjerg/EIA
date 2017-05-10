@@ -164,3 +164,6 @@ C:\Users\Jacob H. Mortensen\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.g.resou
 C:\Users\Jacob H. Mortensen\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.Properties.Resources.resources
 C:\Users\Jacob H. Mortensen\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.csproj.GenerateResource.Cache
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Styles\Scrollbar.baml
+C:\Users\Jacob H. Mortensen\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Styles\Scrollbar.baml
+C:\Users\Jacob H. Mortensen\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\NotificationMessage.g.cs
+C:\Users\Jacob H. Mortensen\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\NotificationMessage.baml
