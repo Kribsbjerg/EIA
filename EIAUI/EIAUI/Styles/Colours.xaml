@@ -20,6 +20,9 @@
     <Color x:Key="TealColor">#009688</Color>
     <SolidColorBrush x:Key="TealColorBrush" Color="{StaticResource TealColor}" />
 
+    <Color x:Key="EIAColor">#20566D</Color>
+    <SolidColorBrush x:Key="EIAColorBrush" Color="{StaticResource EIAColor}" />
+
     <Color x:Key="BlueColor">#547dce</Color>
     <SolidColorBrush x:Key="BlueColorBrush" Color="{StaticResource BlueColor}" />
 

@@ -79,6 +79,9 @@
     <Compile Include="Controls\VisitationCardList.xaml.cs">
       <DependentUpon>VisitationCardList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\VisitationCard_v2.xaml.cs">
+      <DependentUpon>VisitationCard_v2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\Base\BaseViewModel.cs" />
     <Compile Include="ViewModel\Base\RelayParameterCommand.cs" />
     <Compile Include="ViewModel\Visitation\Design\VisitationCardDesignModel.cs" />
@@ -96,6 +99,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\VisitationCardList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\VisitationCard_v2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
