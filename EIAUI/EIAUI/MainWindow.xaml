@@ -9,10 +9,17 @@
         WindowStyle="None"
         AllowsTransparency="True"
         x:Name="AppWindow"
-        Title="MainWindow" Height="700" Width="800"
-        MinWidth="{Binding WindowMinimumWidth}"
-        MinHeight="{Binding WindowMinimumHeight}"
-        >
+        Title="MainWindow" 
+        Width="600"
+        Height="1080"
+        MaxWidth="600"
+        MaxHeight="1080"
+        Left="1320"
+        WindowStartupLocation="Manual" 
+        Top="0">
+        <!--Width="700"
+        >-->
+
     <Window.Resources>
         <Style TargetType="{x:Type local:MainWindow}">
             <Setter Property="Template">
@@ -27,11 +34,11 @@
                                 <!-- Opacity mask for corners on grid -->
                                 <Border x:Name="Container"
                                         Background="{StaticResource BackgroundColorBrush}"
-                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}" />
+                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=1}" />
 
                                 <!-- Main window with resizable outline margin -->
-                                <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}"
-                                        Background="{StaticResource LightTextColorBrush}">
+                                <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=1}"
+                                        Background="{StaticResource BackgroundColorBrush}">
                                     <Border.Effect>
                                         <DropShadowEffect ShadowDepth="0" Opacity="0.4" />
                                     </Border.Effect>
@@ -47,6 +54,8 @@
 
                                         <!-- Title Bar -->
                                         <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=40}" />
+
+                                        <RowDefinition Height="1.5" />
 
                                         <!-- Window Content -->
                                         <RowDefinition Height="*" />
@@ -74,7 +83,7 @@
                                         </Grid.ColumnDefinitions>
 
                                         <!-- Icon -->
-                                            <Image Grid.Column="1" Source="Images/Logo/@0,5xenversion-logo.png"/>
+                                        <Image Grid.Column="1" Source="Images/Logo/@0,5xenversion-logo.png" Height="27"/>
   
                                         <!-- Search Button -->
                                         <Button Grid.Column="3" Content="&#xf1c3;" Style="{StaticResource WindowControlButton}" />
@@ -97,7 +106,9 @@
                                             </Button>
                                         </StackPanel>
                                     </Grid>
-                                    <Grid Grid.Row="1" Background="{StaticResource BackgroundColorBrush}">
+                                    <Grid Grid.Row="1" Background="{StaticResource LightTextColorBrush}">
+                                    </Grid>
+                                    <Grid Grid.Row="2" Background="{StaticResource BackgroundColorBrush}">
                                         <local:VisitationCardList VerticalAlignment="Top"/>
                                     </Grid>
                                 </Grid>
@@ -110,15 +121,27 @@
         </Style>
     </Window.Resources>
 
-    <WindowChrome.WindowChrome>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard >
+                    <DoubleAnimation Duration="0:0:1" Storyboard.TargetProperty="Left" From="2520" To="1320" AccelerationRatio=".1"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Window.InputBindings>
+        <KeyBinding Key="F5" Modifiers="Ctrl"  Command="{Binding MaximizeCommand}"  />
+    </Window.InputBindings>
+
+    <!--<WindowChrome.WindowChrome>
         <WindowChrome
             ResizeBorderThickness="{Binding ResizeBorderThickness}"
             CaptionHeight="{Binding TitleHeight}"
             GlassFrameThickness="0"
             CornerRadius="{Binding }"
             />
-    </WindowChrome.WindowChrome>
-
-    
+    </WindowChrome.WindowChrome>-->
 
 </Window>

@@ -10,13 +10,14 @@ namespace ClassesForProjectEIA
     {
         #region Private Members
 
-        private DateTime _treatmentDay;
-
         #endregion
 
         #region Constructors 
 
         public VisitationConsiderations()
+        {
+
+        }
 
         #endregion
 

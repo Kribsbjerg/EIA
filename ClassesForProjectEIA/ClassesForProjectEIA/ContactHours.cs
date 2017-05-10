@@ -5,7 +5,7 @@ namespace ClassesForProjectEIA
     class ContactHours
     {
         #region Constructors
-
+        
         /// <summary>
         /// Default Constructor
         /// </summary>
@@ -30,6 +30,16 @@ namespace ClassesForProjectEIA
         /// Holds the time for the last possible contact hour
         /// </summary>
         DateTime To { get; set; }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <summary>
+        /// Returns true if the contact is open
+        /// </summary>
+        /// <returns></returns>
+        public bool IsOpen() => From < DateTime.Now && To > DateTime.Now;
 
         #endregion
     }

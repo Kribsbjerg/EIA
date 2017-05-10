@@ -9,11 +9,12 @@ namespace ClassesForProjectEIA
         /// <summary>
         /// Backingfield for Zipcode
         /// </summary>
-        int _zipcode;
+        private int _zipcode;
 
         #endregion
 
         #region Constructors
+
         /// <summary>
         /// Default Constructor
         /// </summary>
@@ -58,7 +59,7 @@ namespace ClassesForProjectEIA
             get { return _zipcode; }
             private set
             {
-                if (value <= 1000 && value >= 9990)
+                if (value >= 1000 && value <= 9990)
                    _zipcode = value;
                 else
                     throw new ArgumentOutOfRangeException();
