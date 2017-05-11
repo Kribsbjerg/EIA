@@ -66,23 +66,22 @@
                                     <Grid Grid.Column="0" Panel.ZIndex="1">
 
                                         <Grid.ColumnDefinitions>
-                                            <!-- Pre-Icon white space -->
+                                            <!-- Slide in icon -->
                                             <ColumnDefinition Width="*" />
-                                            <!-- Icon -->
-                                            <ColumnDefinition Width="Auto" />
-                                            <!-- Post-Icon white space / Title? -->
-                                            <ColumnDefinition Width="8*" />
+                                            <!-- Logo -->
+                                            <ColumnDefinition Width="7*" />
                                             <!-- Windows buttons -->
-                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
                                         </Grid.ColumnDefinitions>
 
-                                        <!-- Icon -->
+                                        <!-- Slide in icon -->
+                                        <Button Grid.Column="0" Command="{Binding MinimizeCommand}" Content="&#xf1eb;" Style="{StaticResource WindowControlButton}" />
+                                        
+                                        <!-- Logo -->
                                         <Image Grid.Column="1" Source="Images/Logo/@0,5xenversion-logo.png" Height="40"/>
 
                                         <!-- Windows Buttons -->
-                                        <StackPanel Grid.Column="6" Orientation="Horizontal">
-                                            <Button Command="{Binding MinimizeCommand}" Content="&#xf1eb;" Style="{StaticResource WindowControlButton}" />
-                                        </StackPanel>
+                                        <Button Grid.Column="2" Command="{Binding MinimizeCommand}" Content="&#xf1eb;" Style="{StaticResource WindowControlButton}" />
                                     </Grid>
 
                                     <TabControl Grid.Row="2" HorizontalAlignment="Center">
