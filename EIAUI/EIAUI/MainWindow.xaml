@@ -10,9 +10,9 @@
         AllowsTransparency="True"
         x:Name="AppWindow"
         Title="MainWindow" 
-        Width="600"
+        Width="400"
         Height="1080"
-        MaxWidth="600"
+        MaxWidth="400"
         MaxHeight="1080"
         Left="1320"
         WindowStartupLocation="Manual" 
@@ -38,9 +38,9 @@
 
                                 <!-- Main window with resizable outline margin -->
                                 <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=1}"
-                                        Background="{StaticResource BackgroundColorBrush}">
+                                        Background="White">
                                     <Border.Effect>
-                                        <DropShadowEffect ShadowDepth="0" Opacity="0.4" />
+                                        <DropShadowEffect ShadowDepth="0" Opacity="0.4" BlurRadius="5" />
                                     </Border.Effect>
                                 </Border>
 
@@ -53,7 +53,7 @@
                                     <Grid.RowDefinitions>
 
                                         <!-- Title Bar -->
-                                        <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=40}" />
+                                        <RowDefinition Height="100" />
 
                                         <RowDefinition Height="1.5" />
 
@@ -72,47 +72,34 @@
                                             <ColumnDefinition Width="Auto" />
                                             <!-- Post-Icon white space / Title? -->
                                             <ColumnDefinition Width="8*" />
-                                            <!-- Search button -->
-                                            <ColumnDefinition Width="Auto" />
-                                            <!-- Notification button-->
-                                            <ColumnDefinition Width="Auto" />
-                                            <!-- User button -->
-                                            <ColumnDefinition Width="Auto" />
                                             <!-- Windows buttons -->
                                             <ColumnDefinition Width="Auto" />
                                         </Grid.ColumnDefinitions>
 
                                         <!-- Icon -->
-                                        <Image Grid.Column="1" Source="Images/Logo/@0,5xenversion-logo.png" Height="27"/>
-  
-                                        <!-- Search Button -->
-                                        <Button Grid.Column="3" Content="&#xf1c3;" Style="{StaticResource WindowControlButton}" />
-                                        <!-- Insert above: Command="{Binding SearchCommand}" -->
-                                        
-                                        <!-- Notification Button -->
-                                        <Button Grid.Column="4" Content="&#xf1fe;" Style="{StaticResource WindowControlButton}" />
-                                        <!-- Insert above: Command="{Binding NotificationCommand}" -->
-                                      
-                                        <!-- User Button --> 
-                                        <Button Grid.Column="5" Content="&#xf207;" Style="{StaticResource WindowControlButton}" />
-                                        <!-- Insert above: Command="{Binding UserCommand}" -->
+                                        <Image Grid.Column="1" Source="Images/Logo/@0,5xenversion-logo.png" Height="40"/>
 
                                         <!-- Windows Buttons -->
                                         <StackPanel Grid.Column="6" Orientation="Horizontal">
                                             <Button Command="{Binding MinimizeCommand}" Content="&#xf1eb;" Style="{StaticResource WindowControlButton}" />
-                                            <Button Command="{Binding MaximizeCommand}" Content="&#xf16d;" Style="{StaticResource WindowControlButton}" />
-                                            <Button Command="{Binding CloseCommand}" Content="&#xf136;" Style="{StaticResource WindowCloseButton}">
-                                                
-                                            </Button>
                                         </StackPanel>
                                     </Grid>
-                                    <Grid Grid.Row="1" Background="{StaticResource LightTextColorBrush}">
-                                    </Grid>
-                                    <Grid Grid.Row="2" Background="{StaticResource BackgroundColorBrush}">
-                                        <local:VisitationCardList VerticalAlignment="Top"/>
-                                    </Grid>
-                                </Grid>
 
+                                    <TabControl Grid.Row="2" HorizontalAlignment="Center">
+                                        <TabItem Header="Visitationer" Width="145">
+                                            <local:VisitationCardList VerticalAlignment="Top"/>
+                                        </TabItem>
+                                        <TabItem Header="Pin" Width="100">
+                                            <TextBox Text="Hello there! Here are the pinned visitations" />
+                                        </TabItem>
+                                        <TabItem Header="Historik" Width="145">
+                                            <TextBlock Text="The history of visitations" />
+                                        </TabItem>
+                                    </TabControl>
+                                    
+                                    
+                                </Grid>
+ 
                             </Grid>
                         </Border>
                     </ControlTemplate>
@@ -125,14 +112,14 @@
         <EventTrigger RoutedEvent="Window.Loaded">
             <BeginStoryboard>
                 <Storyboard >
-                    <DoubleAnimation Duration="0:0:1" Storyboard.TargetProperty="Left" From="2520" To="1320" AccelerationRatio=".1"/>
+                    <DoubleAnimation Duration="0:0:1" Storyboard.TargetProperty="Left" From="2520" To="1520" AccelerationRatio=".1"/>
                 </Storyboard>
             </BeginStoryboard>
         </EventTrigger>
     </Window.Triggers>
 
     <Window.InputBindings>
-        <KeyBinding Key="F5" Modifiers="Ctrl"  Command="{Binding MaximizeCommand}"  />
+        <KeyBinding Key="F5" Modifiers="Ctrl"  Command="{Binding MinimizeCommand}"  />
     </Window.InputBindings>
 
     <!--<WindowChrome.WindowChrome>

@@ -24,61 +24,174 @@ namespace EIAUI
         /// </summary>
         public VisitationCardListDesignModel()
         {
-            VisitationCards = new List<VisitationCardViewModel>
+            VisitationCards = new List<VisitationOverviewViewModel>
             {
-                new VisitationCardViewModel()
+                new VisitationOverviewViewModel()
                 {
-                    Cpr = 0901644527,
-                    Diagnose = "Ondt i hovedet",
-                    TreatmentType = "Kaffe",
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
                 },
-                new VisitationCardViewModel
+
+                new VisitationOverviewViewModel()
                 {
-                    Cpr = 0901644527,
-                    Diagnose = "Ondt i hovedet",
-                    TreatmentType = "Kaffe",
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
                 },
-                new VisitationCardViewModel
+
+                new VisitationOverviewViewModel()
                 {
-                    Cpr = 0901644527,
-                    Diagnose = "Ondt i hovedet",
-                    TreatmentType = "Kaffe",
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
                 },
-                new VisitationCardViewModel
+
+                new VisitationOverviewViewModel()
                 {
-                    Cpr = 0901644527,
-                    Diagnose = "Ondt i hovedet",
-                    TreatmentType = "Kaffe",
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
                 },
-                new VisitationCardViewModel
+
+                new VisitationOverviewViewModel()
                 {
-                    Cpr = 0901644527,
-                    Diagnose = "Ondt i hovedet",
-                    TreatmentType = "Kaffe",
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
                 },
-                new VisitationCardViewModel
+
+                new VisitationOverviewViewModel()
                 {
-                    Cpr = 0901644527,
-                    Diagnose = "Ondt i hovedet",
-                    TreatmentType = "Kaffe",
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
                 },
-                new VisitationCardViewModel
+
+                new VisitationOverviewViewModel()
                 {
-                    Cpr = 0901644527,
-                    Diagnose = "Ondt i hovedet",
-                    TreatmentType = "Kaffe",
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
                 },
-                new VisitationCardViewModel
+
+                new VisitationOverviewViewModel()
                 {
-                    Cpr = 0901644527,
-                    Diagnose = "Ondt i hovedet",
-                    TreatmentType = "Kaffe",
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
                 },
-                new VisitationCardViewModel
+
+                new VisitationOverviewViewModel()
                 {
-                    Cpr = 0901644527,
-                    Diagnose = "Ondt i hovedet",
-                    TreatmentType = "Kaffe",
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = 0102030405,
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
                 },
             };
 

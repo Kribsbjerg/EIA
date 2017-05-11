@@ -8,6 +8,6 @@ namespace EIAUI
 {
     public class VisitationCardListViewModel : BaseViewModel
     {
-        public List<VisitationCardViewModel> VisitationCards { get; set; }
+        public List<VisitationOverviewViewModel> VisitationCards { get; set; }
     }
 }

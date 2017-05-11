@@ -6,16 +6,16 @@
              xmlns:local="clr-namespace:EIAUI"
              mc:Ignorable="d" 
              
-             d:DesignHeight="450" d:DesignWidth="620">
-    <Grid DataContext="{x:Static local:VisitationCardListDesignModel.Instance}" Background="{StaticResource BackgroundColorBrush}">
+             d:DesignHeight="450" d:DesignWidth="400">
+    <Grid DataContext="{x:Static local:VisitationCardListDesignModel.Instance}" Background="White">
         <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0, 0, 0, 0">
             <ItemsControl ItemsSource="{Binding VisitationCards}" Margin="0 12 0 0">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <local:VisitationCardAlt Padding="0 5" />
+                        <local:OverviewCard Padding="0 5" />
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
-        </Grid>
+    </Grid>
 </UserControl>

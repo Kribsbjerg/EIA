@@ -70,6 +70,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\OverviewCard.xaml.cs">
+      <DependentUpon>OverviewCard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\VisitationAlt.xaml.cs">
       <DependentUpon>VisitationAlt.xaml</DependentUpon>
     </Compile>
@@ -81,12 +84,18 @@
     </Compile>
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayParameterCommand.cs" />
+    <Compile Include="ViewModels\Visitation\Design\VisitationOverviewDesignModel.cs" />
     <Compile Include="ViewModels\Visitation\Design\VisitationCardDesignModel.cs" />
     <Compile Include="ViewModels\Visitation\Design\VisitationCardListDesignModel.cs" />
     <Compile Include="ViewModels\Visitation\VisitationCardListViewModel.cs" />
+    <Compile Include="ViewModels\Visitation\VisitationOverviewViewModel.cs" />
     <Compile Include="ViewModels\Visitation\VisitationCardViewModel.cs" />
     <Compile Include="ViewModels\WindowViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayCommand.cs" />
+    <Page Include="Controls\OverviewCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\VisitationAlt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

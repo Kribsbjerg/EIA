@@ -5,9 +5,9 @@ namespace EIAUI
     /// <summary>
     /// Interaction logic for VisitationCardList.xaml
     /// </summary>
-    public partial class VisitationCardList : UserControl
+    public partial class VisitationCard : UserControl
     {
-        public VisitationCardList()
+        public VisitationCard()
         {
             InitializeComponent();
         }

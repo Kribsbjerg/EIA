@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace EIAUI
 {
     /// <summary>
-    /// Interaction logic for VisitationCard.xaml
+    /// Interaction logic for OverviewCard.xaml
     /// </summary>
-    public partial class VisitationCardList : UserControl
+    public partial class OverviewCard : UserControl
     {
-        public VisitationCardList()
+        public OverviewCard()
         {
             InitializeComponent();
-            this.DataContext = new VisitationCardListViewModel();
         }
     }
 }
