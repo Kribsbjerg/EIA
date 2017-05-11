@@ -1,0 +1,89 @@
+﻿<Window x:Class="EIAUI.NotificationMessage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EIAUI"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        x:Name="AppWindow"
+        Title="MainWindow" 
+        Width="500"
+        Height="125"
+        MaxWidth="800"
+        MaxHeight="200"
+        WindowStartupLocation="Manual" 
+        Top="0">
+
+
+
+
+    <Window.Resources>
+        <Style TargetType="{x:Type local:NotificationMessage}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        <Border Padding="{Binding OuterMarginSizeThickness}">
+
+                            <!-- Notification window outline -->
+                            <Grid>
+
+                                <!-- Opacity mask for corners on grid -->
+                                <Border x:Name="Container"
+                                        Background="{StaticResource BackgroundColorBrush}"
+                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=20}" />
+
+                                <!-- The main window content -->
+                                <Grid>
+                                    <Grid.OpacityMask>
+                                        <VisualBrush Visual="{Binding ElementName=Container}" />
+                                    </Grid.OpacityMask>
+
+                                    <Grid Grid.Column="0" Panel.ZIndex="1">
+
+                                        <Grid.ColumnDefinitions>
+                                            <!-- Notification text -->
+                                            <ColumnDefinition Width="*" />
+                                            <!-- Air Space-->
+                                            <ColumnDefinition Width="2" />
+                                            <!-- Buttons -->
+                                            <ColumnDefinition Width="100" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <!-- Notification Message -->
+                                        <Grid Grid.Column="0" Background="{StaticResource DarkTextColorBrush}" />
+                                        <TextBlock
+                                                   Text="Notification example: Perfect Right?"
+                                                   VerticalAlignment="Center"
+                                                   HorizontalAlignment="Center"
+                                                   Foreground="{StaticResource BackgroundColorBrush}"
+                                                   FontFamily="{StaticResource LatoRegular}"
+                                                   FontSize="16"
+                                                   />
+                                        <!-- White Space between Notification & Buttons -->
+                                        <Grid Grid.Column="1" Opacity="0" />
+
+                                        <!-- Notification Buttons -->
+                                        <Grid Grid.Column="2">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="2" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Button Content="VIS" Foreground="{StaticResource BackgroundColorBrush}" Background="{StaticResource DarkTextColorBrush}" FontFamily="{StaticResource LatoRegular}" FontSize="16" />
+                                            <TextBlock Grid.Row="1" Opacity="0"/>
+                                            <Button Grid.Row="2" Content="UDSÆT" Foreground="{StaticResource BackgroundColorBrush}" Background="{StaticResource DarkTextColorBrush}" FontFamily="{StaticResource LatoRegular}" FontSize="16"/>
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+</Window>
