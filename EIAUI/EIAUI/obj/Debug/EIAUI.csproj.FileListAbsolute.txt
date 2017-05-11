@@ -166,3 +166,8 @@ C:\Users\Jacob H. Mortensen\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\EIAUI.csproj.
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Styles\Scrollbar.baml
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\OverviewCard.g.cs
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\OverviewCard.baml
+C:\Users\Jacob H. Mortensen\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\OverviewCard.g.cs
+C:\Users\Jacob H. Mortensen\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\NotificationMessage.g.cs
+C:\Users\Jacob H. Mortensen\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\OverviewCard.baml
+C:\Users\Jacob H. Mortensen\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\NotificationMessage.baml
+C:\Users\Jacob H. Mortensen\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Styles\Scrollbar.baml

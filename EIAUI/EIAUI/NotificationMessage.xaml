@@ -16,9 +16,6 @@
         WindowStartupLocation="Manual" 
         Top="0">
 
-
-
-
     <Window.Resources>
         <Style TargetType="{x:Type local:NotificationMessage}">
             <Setter Property="Template">
@@ -31,9 +28,17 @@
 
                                 <!-- Opacity mask for corners on grid -->
                                 <Border x:Name="Container"
-                                        Background="{StaticResource BackgroundColorBrush}"
-                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=20}" />
+                                        Background="{StaticResource DarkTextColorBrush}"
+                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=4}" />
 
+                                <!-- Main window with resizable outline margin -->
+                                <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=4}"
+                                        Background="White">
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="0" Opacity="0.4" BlurRadius="5" />
+                                    </Border.Effect>
+                                </Border>
+                                
                                 <!-- The main window content -->
                                 <Grid>
                                     <Grid.OpacityMask>
@@ -61,6 +66,8 @@
                                                    FontFamily="{StaticResource LatoRegular}"
                                                    FontSize="16"
                                                    />
+                                        <Image Source="Images/Logo/enversion-logo1.PNG" Width="120" Margin="-445 -60 -40 60"/>
+                                        
                                         <!-- White Space between Notification & Buttons -->
                                         <Grid Grid.Column="1" Opacity="0" />
 
