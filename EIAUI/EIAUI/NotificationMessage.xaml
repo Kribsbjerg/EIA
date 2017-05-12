@@ -67,7 +67,7 @@
                                                    FontSize="16"
                                                    />
                                         <Image Source="Images/Logo/enversion-logo1.PNG" Width="120" Margin="-445 -60 -40 60"/>
-                                        
+
                                         <!-- White Space between Notification & Buttons -->
                                         <Grid Grid.Column="1" Opacity="0" />
 
