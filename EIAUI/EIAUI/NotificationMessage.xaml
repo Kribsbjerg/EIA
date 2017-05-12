@@ -9,10 +9,9 @@
         AllowsTransparency="True"
         x:Name="AppWindow"
         Title="MainWindow" 
-        Width="500"
-        Height="125"
-        MaxWidth="800"
-        MaxHeight="200"
+        Width="596"
+        Height="139"
+
         WindowStartupLocation="Manual" 
         Top="0">
 
@@ -22,23 +21,24 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Window}">
                         <Border Padding="{Binding OuterMarginSizeThickness}">
-
-                            <!-- Notification window outline -->
-                            <Grid>
+                            <Border Background="Transparent" BorderThickness="0">
+                                
+                                <!-- Notification window outline -->
+                                <Grid>
 
                                 <!-- Opacity mask for corners on grid -->
                                 <Border x:Name="Container"
                                         Background="{StaticResource DarkTextColorBrush}"
-                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=4}" />
+                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}" />
 
                                 <!-- Main window with resizable outline margin -->
-                                <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=4}"
-                                        Background="White">
+                                <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}"
+                                        Background="{StaticResource DarkTextColorBrush}">
                                     <Border.Effect>
-                                        <DropShadowEffect ShadowDepth="0" Opacity="0.4" BlurRadius="5" />
+                                        <DropShadowEffect ShadowDepth="1" Opacity="0.4" BlurRadius="5" />
                                     </Border.Effect>
                                 </Border>
-                                
+
                                 <!-- The main window content -->
                                 <Grid>
                                     <Grid.OpacityMask>
@@ -48,44 +48,56 @@
                                     <Grid Grid.Column="0" Panel.ZIndex="1">
 
                                         <Grid.ColumnDefinitions>
+                                            <!-- First air space -->
+                                            <ColumnDefinition Width="61" />
                                             <!-- Notification text -->
+                                            <ColumnDefinition Width="402" />
+                                            <!-- Second air Space-->
                                             <ColumnDefinition Width="*" />
-                                            <!-- Air Space-->
-                                            <ColumnDefinition Width="2" />
-                                            <!-- Buttons -->
-                                            <ColumnDefinition Width="100" />
+                                            <!-- Buttons-->
+                                            <ColumnDefinition Width="102" />
+                                            <!-- Last air space -->
+                                            <ColumnDefinition Width="21" />
                                         </Grid.ColumnDefinitions>
 
-                                        <!-- Notification Message -->
-                                        <Grid Grid.Column="0" Background="{StaticResource DarkTextColorBrush}" />
-                                        <TextBlock
-                                                   Text="Notification example: Perfect Right?"
-                                                   VerticalAlignment="Center"
-                                                   HorizontalAlignment="Center"
-                                                   Foreground="{StaticResource BackgroundColorBrush}"
-                                                   FontFamily="{StaticResource LatoRegular}"
-                                                   FontSize="16"
-                                                   />
-                                        <Image Source="Images/Logo/enversion-logo1.PNG" Width="120" Margin="-445 -60 -40 60"/>
+                                        <!-- Corner Logo -->
+                                        <Grid Grid.Column="0" >
+                                            <Image Source="Images/Logo/enversion-logo1.PNG" Height="144" Width="123" Margin="-110 -142 -40 0"/>
+                                        </Grid>
 
-                                        <!-- White Space between Notification & Buttons -->
-                                        <Grid Grid.Column="1" Opacity="0" />
+                                        <!-- Notification Message -->
+                                        <Grid Grid.Column="1" >
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="20" />
+                                                <RowDefinition Height="34" />
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="19" />
+                                            </Grid.RowDefinitions>
+                                            <TextBlock Grid.Row="1" Text="13:00" Foreground="White" FontFamily="{StaticResource LatoBlack}" FontSize="18" VerticalAlignment="Center"/>
+                                            <TextBlock Grid.Row="2" Text="Jeg har 2 nye visitationer til dig!" Foreground="White" FontFamily="{StaticResource LatoBold}" FontSize="15" />
+                                        </Grid>
 
                                         <!-- Notification Buttons -->
-                                        <Grid Grid.Column="2">
+                                        <Grid Grid.Column="3">
                                             <Grid.RowDefinitions>
+                                                <RowDefinition Height="21" />
+                                                <RowDefinition Height="43" />
                                                 <RowDefinition Height="*" />
-                                                <RowDefinition Height="2" />
-                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="43" />
+                                                <RowDefinition Height="21" />
                                             </Grid.RowDefinitions>
-                                            <Button Content="VIS" Foreground="{StaticResource BackgroundColorBrush}" Background="{StaticResource DarkTextColorBrush}" FontFamily="{StaticResource LatoRegular}" FontSize="16" />
-                                            <TextBlock Grid.Row="1" Opacity="0"/>
-                                            <Button Grid.Row="2" Content="UDSÆT" Foreground="{StaticResource BackgroundColorBrush}" Background="{StaticResource DarkTextColorBrush}" FontFamily="{StaticResource LatoRegular}" FontSize="16"/>
+                                            <Button Grid.Row="1" BorderThickness="1" BorderBrush="White" Content="VIS" Foreground="{StaticResource BackgroundColorBrush}" Background="{StaticResource DarkTextColorBrush}" FontFamily="{StaticResource LatoRegular}" FontSize="14" />
+                                            <Button Grid.Row="3" BorderThickness="1" BorderBrush="White" Content="UDSÆT" Foreground="{StaticResource BackgroundColorBrush}" Background="{StaticResource DarkTextColorBrush}" FontFamily="{StaticResource LatoRegular}" FontSize="14"/>
                                         </Grid>
+
+                                        <!-- White Space between Notification & Buttons -->
+                                        <Grid Grid.Column="2" Opacity="0" />
+
                                     </Grid>
                                 </Grid>
 
                             </Grid>
+                            </Border>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
@@ -94,3 +106,4 @@
     </Window.Resources>
 
 </Window>
+
