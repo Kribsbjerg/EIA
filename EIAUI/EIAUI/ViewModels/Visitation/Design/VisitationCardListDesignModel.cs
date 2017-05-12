@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace EIAUI
 {
@@ -24,7 +25,7 @@ namespace EIAUI
         /// </summary>
         public VisitationCardListDesignModel()
         {
-            VisitationCards = new List<VisitationOverviewViewModel>
+            VisitationCards = new ObservableCollection<VisitationOverviewViewModel>
             {
                 new VisitationOverviewViewModel()
                 {
@@ -41,7 +42,7 @@ namespace EIAUI
                 new VisitationOverviewViewModel()
                 {
                     Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
                 },
 
                 new VisitationOverviewViewModel()

@@ -38,8 +38,6 @@ namespace EIAUI
             //System.Windows.Forms.MessageBox.Show(Application.Current.MainWindow.Width.ToString());
         }
 
-
-
         #region Public Properties
 
         /// <summary>

@@ -3,7 +3,7 @@
                     xmlns:local="clr-namespace:EIAUI">
 
     <Color x:Key="PrimaryColor">#20566D</Color>
-    <SolidColorBrush x:Key="PrimaryColourBrush" Color="{StaticResource PrimaryColor}" />
+    <SolidColorBrush x:Key="PrimaryColorBrush" Color="{StaticResource PrimaryColor}" />
 
     <Color x:Key="DarkTextColor">#121738</Color>
     <SolidColorBrush x:Key="DarkTextColorBrush" Color="{StaticResource DarkTextColor}" />

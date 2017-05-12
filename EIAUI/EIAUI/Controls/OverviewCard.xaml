@@ -3,29 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:local="clr-namespace:EIAUI"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             Height="70" Width="320"
+             x:Name="Overviewcard">
 
     <UserControl.Resources>
         <Style x:Key="ContentStyle" TargetType="{x:Type ContentControl}">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ContentControl}">
-                        <Border x:Name="container" Height="70" Width="300" Background="White" Padding="5">
 
-                                <Border.Effect>
-                                    <DropShadowEffect ShadowDepth="0" Opacity="0.5" BlurRadius="10" />
-                                </Border.Effect>
+                        <Border x:Name="background" Background="White">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="0" Opacity="0.5" BlurRadius="10" />
+                            </Border.Effect>
+
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseDown">
+                                    <i:InvokeCommandAction Command="{Binding SelectCard}" CommandParameter="{Binding ElementName=OverviewCard}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+
+                            <Border x:Name="container" Background="Transparent" Padding="5">
 
                                 <StackPanel>
-                                    <TextBox Text="{Binding Cpr}" Style="{StaticResource LabelField}" FontFamily="{StaticResource LatoBlack}" Padding="0 0 0 2" />
-                                    <TextBox Text="{Binding Diagnose}" Style="{StaticResource LabelField}" TextWrapping="Wrap"/>
+                                    <TextBox Text="{Binding Cpr}" x:Name="text1" Foreground="{StaticResource DarkTextColorBrush}" FontSize="15" Style="{StaticResource LabelField}" FontFamily="{StaticResource LatoBlack}" Padding="0 0 0 2" />
+                                    <TextBox Text="{Binding Diagnose}" x:Name="text2" FontSize="12" Foreground="{StaticResource DarkTextColorBrush}" Style="{StaticResource LabelField}" TextWrapping="Wrap"/>
                                 </StackPanel>
 
                             </Border>
+                        </Border>
 
-                            <ControlTemplate.Triggers>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                <Setter Property="Background" TargetName="background" Value="{StaticResource PrimaryColorBrush}" />
+                                <Setter Property="Foreground" TargetName="text1" Value="White" />
+                                <Setter Property="Foreground" TargetName="text2" Value="White" />
+                            </DataTrigger>
                             <EventTrigger RoutedEvent="MouseEnter">
                                 <BeginStoryboard>
                                     <Storyboard>
@@ -36,7 +52,7 @@
                             <EventTrigger RoutedEvent="MouseLeave">
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation To="White" Duration="0:0:0.2" Storyboard.TargetName="container" Storyboard.TargetProperty="Background.Color" />
+                                        <ColorAnimation To="Transparent" Duration="0:0:0.2" Storyboard.TargetName="container" Storyboard.TargetProperty="Background.Color" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
@@ -49,6 +65,8 @@
             </Setter>
         </Style>
     </UserControl.Resources>
+
+    
 
     <ContentControl d:DataContext="{x:Static local:VisitationOverviewDesignModel.Instance}"
                     Style="{StaticResource ContentStyle}"/>

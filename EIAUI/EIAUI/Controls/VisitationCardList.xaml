@@ -7,6 +7,7 @@
              mc:Ignorable="d" 
              
              d:DesignHeight="450" d:DesignWidth="400">
+    
     <Grid DataContext="{x:Static local:VisitationCardListDesignModel.Instance}" Background="White">
         <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0, 0, 0, 0">
             <ItemsControl ItemsSource="{Binding VisitationCards}" Margin="0 12 0 0">
@@ -18,4 +19,5 @@
             </ItemsControl>
         </ScrollViewer>
     </Grid>
+
 </UserControl>

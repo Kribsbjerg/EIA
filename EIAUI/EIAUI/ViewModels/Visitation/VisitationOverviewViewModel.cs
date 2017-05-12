@@ -10,13 +10,18 @@ namespace EIAUI
     /// </summary>
     public class VisitationOverviewViewModel : BaseViewModel
     {
+
+
         public VisitationOverviewViewModel()
         {
+            SelectCard = new RelayCommand(() => IsSelected = true);
         }
 
-        public ICommand OpenPopupCommand { get; set; }
-        public ICommand ClosePopupCommand { get; set; }
+        #region Commands
 
+        public ICommand SelectCard { get; set; }
+
+        #endregion
 
         #region Public Properties
 
@@ -29,6 +34,11 @@ namespace EIAUI
         /// The diagnosis of the patient
         /// </summary>
         public string Diagnose { get; set; }
+
+        /// <summary>
+        /// Is true if the card is selected
+        /// </summary>
+        public bool IsSelected { get; set; }
 
         #endregion
     }
