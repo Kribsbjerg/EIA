@@ -29,31 +29,31 @@ namespace EIAUI
             {
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
+                    Cpr = 1,
                     Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
+                    Cpr = 2,
                     Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
+                    Cpr = 3,
                     Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
+                    Cpr = 4,
                     Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
+                    Cpr = 5,
                     Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
                 },
 
