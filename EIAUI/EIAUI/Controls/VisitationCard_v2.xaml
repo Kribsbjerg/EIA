@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:EIAUI"
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              mc:Ignorable="d" 
-             d:DesignHeight="200" d:DesignWidth="600">
+             d:DesignHeight="115" d:DesignWidth="316">
 
 
     <Grid DataContext="{x:Static local:VisitationCardDesignModel.Instance}" >
@@ -14,74 +14,79 @@
             <ColumnDefinition Width="223*"/>
             <ColumnDefinition Width="77*"/>
         </Grid.ColumnDefinitions>
-        <Border Padding="7 5 1 1" Background="{StaticResource BackgroundColorBrush}" CornerRadius="2" Width="600" Height="200" Grid.ColumnSpan="2" >
+        <Border Background="{StaticResource BackgroundColorBrush}" CornerRadius="1" Width="313" Height="103" Grid.ColumnSpan="2" >
             <StackPanel Background="{StaticResource BackgroundColorBrush}" Orientation="Vertical">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1.1*" />
-                        <ColumnDefinition Width="0.6*" />
-                        <ColumnDefinition Width="0.45*" />
+                        <ColumnDefinition Width="101.3" />
+                        <ColumnDefinition Width="72" />
                     </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0" Padding="8 5.3 8 0">
+                    <StackPanel Orientation="Vertical" Grid.Column="0">
+                        <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="0 0 0 5">
+                            <Button Style="{StaticResource ContactButton}" Margin="0 0 5 0"/>
+                            <TextBlock Text="{Binding Cpr}" FontFamily="{StaticResource LatoRegular}" FontSize="8.3" VerticalAlignment="Bottom"/>
+                        </StackPanel>
+                        
+                        <TextBlock Text="Diagnose" FontSize="5" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource DarkTextColorBrush}" />
+                        <Border Height="0.3" Background="{StaticResource DarkTextColorBrush}" Margin="0 2"/>
 
-                    <StackPanel Orientation="Vertical" Grid.Column="0" Margin="0 7 0 0">
+                        <TextBlock Text="Text..." FontSize="5" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" 
+                                   Foreground="{StaticResource DarkTextColorBrush}"/>
 
-                        <TextBlock Text="{Binding Cpr}" FontFamily="{StaticResource LatoBold}" FontSize="17"/>
-
-                        <TextBlock Text="Henvisningsdiagnose" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource DarkTextColorBrush}" />
-                        <Border Height="1" Background="{StaticResource DarkTextColorBrush}" Margin="0 2 15 5"/>
-
-                        <TextBlock Text="{Binding Diagnose}" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" 
-                                   Foreground="{StaticResource MediumTextColorBrush}"/>
-
-                        <TextBlock Text="Henvisningsårsag" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource DarkTextColorBrush}"
+                        <TextBlock Text="Henvisningsårsag" FontSize="5" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource DarkTextColorBrush}"
                                    Margin="0 23 10 0"/>
-                        <Border Height="1" Background="{StaticResource DarkTextColorBrush}" Margin="0 2 15 5"/>
+                        <Border Height="0.3" Background="{StaticResource DarkTextColorBrush}" Margin="0 2"/>
 
-                        <TextBlock Text="{Binding ReferralCause}" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource MediumTextColorBrush}"/>
+                        <TextBlock Text="Text.." FontSize="5" LineHeight="8.3" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource DarkTextColorBrush}"/>
 
                     </StackPanel>
-
-                    <Border Grid.Column="1" Background="{StaticResource EIAColorBrush}" Padding="5 0 5 0" CornerRadius="1" Margin="0 -15 0 -38">
+                    </Border>
+                    
+                    <Border Grid.Column="1" Background="{StaticResource PrimaryColourBrush}" Padding="8" CornerRadius="1 0 0 1" Margin="0,-2,0,-16">
                         <Border.Effect>
-                            <DropShadowEffect ShadowDepth="2" Opacity="0.4" />
+                            <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
                         </Border.Effect>
-                        <StackPanel Orientation="Vertical" Grid.Column="1" Background="{StaticResource EIAColorBrush}">
-                            <StackPanel Orientation="Horizontal" Margin="0 3 0 17">
-                                <Button Style="{StaticResource PinButton}" />
-                                <Button Content="&#xf136;" Padding="2" FontFamily="{StaticResource MaterialIcon}" Foreground="{StaticResource BackgroundColorBrush}" Background="{StaticResource EIAColorBrush}" Margin="120 0 0 0"/>
+                        <StackPanel Orientation="Vertical" Grid.Column="1" Background="{StaticResource PrimaryColourBrush}" Height="91" VerticalAlignment="Top" HorizontalAlignment="Left" Width="85">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <Button Style="{StaticResource PinButton}" Width="10.7" Height="10.7" Margin="0 0 5.3 0"/>
+                                <Button Style="{StaticResource MinimizeVisitationButton}" Width="10.7" Height="10.7" />
                             </StackPanel>
-
-                            <TextBlock Text="Behandlingstype" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource BackgroundColorBrush}" />
-                            <Border Height="1" Background="{StaticResource BackgroundColorBrush}" Margin="0 2 6 5"/>
-                            <TextBlock Text="{Binding TreatmentType}" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource BackgroundColorBrush}"/>
-
-                            <TextBlock Text="Dato og Tidspunkt" Margin="0 37 0 0" FontFamily="{StaticResource LatoBold}" 
-                                   Foreground="{StaticResource BackgroundColorBrush}" />
-                            <Border Height="1" Background="{StaticResource BackgroundColorBrush}" Margin="0 2 6 5" HorizontalAlignment="Right" Width="149"/>
-                            <TextBlock Text="{Binding TreatmentTime}" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource BackgroundColorBrush}"/>
-
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0">
-                                <Button Style="{StaticResource ContactButton}" Margin="0 0 9 0" Padding="24 4 24 4"/>
-                                <Button Style="{StaticResource AltVisitationAcceptButton}" Click="Button_Click" Padding="4"/>
+                            
+                            <TextBlock Text="Behandling" FontSize="5" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource BackgroundColorBrush}" Margin="0 6.3 0 0"/>
+                            <Border Height="0.3" Background="{StaticResource BackgroundColorBrush}" Margin="0 2"/>
+                            <TextBlock Text="Text.." FontSize="5" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource BackgroundColorBrush}"/>
+                            
+                            <TextBlock Text="Dato og tidspunkt" FontSize="5" FontFamily="{StaticResource LatoBold}" 
+                                   Foreground="{StaticResource BackgroundColorBrush}" Margin="0 22.3 0 0"/>
+                            <Border Height="0.3" Background="{StaticResource BackgroundColorBrush}" Margin="0 2" HorizontalAlignment="Right" Width="149"/>
+                            <TextBlock Text="{Binding TreatmentTime}" FontSize="5" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource BackgroundColorBrush}"/>
+                            
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 7.3 0 0">
+                                <Button Style="{StaticResource DisapproveVisitationButton}" Margin="0 0 5 0" Height="10.7" Width="10.7"/>
+                                <Button Style="{StaticResource ApproveButton}" Click="Button_Click" Height="10.7" Width="30.7" />
                             </StackPanel>
 
                         </StackPanel>
                     </Border>
 
                     <!-- Contains -->
-                    <Border Grid.Column="2" Padding="7 10 0 0">
+                    <Border Grid.Column="2" Padding="8" CornerRadius="0 1 1 0" Background="{StaticResource SecondaryColorBrush}" Margin="0,-2,0,-16">
                         <StackPanel Grid.Column="2">
-                            <TextBlock Text="Rum" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource DarkTextColorBrush}"/>
-                            <TextBlock Text="Text..." TextWrapping="Wrap" Margin="0 5 0 0" FontFamily="{StaticResource LatoBold}" 
-                                   Foreground="{StaticResource MediumTextColorBrush}" />
+                            <TextBlock Text="Læge:" FontSize="5" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource BackgroundColorBrush}"/>
+                            <TextBlock Text="Text..." FontSize="5" TextWrapping="Wrap" Margin="0 5 0 0" FontFamily="{StaticResource LatoBold}" 
+                                   Foreground="{StaticResource BackgroundColorBrush}" />
 
-                            <TextBlock Text="Læge" Margin="0 15 0 5" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource DarkTextColorBrush}"/>
-                            <TextBlock Text="Text..." TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" 
-                                   Foreground="{StaticResource MediumTextColorBrush}" />
+                            <TextBlock Text="Rum:" FontSize="5" Margin="0 5 0 5" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource BackgroundColorBrush}"/>
+                            <TextBlock Text="Text..." FontSize="5" TextWrapping="Wrap" FontFamily="{StaticResource LatoRegular}" 
+                                   Foreground="{StaticResource BackgroundColorBrush}" />
 
-                            <TextBlock Text="Brev" Margin="0 15 0 5" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource DarkTextColorBrush}"/>
-                            <TextBlock Text="Text..." TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" 
-                                   Foreground="{StaticResource MediumTextColorBrush}" />
+                            <TextBlock Text="Brev(e):" Margin="0 5 0 5" FontSize="5" FontFamily="{StaticResource LatoRegular}" Foreground="{StaticResource BackgroundColorBrush}"/>
+                            <TextBlock Text="Text...
+                                             Text...
+                                             Text..." FontSize="5" TextWrapping="Wrap" FontFamily="{StaticResource LatoRegular}" 
+                                       Foreground="{StaticResource BackgroundColorBrush}" />
                         </StackPanel>
                     </Border>
                 </Grid>
