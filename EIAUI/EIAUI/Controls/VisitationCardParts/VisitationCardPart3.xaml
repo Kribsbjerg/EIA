@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="EIAUI.VisitationCardPart3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EIAUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="330" d:DesignWidth="300">
+    <Grid Width="216" Height="328">
+        <!--Doctor, room and letters-->
+        <Border Padding="24 28 24 37" CornerRadius="0 1 1 0" Background="{StaticResource SecondaryColorBrush}">
+            <StackPanel Grid.Column="2">
+                <TextBlock Text="Læge:" FontSize="13" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource BackgroundColorBrush}"/>
+                <TextBlock Text="Dr. Acula" FontSize="13" TextWrapping="Wrap" Margin="0 1 0 20" FontFamily="{StaticResource LatoBold}" 
+                                   Foreground="{StaticResource BackgroundColorBrush}" />
+
+                <TextBlock Text="Rum:" FontSize="13" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource BackgroundColorBrush}"/>
+                <TextBlock Text="EMG1" FontSize="13" Margin="0 1 0 20" TextWrapping="Wrap" FontFamily="{StaticResource LatoRegular}" 
+                                   Foreground="{StaticResource BackgroundColorBrush}" />
+
+                <TextBlock Text="Brev(e):"  FontSize="13" FontFamily="{StaticResource LatoRegular}" Foreground="{StaticResource BackgroundColorBrush}"/>
+                <TextBlock Text="1.   Indkaldelse indenfor behandlingsgaranti.
+                                 2.   Pjece: EMG undersøgelse.
+                                 3.   Patientrettigheder." FontSize="13" TextWrapping="Wrap" FontFamily="{StaticResource LatoRegular}" 
+                            Foreground="{StaticResource BackgroundColorBrush}" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

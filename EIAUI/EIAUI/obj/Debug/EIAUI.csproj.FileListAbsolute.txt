@@ -192,3 +192,11 @@ C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCard_v2.
 C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\NotificationMessage.baml
 C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Styles\Scrollbar.baml
 C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Styles\Popups.baml
+C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCardParts\VisitationCardPart1.g.cs
+C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCardParts\VisitationCardPart2.g.cs
+C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCardParts\VisitationCardPart3.g.cs
+C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCardParts\VisitationCardFinal.g.cs
+C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCardParts\VisitationCardPart1.baml
+C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCardParts\VisitationCardPart2.baml
+C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCardParts\VisitationCardPart3.baml
+C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCardParts\VisitationCardFinal.baml

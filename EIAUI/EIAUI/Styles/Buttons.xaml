@@ -65,56 +65,6 @@
         </Style.Triggers>
     </Style>
 
-    <!-- Visitation accept button -->
-    <Style TargetType="{x:Type Button}" x:Key="VisitationAcceptButton" BasedOn="{StaticResource BaseStyle}">
-        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
-        <Setter Property="Background" Value="{StaticResource GreenColorBrush}" />
-        <Setter Property="Padding" Value="5" />
-        <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
- 
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" CornerRadius="4 0 0 4">
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource MaterialIcon}" Text="&#xf26b;" />
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-
-        <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{StaticResource BlueColorBrush}" />
-                <Setter Property="Cursor" Value="Hand" />
-            </Trigger>
-        </Style.Triggers>
-    </Style>
-
-    <!-- Visitation edit button -->
-    <Style TargetType="{x:Type Button}" x:Key="VisitationEditButton" BasedOn="{StaticResource BaseStyle}">
-        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
-        <Setter Property="Background" Value="{StaticResource YellowColorBrush}" />
-        <Setter Property="Padding" Value="5" />
-        <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
-
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" CornerRadius="4 0 0 4">
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource MaterialIcon}" Text="&#xf158;" />
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-
-        <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{StaticResource BlueColorBrush}" />
-                <Setter Property="Cursor" Value="Hand" />
-            </Trigger>
-        </Style.Triggers>
-    </Style>
-
     <!-- Approve button -->
     <Style TargetType="{x:Type Button}" x:Key="ApproveButton" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
@@ -124,11 +74,11 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Background="{TemplateBinding Background}" CornerRadius="0.3">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="2">
                         <Border.Effect>
                             <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
                         </Border.Effect>
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource LatoBold}" FontSize="4" Text="GODKEND" />
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource LatoBold}" FontSize="12" Text="GODKEND" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -136,34 +86,6 @@
 
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Cursor" Value="Hand" />
-            </Trigger>
-        </Style.Triggers>
-    </Style>
-
-    <!-- Alternative Visitation edit button -->
-    <Style TargetType="{x:Type Button}" x:Key="AltVisitationEditButton" BasedOn="{StaticResource BaseStyle}">
-        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
-        <Setter Property="Background" Value="{StaticResource YellowColorBrush}" />
-        <Setter Property="Padding" Value="5" />
-        <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
-
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" CornerRadius="1">
-                        <Border.Effect>
-                            <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
-                        </Border.Effect>
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource LatoBold}" Text="REDIGER" />
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-
-        <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{StaticResource BlueColorBrush}" />
                 <Setter Property="Cursor" Value="Hand" />
             </Trigger>
         </Style.Triggers>
@@ -176,17 +98,14 @@
         <Setter Property="Foreground" Value="{StaticResource PrimaryColourBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource PrimaryColourBrush}" />
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="Width" Value="10.7" />
-        <Setter Property="Height" Value="10.7" />
+        <Setter Property="Width" Value="32" />
+        <Setter Property="Height" Value="32" />
 
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" BorderBrush="{StaticResource PrimaryColourBrush}" BorderThickness="0.3" CornerRadius="0.7">
-                        <Border.Effect>
-                            <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
-                        </Border.Effect>
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource MaterialIcon}" Text="&#xf207;" FontSize="5" />
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" BorderBrush="{StaticResource PrimaryColourBrush}" BorderThickness="1" CornerRadius="2">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource MaterialIcon}" Text="&#xf207;" FontSize="13.4" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -209,11 +128,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" BorderThickness="0.3" BorderBrush="{StaticResource BackgroundColorBrush}" CornerRadius="0.7">
-                        <Border.Effect>
-                            <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
-                        </Border.Effect>
-                        <Path Data="M16,12V4H17V2H7V4H8V12L6,14V16H11.2V22H12.8V16H18V14L16,12Z" Fill="{StaticResource BackgroundColorBrush}" Width="4.5" Height="4.5" />
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="{StaticResource BackgroundColorBrush}" CornerRadius="2">
+                        <Path Data="M16,12V4H17V2H7V4H8V12L6,14V16H11.2V22H12.8V16H18V14L16,12Z" Fill="{StaticResource BackgroundColorBrush}" Width="8" Height="13.3" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -231,16 +147,13 @@
         <Setter Property="Background" Value="{StaticResource PrimaryColourBrush}" />
         <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource BackgroundColorBrush}" />
-        <Setter Property="BorderThickness" Value="0.3" />
+        <Setter Property="BorderThickness" Value="1" />
 
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" BorderThickness="0.3" BorderBrush="{StaticResource BackgroundColorBrush}" CornerRadius="0.7">
-                        <Border.Effect>
-                            <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
-                        </Border.Effect>
-                        <TextBlock FontFamily="{StaticResource MaterialIcon}" FontSize="4.5" Text="&#xf1eb;" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="{StaticResource BackgroundColorBrush}" CornerRadius="2">
+                        <TextBlock FontFamily="{StaticResource MaterialIcon}" FontSize="10" Text="&#xf1eb;" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -261,11 +174,11 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" CornerRadius="0.3">
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" CornerRadius="2">
                         <Border.Effect>
                             <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
                         </Border.Effect>
-                        <TextBlock FontFamily="{StaticResource MaterialIcon}" FontSize="4.5" Text="&#xf136;" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock FontFamily="{StaticResource LatoBold}" FontSize="12" Text="AFVIS" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -276,6 +189,5 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-
 
 </ResourceDictionary>

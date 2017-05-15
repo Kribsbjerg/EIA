@@ -82,6 +82,18 @@
     <Compile Include="Controls\VisitationCardList.xaml.cs">
       <DependentUpon>VisitationCardList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\VisitationCardFinal.xaml.cs">
+      <DependentUpon>VisitationCardFinal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\VisitationCardParts\VisitationCardPart1.xaml.cs">
+      <DependentUpon>VisitationCardPart1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\VisitationCardParts\VisitationCardPart2.xaml.cs">
+      <DependentUpon>VisitationCardPart2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\VisitationCardParts\VisitationCardPart3.xaml.cs">
+      <DependentUpon>VisitationCardPart3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\VisitationCard_v2.xaml.cs">
       <DependentUpon>VisitationCard_v2.xaml</DependentUpon>
     </Compile>
@@ -111,6 +123,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\VisitationCardList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\VisitationCardFinal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\VisitationCardParts\VisitationCardPart1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\VisitationCardParts\VisitationCardPart2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\VisitationCardParts\VisitationCardPart3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

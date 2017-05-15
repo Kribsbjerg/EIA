@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="EIAUI.VisitationCardFinal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EIAUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="350" d:DesignWidth="945">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <local:VisitationCardPart1 Loaded="VisitationCardPart1_Loaded" />
+            <local:VisitationCardPart2 />
+            <local:VisitationCardPart3 />
+        </StackPanel>
+    </Grid>
+</UserControl>

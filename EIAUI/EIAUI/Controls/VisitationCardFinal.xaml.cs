@@ -16,21 +16,16 @@ using System.Windows.Shapes;
 namespace EIAUI
 {
     /// <summary>
-    /// Interaction logic for VisitationCard_v2.xaml
+    /// Interaction logic for VisitationCardFinal.xaml
     /// </summary>
-    public partial class VisitationCard_v2 : UserControl
+    public partial class VisitationCardFinal : UserControl
     {
-        public VisitationCard_v2()
+        public VisitationCardFinal()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void VisitationCardPart1_Loaded(object sender, RoutedEventArgs e)
         {
 
         }

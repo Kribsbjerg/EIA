@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\App.xaml
-1439095276
+181034570460
 
-25-1098726773
+29-787501092
 18-228761327
-Controls\OverviewCard.xaml;Controls\VisitationAlt.xaml;Controls\VisitationCard.xaml;Controls\VisitationCardList.xaml;Controls\VisitationCard_v2.xaml;MainWindow.xaml;NotificationMessage.xaml;Styles\Scrollbar.xaml;Styles\Colours.xaml;Styles\Buttons.xaml;Styles\Popups.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;
+Controls\OverviewCard.xaml;Controls\VisitationAlt.xaml;Controls\VisitationCard.xaml;Controls\VisitationCardList.xaml;Controls\VisitationCardFinal.xaml;Controls\VisitationCardParts\VisitationCardPart1.xaml;Controls\VisitationCardParts\VisitationCardPart2.xaml;Controls\VisitationCardParts\VisitationCardPart3.xaml;Controls\VisitationCard_v2.xaml;MainWindow.xaml;NotificationMessage.xaml;Styles\Scrollbar.xaml;Styles\Colours.xaml;Styles\Buttons.xaml;Styles\Popups.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;
 
 False
 

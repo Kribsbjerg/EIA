@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="EIAUI.VisitationCardPart1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EIAUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="320" d:DesignWidth="450">
+    <Grid DataContext="{x:Static local:VisitationCardDesignModel.Instance}" >
+        <Grid Width="422" Height="309" Background="{StaticResource BackgroundColorBrush}">
+            <Border CornerRadius="2 0 0 2" Padding="24 17 24 31">
+                <StackPanel Orientation="Vertical" Grid.Column="0">
+
+                    <!--Contact button and CPR-->
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="0 0 0 17.6">
+                        <Button Style="{StaticResource ContactButton}" Margin="0 0 8 0"/>
+                        <TextBlock Text="{Binding Cpr}" FontFamily="{StaticResource LatoRegular}" FontSize="25" VerticalAlignment="Bottom" Foreground="{StaticResource DarkTextColorBrush}"/>
+                    </StackPanel>
+
+                    <!--Diagnosis-->
+                    <TextBlock Text="Diagnose" FontSize="15" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource DarkTextColorBrush}" Height="24.9"/>
+                    <Border Height="1" Background="{StaticResource DarkTextColorBrush}" />
+                    <TextBlock Text="Text..." Margin="0 5 0 0" FontSize="15" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" 
+                                   Foreground="{StaticResource DarkTextColorBrush}" Height="61"/>
+
+                    <!--Referral cause-->
+                    <TextBlock Text="Henvisningsårsag" FontSize="15" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource DarkTextColorBrush}"
+                                   Margin="0 27.6 0 0" Height="24.9"/>
+                    <Border Height="1" Background="{StaticResource DarkTextColorBrush}" />
+                    <TextBlock Margin="0 5 0 0" Text="Text.." FontSize="15" Height="61" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource DarkTextColorBrush}"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>
