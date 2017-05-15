@@ -116,20 +116,19 @@
     </Style>
 
     <!-- Approve button -->
-    <Style TargetType="{x:Type Button}" x:Key="AltVisitationAcceptButton" BasedOn="{StaticResource BaseStyle}">
+    <Style TargetType="{x:Type Button}" x:Key="ApproveButton" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
         <Setter Property="Background" Value="{StaticResource TealColorBrush}" />
-        <Setter Property="Padding" Value="3" />
         <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
 
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" CornerRadius="1">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="0.3">
                         <Border.Effect>
                             <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
                         </Border.Effect>
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource LatoBold}" FontSize="11" Text="GODKEND" />
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource LatoBold}" FontSize="4" Text="GODKEND" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -137,7 +136,6 @@
 
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{StaticResource BlueColorBrush}" />
                 <Setter Property="Cursor" Value="Hand" />
             </Trigger>
         </Style.Triggers>
@@ -175,38 +173,100 @@
     <Style TargetType="{x:Type Button}" x:Key="ContactButton" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
         <Setter Property="Background" Value="{StaticResource BackgroundColorBrush}" />
-        <Setter Property="Foreground" Value="{StaticResource EIAColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryColourBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryColourBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Width" Value="10.7" />
+        <Setter Property="Height" Value="10.7" />
 
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" CornerRadius="1">
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" BorderBrush="{StaticResource PrimaryColourBrush}" BorderThickness="0.3" CornerRadius="0.7">
                         <Border.Effect>
                             <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
                         </Border.Effect>
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource MaterialIcon}" Text="&#xf2be;" />
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource MaterialIcon}" Text="&#xf207;" FontSize="5" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{StaticResource BlueColorBrush}" />
                 <Setter Property="Cursor" Value="Hand" />
             </Trigger>
         </Style.Triggers>
     </Style>
 
-    <!-- Pin Button -->
+    <!--Pin button-->
     <Style TargetType="{x:Type Button}" x:Key="PinButton" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
-        <Setter Property="Background" Value="{StaticResource EIAColorBrush}" />
+        <Setter Property="Background" Value="{StaticResource PrimaryColourBrush}" />
         <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
-        
+        <Setter Property="BorderBrush" Value="{StaticResource BackgroundColorBrush}" />
+        <Setter Property="BorderThickness" Value="0.3" />
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Path Data="M16,12V4H17V2H7V4H8V12L6,14V16H11.2V22H12.8V16H18V14L16,12Z" Fill="{StaticResource BackgroundColorBrush}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" BorderThickness="0.3" BorderBrush="{StaticResource BackgroundColorBrush}" CornerRadius="0.7">
+                        <Border.Effect>
+                            <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
+                        </Border.Effect>
+                        <Path Data="M16,12V4H17V2H7V4H8V12L6,14V16H11.2V22H12.8V16H18V14L16,12Z" Fill="{StaticResource BackgroundColorBrush}" Width="4.5" Height="4.5" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="Hand" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--Minimize visitation-->
+    <Style TargetType="{x:Type Button}" x:Key="MinimizeVisitationButton" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
+        <Setter Property="Background" Value="{StaticResource PrimaryColourBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BackgroundColorBrush}" />
+        <Setter Property="BorderThickness" Value="0.3" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" BorderThickness="0.3" BorderBrush="{StaticResource BackgroundColorBrush}" CornerRadius="0.7">
+                        <Border.Effect>
+                            <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
+                        </Border.Effect>
+                        <TextBlock FontFamily="{StaticResource MaterialIcon}" FontSize="4.5" Text="&#xf1eb;" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="Hand" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--Disapprove button-->
+    <Style TargetType="{x:Type Button}" x:Key="DisapproveVisitationButton" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
+        <Setter Property="Background" Value="{StaticResource RedColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" CornerRadius="0.3">
+                        <Border.Effect>
+                            <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
+                        </Border.Effect>
+                        <TextBlock FontFamily="{StaticResource MaterialIcon}" FontSize="4.5" Text="&#xf136;" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
