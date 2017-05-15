@@ -25,174 +25,211 @@ namespace EIAUI
         /// </summary>
         public VisitationCardListDesignModel()
         {
-            VisitationCards = new ObservableCollection<VisitationOverviewViewModel>
+            HistoryVisitationCards = new ObservableCollection<VisitationOverviewViewModel>
             {
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 1,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
-                },
+                    Cpr = "238946",
+                    Diagnose = "Diller for lille"
+                }
+            };
 
+            ActiveVisitationCards = new ObservableCollection<VisitationOverviewViewModel>
+            {
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 2,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
-                },
-
-                new VisitationOverviewViewModel()
-                {
-                    Cpr = 3,
+                    Cpr = "1",
                     Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 1"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 4,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "2",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 1"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 5,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "2",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 1"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "4",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 1"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "5",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 2"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 2"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 2"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 2"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 2"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 2"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 2"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 2"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 2"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 2"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 2"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 2"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 3"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 3"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 3"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 3"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 3"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 3"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 3"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 3"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 3"
                 },
 
                 new VisitationOverviewViewModel()
                 {
-                    Cpr = 0102030405,
-                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her"
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 3"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 3"
+                },
+
+                new VisitationOverviewViewModel()
+                {
+                    Cpr = "0102030405",
+                    Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
+                    TreatmentType = "Something 3"
                 },
             };
 

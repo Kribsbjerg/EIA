@@ -5,12 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EIAUI"
              mc:Ignorable="d" 
-             
              d:DesignHeight="1080" d:DesignWidth="400">
     
-    <Grid DataContext="{x:Static local:VisitationCardListDesignModel.Instance}" Background="White">
+    <Grid Background="White">
         <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0, 0, 0, 0">
-            <ListBox ItemsSource="{Binding VisitationCards}" SelectedItem="{Binding SelectedCard}" Margin="0 12 0 0" HorizontalAlignment="Center" BorderThickness="0">
+            <ListBox ItemsSource="{Binding ActiveVisitationCards}" SelectedItem="{Binding SelectedCard}" Margin="0 12 0 0" HorizontalAlignment="Center" BorderThickness="0">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <local:OverviewCard Padding="0 5" />
@@ -25,88 +24,91 @@
         </ScrollViewer>
 
         <Popup IsOpen="{Binding IsCardSelected, Mode=OneWay}" HorizontalOffset="-800" VerticalOffset="-700">
-            <Border Background="{StaticResource GreenColorBrush}" CornerRadius="1" Height="200" Width="600">
-                <Border.Effect>
-                    <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
-                </Border.Effect>
+            <Grid Height="240" Width="640" Background="Transparent">
+                <Border Background="{StaticResource GreenColorBrush}" CornerRadius="1" Height="200" Width="600" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="0" Opacity="0.4" BlurRadius="10" />
+                    </Border.Effect>
 
-                <StackPanel Background="{StaticResource BackgroundColorBrush}" Orientation="Vertical" Margin="9 0 0 0">
+                    <StackPanel Background="{StaticResource BackgroundColorBrush}" Orientation="Vertical" Margin="9 0 0 0">
 
-                    <Grid Margin="10 7 0 0">
+                        <Grid Margin="10 7 0 0">
 
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="0.03*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="0.03*" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="0.03*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="0.03*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
 
-                        <StackPanel Orientation="Vertical" Grid.Column="0">
-                            <TextBlock Text="{Binding SelectedCard.Cpr}" FontFamily="{StaticResource LatoBold}" FontSize="18"/>
-                            <TextBlock Text="Diagnose" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource MediumTextColorBrush}"
+                            <StackPanel Orientation="Vertical" Grid.Column="0">
+                                <TextBlock Text="{Binding SelectedCard.Cpr}" FontFamily="{StaticResource LatoBold}" FontSize="18"/>
+                                <TextBlock Text="Diagnose" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource MediumTextColorBrush}"
                                    Padding="0 6 0 0"/>
-                            <Border Height="1" Background="{StaticResource MediumTextColorBrush}" Margin="0 2 6 4"/>
-                            <TextBlock Text="{Binding Diagnose}" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" 
+                                <Border Height="1" Background="{StaticResource MediumTextColorBrush}" Margin="0 2 6 4"/>
+                                <TextBlock Text="{Binding Diagnose}" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" 
                                    Foreground="{StaticResource LightTextColorBrush}"/>
-                        </StackPanel>
+                            </StackPanel>
 
-                        <StackPanel Orientation="Vertical" Grid.Column="2" Margin="0 0 5 0">
-                            <TextBlock Text="Henvisningsårsag" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource MediumTextColorBrush}"
+                            <StackPanel Orientation="Vertical" Grid.Column="2" Margin="0 0 5 0">
+                                <TextBlock Text="Henvisningsårsag" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource MediumTextColorBrush}"
                                    Margin="0 28 0 0"/>
-                            <Border Height="1" Background="{StaticResource MediumTextColorBrush}" Margin="0 2 6 4"/>
-                            <TextBlock Text="{Binding ReferralCause}" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource LightTextColorBrush}"/>
-                        </StackPanel>
+                                <Border Height="1" Background="{StaticResource MediumTextColorBrush}" Margin="0 2 6 4"/>
+                                <TextBlock Text="{Binding ReferralCause}" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource LightTextColorBrush}"/>
+                            </StackPanel>
 
-                        <StackPanel Grid.Column="4">
-                            <Grid Margin="0 6 10 5">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Column="0" Text="Fordelingsgaranti:" FontFamily="{StaticResource LatoBold}" 
+                            <StackPanel Grid.Column="4">
+                                <Grid Margin="0 6 10 5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="Fordelingsgaranti:" FontFamily="{StaticResource LatoBold}" 
                                        Foreground="{StaticResource MediumTextColorBrush}" FontSize="9" Padding="0 2 5 0" />
-                                <TextBlock Grid.Column="1" FontFamily="{StaticResource MaterialIcon}" 
+                                    <TextBlock Grid.Column="1" FontFamily="{StaticResource MaterialIcon}" 
                                        Text="&#xf26b;" TextAlignment="Center"  Foreground="{StaticResource GreenColorBrush}" />
-                                <TextBlock Grid.Column="2" Text="Behandlingsgaranti:" FontFamily="{StaticResource LatoBold}" 
+                                    <TextBlock Grid.Column="2" Text="Behandlingsgaranti:" FontFamily="{StaticResource LatoBold}" 
                                        Foreground="{StaticResource MediumTextColorBrush}" FontSize="9" Padding="5 2 5 0" />
-                                <TextBlock Grid.Column="3" FontFamily="{StaticResource MaterialIcon}" 
+                                    <TextBlock Grid.Column="3" FontFamily="{StaticResource MaterialIcon}" 
                                        Text="&#xf26b;" TextAlignment="Center" Foreground="{StaticResource GreenColorBrush}" />
-                            </Grid>
+                                </Grid>
 
-                            <TextBlock Text="Behandlingstype" Padding="0 4 0 0" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource MediumTextColorBrush}"/>
-                            <Border Height="1" Background="{StaticResource MediumTextColorBrush}" Margin="0 2 10 4" />
-                            <TextBlock Text="{Binding TreatmentType}" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" 
+                                <TextBlock Text="Behandlingstype" Padding="0 4 0 0" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource MediumTextColorBrush}"/>
+                                <Border Height="1" Background="{StaticResource MediumTextColorBrush}" Margin="0 2 10 4" />
+                                <TextBlock Text="{Binding TreatmentType}" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" 
                                    Foreground="{StaticResource LightTextColorBrush}" />
 
-                            <TextBlock Text="Dato og Tidspunkt" Margin="0 10 0 0" FontFamily="{StaticResource LatoBlack}" 
+                                <TextBlock Text="Dato og Tidspunkt" Margin="0 10 0 0" FontFamily="{StaticResource LatoBlack}" 
                                    Foreground="{StaticResource MediumTextColorBrush}" />
-                            <Border Height="1" Background="{StaticResource MediumTextColorBrush}" Margin="0 2 10 4"/>
-                            <TextBlock Text="{Binding TreatmentTime}" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource LightTextColorBrush}" />
+                                <Border Height="1" Background="{StaticResource MediumTextColorBrush}" Margin="0 2 10 4"/>
+                                <TextBlock Text="{Binding TreatmentTime}" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource LightTextColorBrush}" />
 
-                        </StackPanel>
-                    </Grid>
+                            </StackPanel>
+                        </Grid>
 
-                    <Border Margin="0 20 0 0" Background="{StaticResource LightTextColorBrush}" Height="1"/>
+                        <Border Margin="0 20 0 0" Background="{StaticResource LightTextColorBrush}" Height="1"/>
 
-                    <Grid Margin="10 9 10 0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="0.20*" />
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="0.20*" />
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="{Binding SpecialConditions}" VerticalAlignment="Center" FontFamily="{StaticResource LatoBold}" 
+                        <Grid Margin="10 9 10 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="0.20*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="0.20*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="{Binding SpecialConditions}" VerticalAlignment="Center" FontFamily="{StaticResource LatoBold}" 
                                Foreground="{StaticResource LightTextColorBrush}" FontStyle="Italic" />
-                        <Button Grid.Column="1" Style="{StaticResource AltVisitationEditButton}" />
-                        <Border Grid.Column="2" Margin="3" />
-                        <Button x:Name="ThisButton" Grid.Column="3" Style="{StaticResource AltVisitationAcceptButton}">
-                        </Button>
-                    </Grid>
-                </StackPanel>
-            </Border>
+                            <Button Grid.Column="1" Style="{StaticResource AltVisitationEditButton}" Command="{Binding ApproveVisitation}" />
+                            <Border Grid.Column="2" Margin="3" />
+                            <Button x:Name="ThisButton" Grid.Column="3" Style="{StaticResource AltVisitationAcceptButton}">
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+            </Grid>
+            
         </Popup>
 
     </Grid>

@@ -6,7 +6,7 @@
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:local="clr-namespace:EIAUI"
              mc:Ignorable="d" 
-             Height="70" Width="320"
+             Height="80" Width="320"
              x:Name="Overviewcard">
 
     <UserControl.Resources>
@@ -16,48 +16,47 @@
                     <ControlTemplate TargetType="{x:Type ContentControl}">
 
                         <Grid>
-                            <Border x:Name="background" Background="White">
+                            <Border x:Name="background">
+                                <Border.Style>
+                                    <Style TargetType="Border">
+                                        <Setter Property="Background" Value="White" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                                <Setter Property="Background" Value="{StaticResource PrimaryColorBrush}" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+
                                 <Border.Effect>
-                                    <DropShadowEffect ShadowDepth="0" Opacity="0.5" BlurRadius="10" />
+                                    <DropShadowEffect ShadowDepth="0" Opacity="0.2" BlurRadius="10" />
                                 </Border.Effect>
 
-                                <i:Interaction.Triggers>
-                                    <i:EventTrigger EventName="MouseDown">
-                                        <i:InvokeCommandAction Command="{Binding SelectCard}" CommandParameter="{Binding ElementName=OverviewCard}"/>
-                                    </i:EventTrigger>
-                                </i:Interaction.Triggers>
-
                                 <Border x:Name="container" Background="Transparent" Padding="5">
-
                                     <StackPanel>
-                                        <TextBox Text="{Binding Cpr}" x:Name="text1" Foreground="{StaticResource DarkTextColorBrush}" FontSize="15" Style="{StaticResource LabelField}" FontFamily="{StaticResource LatoBlack}" Padding="0 0 0 2" />
-                                        <TextBox Text="{Binding Diagnose}" x:Name="text2" FontSize="12" Foreground="{StaticResource DarkTextColorBrush}" Style="{StaticResource LabelField}" TextWrapping="Wrap"/>
+                                        <TextBox Text="{Binding Cpr}" x:Name="text1"  FontSize="15"  Style="{StaticResource LabelField}" FontFamily="{StaticResource LatoBold}" Padding="0 0 0 2" />
+                                        <TextBox Text="{Binding Diagnose}" x:Name="text2" FontSize="13" Foreground="{StaticResource MediumTextColorBrush}" Style="{StaticResource LabelField}" TextWrapping="Wrap"/>
                                     </StackPanel>
 
                                 </Border>
                             </Border>
-
-                           
-                            
                         </Grid>
-
-
 
                         <ControlTemplate.Triggers>
                             <DataTrigger Binding="{Binding IsSelected}" Value="True">
-                                <Setter Property="Background" Value="Black" />
+                                <Setter Property="Foreground" Value="White" />
                             </DataTrigger>
                             <EventTrigger RoutedEvent="MouseEnter">
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation To="LightGray" Duration="0:0:0.2" Storyboard.TargetName="container" Storyboard.TargetProperty="Background.Color" />
+                                        <ColorAnimation To="{StaticResource LightTextColor}" Duration="0:0:0.1" Storyboard.TargetName="container" Storyboard.TargetProperty="Background.Color" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
                             <EventTrigger RoutedEvent="MouseLeave">
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation To="Transparent" Duration="0:0:0.2" Storyboard.TargetName="container" Storyboard.TargetProperty="Background.Color" />
+                                        <ColorAnimation To="Transparent" Duration="0:0:0.1" Storyboard.TargetName="container" Storyboard.TargetProperty="Background.Color" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
@@ -72,10 +71,17 @@
     </UserControl.Resources>
 
 
-    <ContentControl d:DataContext="{x:Static local:VisitationOverviewDesignModel.Instance}"
-                    Style="{StaticResource ContentStyle}"/>
+        <ContentControl d:DataContext="{x:Static local:VisitationOverviewDesignModel.Instance}"
+                    Style="{StaticResource ContentStyle}" />
 
-    
+
 
 </UserControl>
  
+    <!--
+        
+        <Border.Triggers>
+    <DataTrigger Binding="{Binding IsSelected}" Value="True">
+        <Setter Property="Background" Value="Black" />
+    </DataTrigger>
+    </Border.Triggers> -->

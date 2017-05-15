@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\App.xaml
-12541591306
+152037298471
 
-231992448843
+281708722760
 181912719919
-Controls\OverviewCard.xaml;Controls\VisitationAlt.xaml;Controls\VisitationCard.xaml;Controls\VisitationCardList.xaml;MainWindow.xaml;Styles\Scrollbar.xaml;Styles\Colours.xaml;Styles\Buttons.xaml;Styles\Popups.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;
+ComboboxTest\Comboboxtest.xaml;Controls\HistoryCardList.xaml;Controls\OverviewCard.xaml;Controls\VisitationAlt.xaml;Controls\VisitationCard.xaml;Controls\VisitationCardList.xaml;Controls\VisitationTab.xaml;MainWindow.xaml;Styles\Scrollbar.xaml;Styles\Colours.xaml;Styles\Buttons.xaml;Styles\Popups.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;
 
 True
 

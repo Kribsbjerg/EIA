@@ -70,6 +70,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ComboboxTest\Comboboxtest.xaml.cs">
+      <DependentUpon>Comboboxtest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HistoryCardList.xaml.cs">
+      <DependentUpon>HistoryCardList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\OverviewCard.xaml.cs">
       <DependentUpon>OverviewCard.xaml</DependentUpon>
     </Compile>
@@ -82,8 +88,13 @@
     <Compile Include="Controls\VisitationCardList.xaml.cs">
       <DependentUpon>VisitationCardList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\VisitationTab.xaml.cs">
+      <DependentUpon>VisitationTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HotKey.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayParameterCommand.cs" />
+    <Compile Include="ViewModels\Visitation\TabViewModel.cs" />
     <Compile Include="ViewModels\Visitation\Design\VisitationOverviewDesignModel.cs" />
     <Compile Include="ViewModels\Visitation\Design\VisitationCardDesignModel.cs" />
     <Compile Include="ViewModels\Visitation\Design\VisitationCardListDesignModel.cs" />
@@ -92,6 +103,14 @@
     <Compile Include="ViewModels\Visitation\VisitationCardViewModel.cs" />
     <Compile Include="ViewModels\WindowViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayCommand.cs" />
+    <Page Include="ComboboxTest\Comboboxtest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HistoryCardList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\OverviewCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -105,6 +124,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\VisitationCardList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\VisitationTab.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

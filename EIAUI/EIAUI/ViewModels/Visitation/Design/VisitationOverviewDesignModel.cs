@@ -16,7 +16,7 @@ namespace EIAUI
         /// </summary>
         public VisitationOverviewDesignModel()
         {
-            Cpr = 0901644527;
+            Cpr = "01";
             Diagnose = "DI 10 - Blodtryksforhøjelse af ukendt årsag. \n\nDE 659 - Fedme u spec.";
         }
         

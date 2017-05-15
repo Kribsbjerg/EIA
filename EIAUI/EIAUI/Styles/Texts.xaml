@@ -17,13 +17,14 @@
         <Setter Property="Padding" Value="0" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="Foreground" Value="{StaticResource DarkTextColorBrush}" />
-        <Setter Property="IsEnabled" Value="True" />
+        <Setter Property="IsReadOnly" Value="False" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
 
     <Style TargetType="{x:Type TextBox}" x:Key="LabelField" BasedOn="{StaticResource InputField}">
-        <Setter Property="IsEnabled" Value="False" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="Cursor" Value="Arrow" />
     </Style>
 
     <Style TargetType="{x:Type Border}" x:Key="FieldBorder">
