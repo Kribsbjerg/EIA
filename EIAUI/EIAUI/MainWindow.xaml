@@ -17,20 +17,24 @@
         Left="1320"
         WindowStartupLocation="Manual" 
         Top="0">
-        <!--Width="700"
-        >-->
 
     <Window.Resources>
+        
+        
         <Style TargetType="{x:Type local:MainWindow}">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Window}">
                         <!-- Outer border with the dropshadow margin -->
                         <Border Padding="{Binding OuterMarginSizeThickness}">
-                            
+
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="0" Opacity="0.6" BlurRadius="10" />
+                            </Border.Effect>
+
                             <!-- Main Window outline -->
                             <Grid>
-                                
+
                                 <!-- Opacity mask for corners on grid -->
                                 <Border x:Name="Container"
                                         Background="{StaticResource BackgroundColorBrush}"
@@ -39,9 +43,7 @@
                                 <!-- Main window with resizable outline margin -->
                                 <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=1}"
                                         Background="White">
-                                    <Border.Effect>
-                                        <DropShadowEffect ShadowDepth="0" Opacity="0.4" BlurRadius="5" />
-                                    </Border.Effect>
+                                    
                                 </Border>
 
                                 <!-- The main window content -->
@@ -55,10 +57,8 @@
                                         <!-- Title Bar -->
                                         <RowDefinition Height="100" />
 
-                                        <RowDefinition Height="1.5" />
-
                                         <!-- Window Content -->
-                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="auto" />
 
                                     </Grid.RowDefinitions>
 
@@ -75,36 +75,161 @@
                                         </Grid.ColumnDefinitions>
 
                                         <!-- Slide in icon -->
-                                        <Button Grid.Column="0" Command="{Binding MinimizeCommand}" Content="&#xf1eb;" Style="{StaticResource WindowControlButton}" />
-                                        
+                                        <Button Grid.Column="0" Command="{Binding MinimizeCommand}" Content=">" Style="{StaticResource WindowControlButton}" />
+
                                         <!-- Logo -->
                                         <Image Grid.Column="1" Source="Images/Logo/@0,5xenversion-logo.png" Height="40"/>
 
                                         <!-- Windows Buttons -->
-                                        <Button Grid.Column="2" Command="{Binding MinimizeCommand}" Content="&#xf1eb;" Style="{StaticResource WindowControlButton}" />
+                                        <Button Grid.Column="2" Focusable="False" Content="&#xf1c3;" Style="{StaticResource WindowControlButton}">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="PreviewMouseUp">
+                                                    <i:InvokeCommandAction Command="{Binding SearchCommand}"/>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </Button>
                                     </Grid>
 
-                                    <TabControl Grid.Row="2" HorizontalAlignment="Center">
-                                        <TabItem Header="Visitationer" Width="145">
+                                    <Grid x:Name="TabContent" Grid.Row="1" DataContext="{x:Static local:VisitationCardListDesignModel.Instance}">
+
+                                        <!-- Tab Content -->
+
+                                        <!--<Grid x:Name="Content1" Grid.Row="1" Width="400" Height="800" Background="{StaticResource ActiveTabColorBrush}" Panel.ZIndex="1" Margin="0 -3 0 0">
+                                            <Border Background="{StaticResource PrimaryColorBrush}" Height="0.5" VerticalAlignment="Top" Width="205" HorizontalAlignment="Right" />
+
+                                            <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0, 10, 0, 0" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="1" BorderBrush="{StaticResource PrimaryColorBrush}" Width="380">
+                                                <ListBox ItemsSource="{Binding DiagnosisGroup}" SelectedItem="{Binding SelectedCard}" HorizontalAlignment="Center" BorderThickness="0" Background="{StaticResource ActiveTabColorBrush}" >
+                                                    <ListBox.ItemContainerStyle>
+                                                        <Style TargetType="ListBoxItem">
+                                                            <Setter Property="IsSelected" Value="{Binding Content.IsSelected, Mode=TwoWay, RelativeSource={RelativeSource Self}}"/>
+                                                            <Setter Property="Background" Value="Red" />
+                                                            <Setter Property="Template">
+                                                                <Setter.Value>
+                                                                    <ControlTemplate TargetType="ListBoxItem">
+                                                                        <ContentPresenter />
+                                                                    </ControlTemplate>
+                                                                </Setter.Value>
+                                                            </Setter>
+                                                        </Style>
+                                                    </ListBox.ItemContainerStyle>
+
+                                                    <ItemsControl.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <Grid >
+                                                                <local:TreatmentCategory />
+                                                            </Grid>
+                                                        </DataTemplate>
+                                                    </ItemsControl.ItemTemplate>
+
+                                                </ListBox>
+                                            </ScrollViewer>
+                                        </Grid>-->
+
+                                        <local:VisitationTab />
+
+                                        <UserControl Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                            <UserControl.Style>
+                                                <Style TargetType="UserControl">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource FindAncestor, 
+                                                                               AncestorType={x:Type Window}}, Path=DataContext.SearchActivated}" Value="True">
+                                                            <Setter Property="Visibility" Value="Visible" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource FindAncestor, 
+                                                                               AncestorType={x:Type Window}}, Path=DataContext.SearchActivated}" Value="False">
+                                                            <Setter Property="Visibility" Value="Collapsed" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </UserControl.Style>
+                                            <Grid Background="White" >
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="10*" />
+                                                </Grid.RowDefinitions>
+
+                                                <Grid Grid.Row="0" Height="70" Width="390">
+                                                    <TextBox x:Name="SearchField" Text="{Binding SearchWord , Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                                             Padding="1 5 5 0"
+                                                             VerticalAlignment="Center" 
+                                                             FontFamily="{StaticResource LatoRegular}"
+                                                             FontSize="24"
+                                                             Width="350" 
+                                                             Height="60"
+                                                             >
+                                                        <TextBox.Style>
+                                                            <Style>
+                                                                <Style.Triggers>
+                                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource FindAncestor, 
+                                                                               AncestorType={x:Type Window}}, Path=DataContext.SearchActivated}" Value="True">
+                                                                        <Setter Property="FocusManager.FocusedElement" Value="{Binding ElementName=SearchField}"/>
+                                                                    </DataTrigger>
+                                                                </Style.Triggers>
+                                                            </Style>
+                                                        </TextBox.Style>
+                                                        
+                                                    </TextBox>
+                                                </Grid>
+                                                <Grid Grid.Row="1" Height="900">
+ 
+                                                   <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0, 10, 0, 0" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="1" BorderBrush="{StaticResource PrimaryColorBrush}" Width="380">
+                                                    <ListBox ItemsSource="{Binding SearchResult}" SelectedItem="{Binding SelectedCard}" HorizontalAlignment="Center" BorderThickness="0" Background="{StaticResource ActiveTabColorBrush}" >
+                                                        <ListBox.ItemContainerStyle>
+                                                            <Style TargetType="ListBoxItem">
+                                                                <Setter Property="IsSelected" Value="{Binding Content.IsSelected, Mode=TwoWay, RelativeSource={RelativeSource Self}}"/>
+                                                                <Setter Property="Background" Value="Red" />
+                                                                <Setter Property="Template">
+                                                                    <Setter.Value>
+                                                                        <ControlTemplate TargetType="ListBoxItem">
+                                                                            <ContentPresenter/>
+                                                                        </ControlTemplate>
+                                                                    </Setter.Value>
+                                                                </Setter>
+                                                            </Style>
+                                                        </ListBox.ItemContainerStyle>
+
+                                                        <ItemsControl.ItemTemplate>
+                                                            <DataTemplate>
+                                                                <Grid>
+                                                                    <local:OverviewCard Padding="0 6" />
+                                                                </Grid>
+                                                            </DataTemplate>
+                                                        </ItemsControl.ItemTemplate>
+
+                                                    </ListBox>
+                                                    </ScrollViewer>
+
+                                                </Grid>
+
+                                            </Grid>
+                                        </UserControl>
+
+                                    </Grid>
+                                    
+                                    
+
+                                    <!--<TabControl Grid.Row="2" FontSize="15"  HorizontalAlignment="Center" Style="{StaticResource TabControlStyle}" DataContext="{Binding VisitationCardListViewModel}">
+                                        <TabItem Header="Visitationer"  Width="130">
                                             <local:VisitationCardList VerticalAlignment="Top"/>
                                         </TabItem>
-                                        <TabItem Header="Pin" Width="100">
-                                            <TextBox Text="Hello there! Here are the pinned visitations" />
+                                        <TabItem Header="Pin" Width="130" >
+                                            <TextBlock Text="Hello there! Here are the pinned visitations" />
                                         </TabItem>
-                                        <TabItem Header="Historik" Width="145">
-                                            <TextBlock Text="The history of visitations" />
+                                        <TabItem Header="Historik" Width="130" >
+                                            <local:HistoryCardList VerticalAlignment="Top"/>
                                         </TabItem>
-                                    </TabControl>
-                                    
-                                    
+                                    </TabControl>-->
+
                                 </Grid>
- 
+
                             </Grid>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
+
+        
     </Window.Resources>
 
     <Window.Triggers>
@@ -118,16 +243,88 @@
     </Window.Triggers>
 
     <Window.InputBindings>
-        <KeyBinding Key="F5" Modifiers="Ctrl"  Command="{Binding MinimizeCommand}"  />
+        <KeyBinding Key="F" Modifiers="Ctrl"  Command="{Binding SearchCommand}"  />
     </Window.InputBindings>
 
-    <!--<WindowChrome.WindowChrome>
+    <WindowChrome.WindowChrome>
         <WindowChrome
             ResizeBorderThickness="{Binding ResizeBorderThickness}"
-            CaptionHeight="{Binding TitleHeight}"
             GlassFrameThickness="0"
             CornerRadius="{Binding }"
             />
     </WindowChrome.WindowChrome>-->
 
 </Window>
+    
+    
+    <!--
+         TabControl style
+    <Style x:Key="TabControlStyle" TargetType="{x:Type TabControl}">
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TabControl">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="1" Panel.ZIndex="5" Margin="-2"
+                                BorderBrush="White"
+                                Background="White">
+                            <ContentPresenter ContentSource="SelectedContent"/>
+                        </Border>
+                        <StackPanel Orientation="Horizontal" Grid.Row="0" Panel.ZIndex="1" IsItemsHost="true"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="{x:Type TabItem}" TargetType="{x:Type TabItem}">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="FontFamily" Value="{StaticResource LatoBlack}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TabItem">
+
+                    <Grid x:Name="grd" >
+                        <Path x:Name="TabPath" StrokeThickness="8"
+                              Margin="0"
+                              Stroke="Red"
+                              Fill="LightGray"
+                              Data="M 0,40 L 10,0 L 115,0 L 125,40"
+                              StrokeLineJoin="Round"
+                              >
+                        </Path>
+
+                        <ContentPresenter x:Name="TabItemContent" ContentSource="Header"
+                                          VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"
+                                          TextElement.Foreground="Black"/>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True" SourceName="grd">
+                            <Setter Property="Stroke" Value="Yellow" TargetName="TabPath"/>
+                        </Trigger>
+                        <Trigger Property="Selector.IsSelected" Value="True">
+                            <Setter Property="Fill" TargetName="TabPath">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="White"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="BitmapEffect">
+                                <Setter.Value>
+                                    <DropShadowBitmapEffect Direction="1" Opacity="0.4" 
+                                                        ShadowDepth="2" Softness="0.5"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Panel.ZIndex" Value="2"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    -->

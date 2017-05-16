@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Forms;
 using System.Windows.Input;
+using System.Windows.Media.Animation;
 
 namespace EIAUI
 {
@@ -20,12 +24,14 @@ namespace EIAUI
         /// <summary>
         /// The margin around the window to allow for a drop shadow
         /// </summary>
-        private int _outerMarginSize = 0; //10;
+        private int _outerMarginSize = 10; //10;
 
         /// <summary>
         /// The radius of the edges of the windows
         /// </summary>
         private int _windowRadius = 0;
+
+        NotifyIcon ni = new NotifyIcon();
 
         #endregion
 
@@ -38,6 +44,8 @@ namespace EIAUI
         public WindowViewModel(Window window)
         {
             _window = window;
+
+            //_window.Topmost = true;
 
             // Listen out for the window resizing
             _window.StateChanged += (sender, e) =>
@@ -54,24 +62,40 @@ namespace EIAUI
             // SeachCommand + new RelayCommand(() => );
             // NotificationCommand + new RelayCommand(() => );
             // UserCommand + new RelayCommand(() => );
-            MinimizeCommand = new RelayCommand(() => _window.WindowState = WindowState.Minimized);
+            MinimizeCommand = new RelayCommand(() => SlideOutAndMinimizeAnimation()); //_window.WindowState = WindowState.Minimized
             MaximizeCommand = new RelayCommand(() => _window.WindowState ^= WindowState.Maximized);
             CloseCommand = new RelayCommand(() => _window.Close());
+            SearchCommand = new RelayCommand(() => ActivateSearchDialog());
+
+            ni.Icon = new Icon("Main.ico");
+            ni.Click +=
+                delegate (object sender, EventArgs args)
+                {
+                    ShowAndSlideInAnimation();
+                };
+
+            var a = new HotKey(Key.Space, KeyModifier.Win | KeyModifier.Alt, OnHotKeyHandler);
+        }
+
+        private void ActivateSearchDialog()
+        {
+            SearchActivated = !SearchActivated;
+
+        }
+
+        private void OnHotKeyHandler(HotKey hotKey)
+        {
+            if (_window.WindowState == WindowState.Minimized)
+                ShowAndSlideInAnimation();
+            else if (_window.IsActive)
+                SlideOutAndMinimizeAnimation();
+            else
+                _window.Activate();
         }
 
         #endregion
 
         #region Public Properties
-
-        /// <summary>
-        /// The size of the resize border arund the window
-        /// </summary>
-        //public int ResizeBorder { get; set; } = 6;
-
-        /// <summary>
-        /// The size of the resize border arund the window, taking into account the outer margin
-        /// </summary>
-        //public Thickness ResizeBorderThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }
 
         /// <summary>
         /// The margin around the window to allow for a drop shadow
@@ -91,7 +115,7 @@ namespace EIAUI
         /// <summary>
         /// The margin around the window to allow for a drop shadow
         /// </summary>
-        public Thickness OuterMarginSizeThickness { get { return new Thickness(OuterMarginSize); } }
+        public Thickness OuterMarginSizeThickness { get { return new Thickness(OuterMarginSize, 0, 0, 0); } }
 
         /// <summary>
         /// The radius of the edges of the window
@@ -135,6 +159,8 @@ namespace EIAUI
 
         public double WindowLeftPosition => SystemParameters.PrimaryScreenWidth - WindowMinimumWidth;
 
+        public bool SearchActivated { get; set; }
+
         #endregion
 
         #region Commands
@@ -168,6 +194,54 @@ namespace EIAUI
         /// The command to close the window
         /// </summary>
         public ICommand CloseCommand { get; set; }
+
+        #endregion
+
+        #region Animation Methods
+
+        private async void SlideOutAndMinimizeAnimation()
+        {
+            SearchActivated = false;
+            await SlideOutAnimation();
+            _window.WindowState = WindowState.Minimized;
+            _window.Hide();
+            ni.Visible = true;
+        }
+
+        private async Task SlideOutAnimation()
+        {
+            DoubleAnimation slideOut = new DoubleAnimation();
+
+            slideOut.From = 1520;
+            slideOut.To = 1920;
+            slideOut.Duration = new Duration(TimeSpan.FromSeconds(0.8));
+
+            _window.BeginAnimation(Window.LeftProperty, slideOut);
+
+            await Task.Delay(800);
+        }
+
+        private async void ShowAndSlideInAnimation()
+        {
+            _window.Show();
+            _window.WindowState = WindowState.Normal;
+            _window.Activate();
+            await SlideInAnimation();
+            ni.Visible = false;
+        }
+
+        private async Task SlideInAnimation()
+        {
+            DoubleAnimation slideOut = new DoubleAnimation();
+
+            slideOut.From = 1920;
+            slideOut.To = 1520;
+            slideOut.Duration = new Duration(TimeSpan.FromSeconds(0.8));
+
+            _window.BeginAnimation(Window.LeftProperty, slideOut);
+
+            await Task.Delay(800);
+        }
 
         #endregion
 

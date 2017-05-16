@@ -2,26 +2,36 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:EIAUI">
 
-    <Color x:Key="PrimaryColor">#20566D</Color>
-    <SolidColorBrush x:Key="PrimaryColourBrush" Color="{StaticResource PrimaryColor}" />
+    <Color x:Key="PrimaryColor">#20566d</Color>
+    <SolidColorBrush x:Key="PrimaryColorBrush" Color="{StaticResource PrimaryColor}" />
+    
+    <!-- Tab Colors -->
+    <Color x:Key="ActiveTabColor">#f5f5f5</Color>
+    <SolidColorBrush x:Key="ActiveTabColorBrush" Color="{StaticResource ActiveTabColor}" />
 
-    <Color x:Key="SecondaryColor">#397189</Color>
-    <SolidColorBrush x:Key="SecondaryColorBrush" Color="{StaticResource SecondaryColor}" />
+    <Color x:Key="InactiveTabColor">#d8d8d8</Color>
+    <SolidColorBrush x:Key="InactiveTabColorBrush" Color="{StaticResource InactiveTabColor}" />
 
+    <!-- Font Color -->        
     <Color x:Key="DarkTextColor">#121738</Color>
     <SolidColorBrush x:Key="DarkTextColorBrush" Color="{StaticResource DarkTextColor}" />
 
     <Color x:Key="MediumTextColor">#121738</Color>
-    <SolidColorBrush x:Key="MediumTextColorBrush" Color="{StaticResource MediumTextColor}" Opacity="0.5" />
+    <SolidColorBrush x:Key="MediumTextColorBrush" Color="{StaticResource MediumTextColor}" Opacity="0.8" />
 
-    <Color x:Key="LightTextColor">#121738</Color>
-    <SolidColorBrush x:Key="LightTextColorBrush" Color="{StaticResource LightTextColor}" Opacity="0.3" />
+    <Color x:Key="LightTextColor">#A5A2AF</Color>
+    <SolidColorBrush x:Key="LightTextColorBrush" Color="{StaticResource LightTextColor}" />
 
+    
+    
     <Color x:Key="BorderLineColor">#121738</Color>
     <SolidColorBrush x:Key="BorderLineColorBrush" Color="{StaticResource BorderLineColor}" Opacity="0.12" />
 
     <Color x:Key="TealColor">#009688</Color>
     <SolidColorBrush x:Key="TealColorBrush" Color="{StaticResource TealColor}" />
+
+    <Color x:Key="EIAColor">#20566D</Color>
+    <SolidColorBrush x:Key="EIAColorBrush" Color="{StaticResource EIAColor}" />
 
     <Color x:Key="BlueColor">#547dce</Color>
     <SolidColorBrush x:Key="BlueColorBrush" Color="{StaticResource BlueColor}" />

@@ -15,24 +15,6 @@ namespace EIAUI
             InitializeComponent();
 
             this.DataContext = new WindowViewModel(this);
-
-            NotifyIcon ni = new NotifyIcon();
-            ni.Icon = new Icon("Main.ico");
-            ni.Visible = true;
-            ni.Click +=
-                delegate (object sender, EventArgs args)
-                {
-                    this.Show();
-                    this.WindowState = WindowState.Normal;
-                };
-        }
-
-        protected override void OnStateChanged(EventArgs e)
-        {
-            if (WindowState == WindowState.Minimized)
-                this.Hide();
-
-            base.OnStateChanged(e);
         }
     }
 }
