@@ -33,8 +33,6 @@ namespace EIAUI
 
         public IEnumerable<IGrouping<string, VisitationOverviewViewModel>> DiagnosisGroup => ActiveVisitationCards.GroupBy(c => c.TreatmentType);
 
-        public ObservableCollection<string> DiagnosisList => new ObservableCollection<string>(DiagnosisGroup.Select(dg => dg.Key));
-
         public bool IsCardSelected => SelectedCard != null;
 
         public VisitationOverviewViewModel SelectedCard

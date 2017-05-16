@@ -18,22 +18,30 @@
             </Setter>
         </Style>
     </UserControl.Resources>-->
-
+    <UserControl.Resources>
+        
+    </UserControl.Resources>
     <Grid d:DataContext="{x:Static local:VisitationCardListDesignModel.Instance}">
         <ComboBox  Name="MyComboBox"
                    IsEditable="True"
+                   Focusable="False"
                    IsReadOnly="True"
                    Text="{Binding Mode=OneWay}"
                    Height="50"
                    Width="350"
-                   ItemsSource="{Binding DiagnosisGroup}">
+                   ItemsSource="{Binding Path=HistoryVisitationCards}"
+                   DisplayMemberPath="">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <local:OverviewCard />
-                </DataTemplate>
+                </DataTemplate> 
             </ComboBox.ItemTemplate>
         </ComboBox>
     </Grid>
     
 
 </UserControl>
+
+    <!--   
+        "{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.SearchActivated}"
+        -->

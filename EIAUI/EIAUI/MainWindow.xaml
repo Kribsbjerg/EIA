@@ -90,9 +90,41 @@
                                         </Button>
                                     </Grid>
 
-                                    <Grid Grid.Row="1" DataContext="{x:Static local:VisitationCardListDesignModel.Instance}">
+                                    <Grid x:Name="TabContent" Grid.Row="1" DataContext="{x:Static local:VisitationCardListDesignModel.Instance}">
 
                                         <!-- Tab Content -->
+
+                                        <!--<Grid x:Name="Content1" Grid.Row="1" Width="400" Height="800" Background="{StaticResource ActiveTabColorBrush}" Panel.ZIndex="1" Margin="0 -3 0 0">
+                                            <Border Background="{StaticResource PrimaryColorBrush}" Height="0.5" VerticalAlignment="Top" Width="205" HorizontalAlignment="Right" />
+
+                                            <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0, 10, 0, 0" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="1" BorderBrush="{StaticResource PrimaryColorBrush}" Width="380">
+                                                <ListBox ItemsSource="{Binding DiagnosisGroup}" SelectedItem="{Binding SelectedCard}" HorizontalAlignment="Center" BorderThickness="0" Background="{StaticResource ActiveTabColorBrush}" >
+                                                    <ListBox.ItemContainerStyle>
+                                                        <Style TargetType="ListBoxItem">
+                                                            <Setter Property="IsSelected" Value="{Binding Content.IsSelected, Mode=TwoWay, RelativeSource={RelativeSource Self}}"/>
+                                                            <Setter Property="Background" Value="Red" />
+                                                            <Setter Property="Template">
+                                                                <Setter.Value>
+                                                                    <ControlTemplate TargetType="ListBoxItem">
+                                                                        <ContentPresenter />
+                                                                    </ControlTemplate>
+                                                                </Setter.Value>
+                                                            </Setter>
+                                                        </Style>
+                                                    </ListBox.ItemContainerStyle>
+
+                                                    <ItemsControl.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <Grid >
+                                                                <local:TreatmentCategory />
+                                                            </Grid>
+                                                        </DataTemplate>
+                                                    </ItemsControl.ItemTemplate>
+
+                                                </ListBox>
+                                            </ScrollViewer>
+                                        </Grid>-->
+
                                         <local:VisitationTab />
 
                                         <UserControl Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">

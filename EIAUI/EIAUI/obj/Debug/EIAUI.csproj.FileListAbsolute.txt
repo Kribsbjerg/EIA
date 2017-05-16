@@ -192,3 +192,11 @@ C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCard_v2.
 C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\NotificationMessage.baml
 C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Styles\Scrollbar.baml
 C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Styles\Popups.baml
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\ComboboxTest\Comboboxtest.baml
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\HistoryCardList.baml
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationTab.baml
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\ComboboxTest\Comboboxtest.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\HistoryCardList.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationTab.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\TreatmentCategory.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\TreatmentCategory.baml

@@ -79,6 +79,9 @@
     <Compile Include="Controls\OverviewCard.xaml.cs">
       <DependentUpon>OverviewCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\TreatmentCategory.xaml.cs">
+      <DependentUpon>TreatmentCategory.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\VisitationAlt.xaml.cs">
       <DependentUpon>VisitationAlt.xaml</DependentUpon>
     </Compile>
@@ -112,6 +115,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\OverviewCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TreatmentCategory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
