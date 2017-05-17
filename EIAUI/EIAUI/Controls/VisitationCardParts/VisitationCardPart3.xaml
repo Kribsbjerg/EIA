@@ -10,15 +10,15 @@
         <!--Doctor, room and letters-->
         <Border Padding="24 28 24 37" CornerRadius="0 1 1 0" Background="{StaticResource SecondaryColorBrush}">
             <StackPanel Grid.Column="2">
-                <TextBlock Text="Læge:" FontSize="13" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource BackgroundColorBrush}"/>
+                <TextBlock Text="Læge:" FontSize="13" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource BackgroundColorBrush}"/>
                 <TextBlock Text="Dr. Acula" FontSize="13" TextWrapping="Wrap" Margin="0 1 0 20" FontFamily="{StaticResource LatoBold}" 
                                    Foreground="{StaticResource BackgroundColorBrush}" />
 
-                <TextBlock Text="Rum:" FontSize="13" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource BackgroundColorBrush}"/>
+                <TextBlock Text="Rum:" FontSize="13" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource BackgroundColorBrush}"/>
                 <TextBlock Text="EMG1" FontSize="13" Margin="0 1 0 20" TextWrapping="Wrap" FontFamily="{StaticResource LatoRegular}" 
                                    Foreground="{StaticResource BackgroundColorBrush}" />
 
-                <TextBlock Text="Brev(e):"  FontSize="13" FontFamily="{StaticResource LatoRegular}" Foreground="{StaticResource BackgroundColorBrush}"/>
+                <TextBlock Text="Brev(e):"  FontSize="13" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource BackgroundColorBrush}"/>
                 <TextBlock Text="1.   Indkaldelse indenfor behandlingsgaranti.
                                  2.   Pjece: EMG undersøgelse.
                                  3.   Patientrettigheder." FontSize="13" TextWrapping="Wrap" FontFamily="{StaticResource LatoRegular}" 

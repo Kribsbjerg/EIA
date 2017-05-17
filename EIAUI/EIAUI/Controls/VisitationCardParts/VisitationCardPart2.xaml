@@ -7,8 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="500">
     <Grid d:DataContext="{x:Static local:VisitationCardDesignModel.Instance}" >
-        <Grid Width="304" Height="328">
-            <Border Background="{StaticResource PrimaryColorBrush}" Padding="24" CornerRadius="2 0 0 2">
+        <Grid Width="320" Height="350">
+            <Border Background="{StaticResource PrimaryColorBrush}" Width="304" Height="328" Padding="24" CornerRadius="2 0 0 2">
                 <Border.Effect>
                     <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
                 </Border.Effect>
