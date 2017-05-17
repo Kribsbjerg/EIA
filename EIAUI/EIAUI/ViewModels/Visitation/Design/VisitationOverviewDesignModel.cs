@@ -17,7 +17,7 @@ namespace EIAUI
         public VisitationOverviewDesignModel()
         {
             Cpr = "01";
-            Diagnose = "DI 10 - Blodtryksforhøjelse af ukendt årsag. \n\nDE 659 - Fedme u spec.";
+            Diagnose = "DI 10 - Blodtryksforhøjelse af ukendt årsag";
         }
         
         #endregion

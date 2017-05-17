@@ -18,6 +18,7 @@ namespace EIAUI
         {
             ApproveVisitation = new RelayCommand(() => ApproveToNextCard());
             MinimizeVisitationCard = new RelayCommand(() => SelectedCard = null);
+            
         }
 
         public ICommand ApproveVisitation { get; set; }
@@ -27,6 +28,10 @@ namespace EIAUI
         public ICommand TabChange { get; set; }
 
         public string SearchWord { get; set; } = "";
+
+        public int NumberOfActiveVisitations { get; set; }
+
+        public int NumberOfHistoryVisitations { get; set; } 
 
         public ObservableCollection<VisitationOverviewViewModel> ActiveVisitationCards { get; set; }
 
@@ -55,6 +60,8 @@ namespace EIAUI
             int indexOfCard = ActiveVisitationCards.IndexOf(SelectedCard);
             MoveCardToHistory();
             SelectedCard = ActiveVisitationCards[indexOfCard];
+            NumberOfActiveVisitations = ActiveVisitationCards.Count;
+            NumberOfHistoryVisitations = HistoryVisitationCards.Count;
         }
 
         private void MoveCardToHistory()

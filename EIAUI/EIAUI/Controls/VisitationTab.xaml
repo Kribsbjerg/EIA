@@ -16,7 +16,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Border x:Name="Tab1" Grid.Row="0" Width="220" Height="35" Background="Transparent" HorizontalAlignment="Left" Panel.ZIndex="1">
+        <Border x:Name="Tab1" Grid.Row="0" Width="200" Height="35" Background="Transparent" HorizontalAlignment="Left" Panel.ZIndex="1">
             <Grid>
                 <Path x:Name="TabPath1" StrokeThickness="0.5"
                               Margin="0 0 0 0"
@@ -26,8 +26,22 @@
                               StrokeLineJoin="Round"
                               >
                 </Path>
+                <Grid >
 
-                <TextBlock Margin="-20 0 0 0" Text="Visitationer" FontSize="14" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource PrimaryColorBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="6*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="3*" />
+
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBlock Grid.Column="1" Margin="-20 0 0 0" Text="Visitationer" FontSize="13" FontWeight="SemiBold"  FontFamily="{StaticResource LatoBold}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <Ellipse Grid.Column="3" Height="22" Width="22" Fill="Red" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Grid.Column="3" Text="{Binding NumberOfActiveVisitations, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0 0 0 0" Foreground="White" />
+                </Grid>
+                
 
             </Grid>
             <Border.Triggers>
@@ -71,9 +85,10 @@
 
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <Grid>
-                                <local:OverviewCard Padding="0 6" />
-                            </Grid>
+                            <StackPanel>
+                                <local:OverviewCard Padding="0" />
+                                <!--<Border Height="0.5" Background="{StaticResource BorderLineColorBrush}" Margin="0 0 0 0.1" />-->
+                            </StackPanel>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
 
@@ -148,7 +163,23 @@
                               StrokeLineJoin="Round"
                               >
                 </Path>
-                <TextBlock Text="Historik" FontSize="14" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource PrimaryColorBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+                <Grid >
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="6*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="3*" />
+
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Historik" FontSize="14" FontFamily="{StaticResource LatoBold}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <Ellipse Grid.Column="3" Height="22" Width="22" Fill="Red" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Grid.Column="3" Text="{Binding NumberOfHistoryVisitations, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0 0 0 0" Foreground="White" />
+
+                </Grid>
 
             </Grid>
             <Border.Triggers>
@@ -172,10 +203,12 @@
         <Grid x:Name="Content2" Grid.Row="1" Width="400" Height="800" Background="{StaticResource ActiveTabColorBrush}" Panel.ZIndex="0" Margin="0 -3 0 0">
             <Border Background="{StaticResource PrimaryColorBrush}" Height="0.5" VerticalAlignment="Top" Width="192" HorizontalAlignment="Left" />
             <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0, 10, 0, 0" Width="390">
-                <ListBox ItemsSource="{Binding HistoryVisitationCards}" HorizontalAlignment="Center" BorderThickness="0" Background="{StaticResource ActiveTabColorBrush}">
+                <ListBox ItemsSource="{Binding HistoryVisitationCards}" Width="380" HorizontalAlignment="Center" BorderThickness="0" Background="{StaticResource ActiveTabColorBrush}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <local:OverviewCard Padding="0 5" />
+                            <Grid>
+                                <local:OverviewCard Padding="0" />
+                            </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ListBox>
