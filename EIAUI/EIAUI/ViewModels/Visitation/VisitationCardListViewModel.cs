@@ -17,9 +17,12 @@ namespace EIAUI
         public VisitationCardListViewModel()
         {
             ApproveVisitation = new RelayCommand(() => ApproveToNextCard());
+            MinimizeVisitationCard = new RelayCommand(() => SelectedCard = null);
         }
 
         public ICommand ApproveVisitation { get; set; }
+
+        public ICommand MinimizeVisitationCard { get; set; }
 
         public ICommand TabChange { get; set; }
 
@@ -29,7 +32,7 @@ namespace EIAUI
 
         public ObservableCollection<VisitationOverviewViewModel> HistoryVisitationCards { get; set; }
 
-        public ObservableCollection<VisitationOverviewViewModel> SearchResult => new ObservableCollection<VisitationOverviewViewModel>(ActiveVisitationCards.Where(c => c.Cpr.Contains(SearchWord)).ToList());
+        public IEnumerable<VisitationOverviewViewModel> SearchResult => ActiveVisitationCards.Where(c => c.Cpr.Contains(SearchWord));
 
         public IEnumerable<IGrouping<string, VisitationOverviewViewModel>> DiagnosisGroup => ActiveVisitationCards.GroupBy(c => c.TreatmentType);
 

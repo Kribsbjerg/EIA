@@ -70,17 +70,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ComboboxTest\Comboboxtest.xaml.cs">
+      <DependentUpon>Comboboxtest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HistoryCardList.xaml.cs">
+      <DependentUpon>HistoryCardList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\OverviewCard.xaml.cs">
       <DependentUpon>OverviewCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\TreatmentCategory.xaml.cs">
+      <DependentUpon>TreatmentCategory.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\VisitationAlt.xaml.cs">
       <DependentUpon>VisitationAlt.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\VisitationCard.xaml.cs">
-      <DependentUpon>VisitationCard.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\VisitationCardList.xaml.cs">
-      <DependentUpon>VisitationCardList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\VisitationCardFinal.xaml.cs">
       <DependentUpon>VisitationCardFinal.xaml</DependentUpon>
@@ -97,6 +100,10 @@
     <Compile Include="Controls\VisitationCard_v2.xaml.cs">
       <DependentUpon>VisitationCard_v2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\VisitationTab.xaml.cs">
+      <DependentUpon>VisitationTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HotKey.cs" />
     <Compile Include="NotificationMessage.xaml.cs">
       <DependentUpon>NotificationMessage.xaml</DependentUpon>
     </Compile>
@@ -105,24 +112,29 @@
     <Compile Include="ViewModels\Visitation\Design\VisitationOverviewDesignModel.cs" />
     <Compile Include="ViewModels\Visitation\Design\VisitationCardDesignModel.cs" />
     <Compile Include="ViewModels\Visitation\Design\VisitationCardListDesignModel.cs" />
+    <Compile Include="ViewModels\Visitation\TabViewModel.cs" />
     <Compile Include="ViewModels\Visitation\VisitationCardListViewModel.cs" />
     <Compile Include="ViewModels\Visitation\VisitationOverviewViewModel.cs" />
     <Compile Include="ViewModels\Visitation\VisitationCardViewModel.cs" />
     <Compile Include="ViewModels\WindowViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayCommand.cs" />
+    <Page Include="ComboboxTest\Comboboxtest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\HistoryCardList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\OverviewCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\TreatmentCategory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\VisitationAlt.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\VisitationCard.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\VisitationCardList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -143,6 +155,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\VisitationCard_v2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\VisitationTab.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -234,9 +250,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="FodyWeavers.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Main.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Logo\enversion-logo.PNG" />

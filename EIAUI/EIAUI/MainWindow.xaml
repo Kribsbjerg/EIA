@@ -17,7 +17,7 @@
         Left="1320"
         WindowStartupLocation="Manual" 
         Top="0">
-
+½
     <Window.Resources>
         
         
@@ -252,7 +252,7 @@
             GlassFrameThickness="0"
             CornerRadius="{Binding }"
             />
-    </WindowChrome.WindowChrome>-->
+    </WindowChrome.WindowChrome>
 
 </Window>
     

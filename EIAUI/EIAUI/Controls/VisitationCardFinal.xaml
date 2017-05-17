@@ -5,9 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EIAUI"
              mc:Ignorable="d" 
-             d:DesignHeight="350" d:DesignWidth="945">
-    <Grid>
-        <StackPanel Orientation="Horizontal">
+             d:DesignHeight="350" d:DesignWidth="945"
+             >
+    <Grid Background="Transparent">
+        <StackPanel Orientation="Horizontal" Background="Transparent">
             <local:VisitationCardPart1 Loaded="VisitationCardPart1_Loaded" />
             <local:VisitationCardPart2 />
             <local:VisitationCardPart3 />

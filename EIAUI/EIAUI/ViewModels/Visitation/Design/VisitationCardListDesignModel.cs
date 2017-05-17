@@ -30,7 +30,7 @@ namespace EIAUI
                 new VisitationOverviewViewModel()
                 {
                     Cpr = "238946",
-                    Diagnose = "Diller for lille"
+                    Diagnose = "A historical visitation"
                 }
             };
 
