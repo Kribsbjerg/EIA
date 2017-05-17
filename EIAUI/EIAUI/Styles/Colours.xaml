@@ -28,8 +28,6 @@
     <Color x:Key="LightTextColor">#A5A2AF</Color>
     <SolidColorBrush x:Key="LightTextColorBrush" Color="{StaticResource LightTextColor}" />
 
-    
-    
     <Color x:Key="BorderLineColor">#121738</Color>
     <SolidColorBrush x:Key="BorderLineColorBrush" Color="{StaticResource BorderLineColor}" Opacity="0.12" />
 

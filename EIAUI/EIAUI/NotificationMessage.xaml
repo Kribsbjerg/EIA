@@ -28,12 +28,12 @@
 
                                 <!-- Opacity mask for corners on grid -->
                                 <Border x:Name="Container"
-                                        Background="{StaticResource DarkTextColorBrush}"
-                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}" />
+                                        Background="{StaticResource PrimaryColorBrush}"
+                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=2}" />
 
                                 <!-- Main window with resizable outline margin -->
-                                <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}"
-                                        Background="{StaticResource DarkTextColorBrush}">
+                                <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=2}"
+                                        Background="{StaticResource PrimaryColorBrush}">
                                     <Border.Effect>
                                         <DropShadowEffect ShadowDepth="1" Opacity="0.4" BlurRadius="5" />
                                     </Border.Effect>
@@ -86,8 +86,8 @@
                                                 <RowDefinition Height="43" />
                                                 <RowDefinition Height="21" />
                                             </Grid.RowDefinitions>
-                                            <Button Grid.Row="1" BorderThickness="1" BorderBrush="White" Content="VIS" Foreground="{StaticResource BackgroundColorBrush}" Background="{StaticResource DarkTextColorBrush}" FontFamily="{StaticResource LatoRegular}" FontSize="14" />
-                                            <Button Grid.Row="3" BorderThickness="1" BorderBrush="White" Content="UDSÆT" Foreground="{StaticResource BackgroundColorBrush}" Background="{StaticResource DarkTextColorBrush}" FontFamily="{StaticResource LatoRegular}" FontSize="14"/>
+                                            <Button Grid.Row="1" BorderThickness="1" BorderBrush="White" Content="VIS" Foreground="{StaticResource BackgroundColorBrush}" Background="{StaticResource PrimaryColorBrush}" FontFamily="{StaticResource LatoRegular}" FontSize="14" />
+                                            <Button Grid.Row="3" BorderThickness="1" BorderBrush="White" Content="UDSÆT" Foreground="{StaticResource BackgroundColorBrush}" Background="{StaticResource PrimaryColorBrush}" FontFamily="{StaticResource LatoRegular}" FontSize="14"/>
                                         </Grid>
 
                                         <!-- White Space between Notification & Buttons -->

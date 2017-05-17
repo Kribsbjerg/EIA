@@ -73,6 +73,9 @@
     <Compile Include="ComboboxTest\Comboboxtest.xaml.cs">
       <DependentUpon>Comboboxtest.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ContactPopup.xaml.cs">
+      <DependentUpon>ContactPopup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\HistoryCardList.xaml.cs">
       <DependentUpon>HistoryCardList.xaml</DependentUpon>
     </Compile>
@@ -121,6 +124,10 @@
     <Page Include="ComboboxTest\Comboboxtest.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ContactPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\HistoryCardList.xaml">
       <Generator>MSBuild:Compile</Generator>
