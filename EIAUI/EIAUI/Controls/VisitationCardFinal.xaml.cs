@@ -24,10 +24,5 @@ namespace EIAUI
         {
             InitializeComponent();
         }
-
-        private void VisitationCardPart1_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

@@ -37,34 +37,32 @@
 
                     </Grid.ColumnDefinitions>
                     
-                    <TextBlock Grid.Column="1" Margin="-20 0 0 0" Text="Visitationer" FontSize="13" FontWeight="SemiBold"  FontFamily="{StaticResource LatoBold}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <Ellipse Grid.Column="3" Height="22" Width="22" Fill="Red" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <TextBlock Grid.Column="3" Text="{Binding NumberOfActiveVisitations, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0 0 0 0" Foreground="White" />
+                    <TextBlock Grid.Column="1" Margin="-20 0 0 0" Text="Visitationer" FontSize="14" FontWeight="SemiBold"  FontFamily="{StaticResource LatoBold}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <Ellipse Grid.Column="3" Height="22" Width="22" Fill="{StaticResource AccentColorBrush}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Grid.Column="3" Text="{Binding NumberOfActiveVisitations, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0 0 0 0" Foreground="White" />
                 </Grid>
                 
 
             </Grid>
             <Border.Triggers>
-                        <EventTrigger RoutedEvent="MouseDown">
-                            <EventTrigger.Actions>
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <Int32Animation Storyboard.TargetName="Tab1" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="1"/>
-                                        <Int32Animation Storyboard.TargetName="Content1" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="1"/>
-                                        <Int32Animation Storyboard.TargetName="Tab2" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="0"/>
-                                        <Int32Animation Storyboard.TargetName="Content2" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="0"/>
-                                        <ColorAnimation Storyboard.TargetName="TabPath1" To="{StaticResource ActiveTabColor}" Duration="0:0:0" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" />
-                                        <ColorAnimation Storyboard.TargetName="TabPath2" To="{StaticResource InactiveTabColor}" Duration="0:0:0" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger.Actions>
-                        </EventTrigger>
-                    </Border.Triggers>
+                <EventTrigger RoutedEvent="MouseDown">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <Int32Animation Storyboard.TargetName="Tab1" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="1"/>
+                                <Int32Animation Storyboard.TargetName="Content1" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="1"/>
+                                <Int32Animation Storyboard.TargetName="Tab2" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="0"/>
+                                <Int32Animation Storyboard.TargetName="Content2" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="0"/>
+                                <ColorAnimation Storyboard.TargetName="TabPath1" To="{StaticResource ActiveTabColor}" Duration="0:0:0" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" />
+                                <ColorAnimation Storyboard.TargetName="TabPath2" To="{StaticResource InactiveTabColor}" Duration="0:0:0" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Border.Triggers>
         </Border>
         
-        <!--
         
-        -->
         <Grid x:Name="Content1" Grid.Row="1" Width="400" Height="800" Background="{StaticResource ActiveTabColorBrush}" Panel.ZIndex="1" Margin="0 -3 0 0">
             <Border Background="{StaticResource PrimaryColorBrush}" Height="0.5" VerticalAlignment="Top" Width="205" HorizontalAlignment="Right" />
             <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0, 10, 0, 0" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="1" BorderBrush="{StaticResource PrimaryColorBrush}" Width="380">
@@ -91,6 +89,10 @@
                             </StackPanel>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
+
+                    <!--<ListBox.Effect>
+                        <DropShadowEffect ShadowDepth="0" Opacity="0.6" BlurRadius="10" />
+                    </ListBox.Effect>-->
 
                 </ListBox>
             </ScrollViewer>
@@ -147,7 +149,13 @@
                 </Popup.Style>-->
 
 
-                <local:VisitationCardFinal />
+                <Grid Background="Transparent">
+                    <StackPanel Orientation="Horizontal" Background="Transparent">
+                        <local:VisitationCardPart1 Loaded="VisitationCardPart1_Loaded" />
+                        <local:VisitationCardPart2 />
+                        <local:VisitationCardPart3 />
+                    </StackPanel>
+                </Grid>
 
             </Popup>
 
@@ -175,9 +183,9 @@
 
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Text="Historik" FontSize="14" FontFamily="{StaticResource LatoBold}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <Ellipse Grid.Column="3" Height="22" Width="22" Fill="Red" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <TextBlock Grid.Column="3" Text="{Binding NumberOfHistoryVisitations, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0 0 0 0" Foreground="White" />
+                    <TextBlock Grid.Column="1" Text="Historik" FontSize="14" FontFamily="{StaticResource LatoBold}" FontWeight="SemiBold" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <Ellipse Grid.Column="3" Height="22" Width="22" Fill="{StaticResource LightTextColorBrush}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Grid.Column="3" Text="{Binding NumberOfHistoryVisitations, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0 0 0 0" Foreground="White" />
 
                 </Grid>
 
@@ -203,7 +211,22 @@
         <Grid x:Name="Content2" Grid.Row="1" Width="400" Height="800" Background="{StaticResource ActiveTabColorBrush}" Panel.ZIndex="0" Margin="0 -3 0 0">
             <Border Background="{StaticResource PrimaryColorBrush}" Height="0.5" VerticalAlignment="Top" Width="192" HorizontalAlignment="Left" />
             <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0, 10, 0, 0" Width="390">
-                <ListBox ItemsSource="{Binding HistoryVisitationCards}" Width="380" HorizontalAlignment="Center" BorderThickness="0" Background="{StaticResource ActiveTabColorBrush}">
+                <ListBox ItemsSource="{Binding HistoryVisitationCards}" HorizontalAlignment="Center" Height="Auto" BorderThickness="0" Background="{StaticResource ActiveTabColorBrush}">
+
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="IsSelected" Value="{Binding Content.IsSelected, Mode=TwoWay, RelativeSource={RelativeSource Self}}"/>
+                            <Setter Property="Background" Value="Red" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="ListBoxItem">
+                                        <ContentPresenter/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Grid>
@@ -211,7 +234,14 @@
                             </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
+
+                    <!--<ListBox.Effect>
+                        <DropShadowEffect ShadowDepth="0" Opacity="0.6" BlurRadius="10" />
+                    </ListBox.Effect>-->
+
                 </ListBox>
+
+                
 
             </ScrollViewer>
         </Grid>
