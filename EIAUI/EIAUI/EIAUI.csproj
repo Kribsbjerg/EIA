@@ -259,13 +259,13 @@
     <Resource Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Logo\enversion-logo.PNG" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\Logo\%400,5xenversion-logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="enversion-logo1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Logo\enversion-logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.1.29.2\build\dotnet\Fody.targets" Condition="Exists('..\packages\Fody.1.29.2\build\dotnet\Fody.targets')" />
