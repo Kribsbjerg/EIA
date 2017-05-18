@@ -17,16 +17,24 @@ namespace EIAUI
         public VisitationCardListViewModel()
         {
             ApproveVisitation = new RelayCommand(() => ApproveToNextCard());
-            MinimizeVisitationCard = new RelayCommand(() => SelectedCard = null);
+            DeclineVisitation = new RelayCommand(() => DeclineToNextCard());
+            MinimizeVisitationCard = new RelayCommand(() => MinimizeCard());
+            
         }
 
         public ICommand ApproveVisitation { get; set; }
+
+        public ICommand DeclineVisitation { get; set; }
 
         public ICommand MinimizeVisitationCard { get; set; }
 
         public ICommand TabChange { get; set; }
 
         public string SearchWord { get; set; } = "";
+
+        public int NumberOfActiveVisitations { get; set; }
+
+        public int NumberOfHistoryVisitations { get; set; } 
 
         public ObservableCollection<VisitationOverviewViewModel> ActiveVisitationCards { get; set; }
 
@@ -38,28 +46,50 @@ namespace EIAUI
 
         public bool IsCardSelected => SelectedCard != null;
 
+        public bool CardIsClosed { get; set; }
+
         public VisitationOverviewViewModel SelectedCard
         {
             get { return _selectedCard; }
             set
             {
+                CardIsClosed = true;
                 _selectedCard = value;
-                ChangeSelectedCardInList(ActiveVisitationCards);
+                ChangeSelectedCardInList(ActiveVisitationCards); 
             }
         }
 
         #region Private Methods
+
+        private void MinimizeCard()
+        {
+            CardIsClosed = false;
+            SelectedCard = null;
+        }
 
         private void ApproveToNextCard()
         {
             int indexOfCard = ActiveVisitationCards.IndexOf(SelectedCard);
             MoveCardToHistory();
             SelectedCard = ActiveVisitationCards[indexOfCard];
+            NumberOfActiveVisitations = ActiveVisitationCards.Count;
+            NumberOfHistoryVisitations = HistoryVisitationCards.Count;
+        }
+
+        private void DeclineToNextCard()
+        {
+            int indexOfCard = ActiveVisitationCards.IndexOf(SelectedCard);
+            ActiveVisitationCards.Remove(_selectedCard);
+            ChangeSelectedCardInList(HistoryVisitationCards);
+            SelectedCard = ActiveVisitationCards[indexOfCard];
+            NumberOfActiveVisitations = ActiveVisitationCards.Count;
+            NumberOfHistoryVisitations = HistoryVisitationCards.Count;
         }
 
         private void MoveCardToHistory()
         {
             HistoryVisitationCards.Add(_selectedCard);
+
             ActiveVisitationCards.Remove(_selectedCard);
             ChangeSelectedCardInList(HistoryVisitationCards);
         }

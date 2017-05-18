@@ -7,11 +7,5 @@
              mc:Ignorable="d" 
              d:DesignHeight="350" d:DesignWidth="945"
              >
-    <Grid Background="Transparent">
-        <StackPanel Orientation="Horizontal" Background="Transparent">
-            <local:VisitationCardPart1 />
-            <local:VisitationCardPart2 />
-            <local:VisitationCardPart3 />
-        </StackPanel>
-    </Grid>
+    
 </UserControl>

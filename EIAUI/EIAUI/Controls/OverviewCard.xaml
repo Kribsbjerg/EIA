@@ -6,7 +6,7 @@
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:local="clr-namespace:EIAUI"
              mc:Ignorable="d" 
-             Height="80" Width="320"
+             Height="70" Width="340"
              x:Name="Overviewcard">
 
     <UserControl.Resources>
@@ -14,38 +14,67 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ContentControl}">
+                        <Border x:Name="background" Margin="3 0 3 0">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="Background" Value="White" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                            <Setter Property="Background" Value="{StaticResource PrimaryColorBrush}" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
 
-                        <Grid>
-                            <Border x:Name="background">
-                                <Border.Style>
-                                    <Style TargetType="Border">
-                                        <Setter Property="Background" Value="White" />
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding IsSelected}" Value="True">
-                                                <Setter Property="Background" Value="{StaticResource PrimaryColorBrush}" />
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Border.Style>
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="1" Opacity="0.4" BlurRadius="10" />
+                            </Border.Effect>
 
-                                <Border.Effect>
-                                    <DropShadowEffect ShadowDepth="0" Opacity="0.2" BlurRadius="10" />
-                                </Border.Effect>
+                            <Grid x:Name="container" Background="Transparent">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="18*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
 
-                                <Border x:Name="container" Background="Transparent" Padding="5">
-                                    <StackPanel>
-                                        <TextBox Text="{Binding Cpr}" x:Name="text1"  FontSize="15"  Style="{StaticResource LabelField}" FontFamily="{StaticResource LatoBold}" Padding="0 0 0 2" />
-                                        <TextBox Text="{Binding Diagnose}" x:Name="text2" FontSize="13" Foreground="{StaticResource MediumTextColorBrush}" Style="{StaticResource LabelField}" TextWrapping="Wrap"/>
-                                    </StackPanel>
+                                <StackPanel Grid.Row="0" Grid.Column="1" Margin="0 5 0 5" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding Cpr}" x:Name="text1" FontSize="13" FontFamily="{StaticResource LatoBlack}" Margin="0 0 0 2">
+                                        <TextBlock.Style>
+                                            <Style TargetType="{x:Type TextBlock}">
+                                                <Setter Property="Foreground" Value="Black" />
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                                        <Setter Property="Foreground" Value="White" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding Diagnose}" x:Name="text2" FontSize="12" TextTrimming="CharacterEllipsis" Height="20">
+                                        <TextBlock.Style>
+                                            <Style TargetType="{x:Type TextBlock}">
+                                                <Setter Property="Foreground" Value="{StaticResource DarkTextColorBrush}" />
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                                        <Setter Property="Foreground" Value="White" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                </StackPanel>
 
-                                </Border>
-                            </Border>
-                        </Grid>
+                                <Border Grid.Row="1" Grid.ColumnSpan="3" Height="1" Background="{StaticResource BorderLineColorBrush}" />
+
+                            </Grid>
+                        </Border>
 
                         <ControlTemplate.Triggers>
-                            <DataTrigger Binding="{Binding IsSelected}" Value="True">
-                                <Setter Property="Foreground" Value="White" />
-                            </DataTrigger>
+                            
                             <EventTrigger RoutedEvent="MouseEnter">
                                 <BeginStoryboard>
                                     <Storyboard>

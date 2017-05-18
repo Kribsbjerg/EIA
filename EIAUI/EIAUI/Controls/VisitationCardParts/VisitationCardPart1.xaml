@@ -5,10 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EIAUI"
              mc:Ignorable="d" 
-             d:DesignHeight="320" d:DesignWidth="450">
-    <Grid Width="422" Height="309" Background="{StaticResource BackgroundColorBrush}" d:DataContext="{x:Static local:VisitationCardDesignModel.Instance}">
-            <Border CornerRadius="2 0 0 2" Padding="24 17 24 31">
-                <StackPanel Orientation="Vertical" Grid.Column="0">
+             d:DesignHeight="320" d:DesignWidth="450"
+             >
+    
+    <Grid x:Name="CardPart1"  d:DataContext="{x:Static local:VisitationCardDesignModel.Instance}">
+        <Border CornerRadius="2 0 0 2" Padding="24 17 24 31" Background="{StaticResource BackgroundColorBrush}"  Width="422" Height="309">
+            <StackPanel Orientation="Vertical" Grid.Column="0">
 
                     <!--Contact button and CPR-->
                     <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="0 0 0 17.6">

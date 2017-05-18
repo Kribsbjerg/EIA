@@ -129,7 +129,13 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="{StaticResource BackgroundColorBrush}" CornerRadius="2">
-                        <Path Data="M16,12V4H17V2H7V4H8V12L6,14V16H11.2V22H12.8V16H18V14L16,12Z" Fill="{StaticResource BackgroundColorBrush}" Width="8" Height="13.3" />
+                        <Viewbox Width="32" Height="32" >
+                            <Canvas x:Name="PinCanvas" Width="32" Height="32" >
+                                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" >
+                                    <Path Data="M16,12V4H17V2H7V4H8V12L6,14V16H11.2V22H12.8V16H18V14L16,12Z" Fill="White" />
+                                </Grid>
+                            </Canvas>
+                        </Viewbox>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -192,22 +198,21 @@
             </DataTrigger>
         </Style.Triggers>
     </Style>
-    
-    <!--Notification button-->
-    <Style TargetType="{x:Type Button}" x:Key="NotificationButton" BasedOn="{StaticResource BaseStyle}">
+
+    <!--Close next button-->
+    <Style TargetType="{x:Type Button}" x:Key="CloseNextVisitationButton" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
-        <Setter Property="Background" Value="{StaticResource PrimaryColorBrush}" />
+        <Setter Property="Background" Value="{StaticResource RedColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
-        <Setter Property="BorderBrush" Value="{StaticResource BackgroundColorBrush}" />
 
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}"
-                            BorderThickness="1" BorderBrush="{StaticResource BackgroundColorBrush}" CornerRadius="1" >
-
-                        <TextBlock FontFamily="{StaticResource LatoBold}" FontSize="12" Text=" " HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" CornerRadius="2">
+                        <Border.Effect>
+                            <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
+                        </Border.Effect>
+                        <TextBlock FontFamily="{StaticResource LatoBlack}" FontSize="12" Text="NEJ" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -216,10 +221,65 @@
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Cursor" Value="Hand" />
             </Trigger>
+            <DataTrigger Binding="{Binding IsTreated}" Value="True">
+                <Setter Property="Visibility" Value="Hidden" />
+            </DataTrigger>
         </Style.Triggers>
     </Style>
 
-    <Style TargetType="{x:Type Button}" x:Key="GemButton" BasedOn="{StaticResource NotificationButton}">
-        <Setter Property="TextBlock.Text" Value="GEM" />
+    <!-- Next button -->
+    <Style TargetType="{x:Type Button}" x:Key="NextButton" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
+        <Setter Property="Background" Value="{StaticResource TealColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="2">
+                        <Border.Effect>
+                            <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
+                        </Border.Effect>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource LatoBlack}" FontSize="12" Text="JA" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="Hand" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
+
+    <!-- Close Search Button -->
+
+    <Style TargetType="{x:Type Button}" x:Key="CloseSearch" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
+        <Setter Property="Background" Value="{StaticResource RedColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
+
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}" Background="{StaticResource PrimaryColorBrush}" CornerRadius="12" Height="24" Width="24">
+                        <Border.Effect>
+                            <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
+                        </Border.Effect>
+                        <TextBlock FontFamily="{StaticResource MaterialIcon}" Text="&#xf136;" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="Hand" />
+            </Trigger>
+        </Style.Triggers>
+
+    </Style>
+
 </ResourceDictionary>

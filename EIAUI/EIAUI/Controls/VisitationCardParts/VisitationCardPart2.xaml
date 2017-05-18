@@ -5,10 +5,17 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EIAUI"
              mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="500">
+             d:DesignHeight="1000" d:DesignWidth="1000">
+    
     <Grid d:DataContext="{x:Static local:VisitationCardDesignModel.Instance}" >
-        <Grid Width="320" Height="350">
-            <Border Background="{StaticResource PrimaryColorBrush}" Width="304" Height="328" Padding="24" CornerRadius="2 0 0 2">
+        <Grid Width="930" Height="400">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="422" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            
+            <Border Grid.Column="1" x:Name="DecisionCard" Panel.ZIndex="1" Background="{StaticResource PrimaryColorBrush}" Width="304" Height="328" Padding="24" CornerRadius="2 0 0 2">
                 <Border.Effect>
                     <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
                 </Border.Effect>
@@ -49,11 +56,223 @@
 
                     <!--Approve/disapprove buttons-->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 26.6 0 0">
-                        <Button Style="{StaticResource DisapproveVisitationButton}" Command="{Binding MinimizeVisitationCard}" Margin="0 0 8 0" Height="32" Width="64" />
-                        <Button Style="{StaticResource ApproveButton}" Command="{Binding ApproveVisitation}" Height="32" Width="92" />
+                        <Button Style="{StaticResource DisapproveVisitationButton}" Command="{Binding DeclineVisitation}" Margin="0 0 8 0" Height="32" Width="64">
+                            <Button.Triggers>
+                                <EventTrigger RoutedEvent="Button.Click">
+                                    <EventTrigger.Actions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <Int32Animation Storyboard.TargetName="DeclineCard" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="1"/>
+                                                <Int32Animation Storyboard.TargetName="DecisionCard" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="0"/>
+                                                <ThicknessAnimation Storyboard.TargetName="RightCard" To="-220 0 0 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.7" />
+                                                <ThicknessAnimation Storyboard.TargetName="LeftCard" To="0 0 -700 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.7" />
+                                                <DoubleAnimation Storyboard.TargetName="LeftCard" To="0" Storyboard.TargetProperty="(Border.Width)" Duration="0:0:1" />
+                                                <DoubleAnimation Storyboard.TargetName="LogoImage2" Storyboard.TargetProperty="Opacity" From="0.0" To="1.0" Duration="0:0:0.2"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger.Actions> 
+                                </EventTrigger>
+                            </Button.Triggers>
+                        </Button>
+                        
+                        <Button Style="{StaticResource ApproveButton}" Command="{Binding ApproveVisitation}" Height="32" Width="92" >
+                            <Button.Triggers>
+                                <EventTrigger RoutedEvent="Button.Click">
+                                    <EventTrigger.Actions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <Int32Animation Storyboard.TargetName="NextCard" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="1"/>
+                                                <Int32Animation Storyboard.TargetName="DecisionCard" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="0"/>
+                                                <ThicknessAnimation Storyboard.TargetName="RightCard" To="-220 0 0 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.7" />
+                                                <ThicknessAnimation Storyboard.TargetName="LeftCard" To="0 0 -700 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.7" />
+                                                <DoubleAnimation Storyboard.TargetName="LeftCard" To="0" Storyboard.TargetProperty="(Border.Width)" Duration="0:0:1" />
+                                                <DoubleAnimation Storyboard.TargetName="LogoImage" Storyboard.TargetProperty="Opacity" From="0.0" To="1.0" Duration="0:0:0.2"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger.Actions>
+                                </EventTrigger>
+                            </Button.Triggers>
+                        </Button>
                     </StackPanel>
                 </StackPanel>
             </Border>
+
+            <!-- Next Dialog -->
+            <Border Grid.Column="1" x:Name="NextCard" Panel.ZIndex="0" Background="{StaticResource PrimaryColorBrush}" Width="304" Height="328" Padding="24" CornerRadius="2 0 0 2">
+                <Grid  Background="{StaticResource PrimaryColorBrush}">
+
+                    <!-- Logo -->
+                    <Image x:Name="LogoImage" Opacity="0.0" Source="pack://application:,,,/Images/Logo/enversion-logo.png" Width="60" Height="60" Margin="-300 -320 0 0"/>
+
+                    <StackPanel Margin="0 100 0 0">
+
+                        <TextBlock Text="Jeg har stadig: " FontSize="15" FontFamily="{StaticResource LatoRegular}" 
+                                               Foreground="{StaticResource BackgroundColorBrush}" TextAlignment="Center" />
+                        <TextBlock Text="{Binding NumberOfActiveVisitations}" FontSize="15" FontFamily="{StaticResource LatoBold}" 
+                                               Foreground="{StaticResource BackgroundColorBrush}" TextAlignment="Center" />
+                        <TextBlock Text="forslag klar til dig, skal vi fortsætte?" FontSize="15" FontFamily="{StaticResource LatoRegular}" 
+                                               Foreground="{StaticResource BackgroundColorBrush}" TextAlignment="Center" />
+                    </StackPanel>
+
+                    <!--Next/Close buttons-->
+                    <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 26.6 0 0">
+                        <Button Style="{StaticResource CloseNextVisitationButton}" Command="{Binding MinimizeVisitationCard}" Margin="0 0 8 0" Height="32" Width="64" >
+                            <Button.Triggers>
+                                <EventTrigger RoutedEvent="Button.Click">
+                                    <EventTrigger.Actions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <Int32Animation Storyboard.TargetName="NextCard" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="0"/>
+                                                <Int32Animation Storyboard.TargetName="DecisionCard" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="1"/>
+                                                <ThicknessAnimation Storyboard.TargetName="RightCard" To="0 0 0 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.5" />
+                                                <DoubleAnimation Storyboard.TargetName="LeftCard" To="422" Storyboard.TargetProperty="(Border.Width)" Duration="0:0:0.5" />
+                                                <ThicknessAnimation Storyboard.TargetName="LeftCard" To="0 0 0 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.5" />
+                                                <DoubleAnimation Storyboard.TargetName="LogoImage" Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:0.2"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger.Actions>
+                                </EventTrigger>
+                            </Button.Triggers>
+                        </Button>
+                        
+                        <Button Style="{StaticResource NextButton}" Height="32" Width="92" >
+                            <Button.Triggers>
+                                <EventTrigger RoutedEvent="Button.Click">
+                                    <EventTrigger.Actions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <Int32Animation Storyboard.TargetName="NextCard" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="0"/>
+                                                <Int32Animation Storyboard.TargetName="DecisionCard" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="1"/>
+                                                <ThicknessAnimation Storyboard.TargetName="RightCard" To="0 0 0 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.5" />
+                                                <DoubleAnimation Storyboard.TargetName="LeftCard" To="422" Storyboard.TargetProperty="(Border.Width)" Duration="0:0:0.5" />
+                                                <ThicknessAnimation Storyboard.TargetName="LeftCard" To="0 0 0 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.5" />
+                                                <DoubleAnimation Storyboard.TargetName="LogoImage" Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:0.2"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger.Actions>
+                                </EventTrigger>
+                            </Button.Triggers>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <Border Grid.Column="1" x:Name="DeclineCard" Panel.ZIndex="0" Background="{StaticResource PrimaryColorBrush}" Width="304" Height="328" Padding="24" CornerRadius="2 0 0 2">
+                <Grid  Background="{StaticResource PrimaryColorBrush}">
+
+                    <!-- Logo -->
+                    <Image x:Name="LogoImage2" Opacity="0.0" Source="pack://application:,,,/Images/Logo/enversion-logo.png" Width="60" Height="60" Margin="-300 -320 0 0"/>
+
+                    <StackPanel Margin="0 60 0 0">
+
+                        <TextBlock Text="OK, jeg sender henvendelsen til din mail." TextWrapping="WrapWithOverflow" FontSize="15" FontFamily="{StaticResource LatoRegular}" 
+                                               Foreground="{StaticResource BackgroundColorBrush}" TextAlignment="Center" Margin="0 0 0 20" />
+                        
+                        <TextBlock Text="Jeg har stadig: " FontSize="15" FontFamily="{StaticResource LatoRegular}" 
+                                               Foreground="{StaticResource BackgroundColorBrush}" TextAlignment="Center" />
+                        <TextBlock Text="{Binding NumberOfActiveVisitations}" FontSize="15" FontFamily="{StaticResource LatoBold}" 
+                                               Foreground="{StaticResource BackgroundColorBrush}" TextAlignment="Center" />
+                        <TextBlock Text="forslag klar til dig, skal vi fortsætte?" FontSize="15" FontFamily="{StaticResource LatoRegular}" 
+                                               Foreground="{StaticResource BackgroundColorBrush}" TextAlignment="Center" />
+                    </StackPanel>
+
+                    <!--Next/Close buttons-->
+                    <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 26.6 0 0">
+                        <Button Style="{StaticResource CloseNextVisitationButton}" Command="{Binding MinimizeVisitationCard}" Margin="0 0 8 0" Height="32" Width="64" >
+                            <Button.Triggers>
+                                <EventTrigger RoutedEvent="Button.Click">
+                                    <EventTrigger.Actions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <Int32Animation Storyboard.TargetName="DeclineCard" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="0"/>
+                                                <Int32Animation Storyboard.TargetName="DecisionCard" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="1"/>
+                                                <ThicknessAnimation Storyboard.TargetName="RightCard" To="0 0 0 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.5" />
+                                                <DoubleAnimation Storyboard.TargetName="LeftCard" To="422" Storyboard.TargetProperty="(Border.Width)" Duration="0:0:0.5" />
+                                                <ThicknessAnimation Storyboard.TargetName="LeftCard" To="0 0 0 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.5" />
+                                                <DoubleAnimation Storyboard.TargetName="LogoImage" Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:0.2"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger.Actions>
+                                </EventTrigger>
+                            </Button.Triggers>
+                        </Button>
+                        
+                        <Button Style="{StaticResource NextButton}" Height="32" Width="92" >
+                            <Button.Triggers>
+                                <EventTrigger RoutedEvent="Button.Click">
+                                    <EventTrigger.Actions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <Int32Animation Storyboard.TargetName="DeclineCard" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="0"/>
+                                                <Int32Animation Storyboard.TargetName="DecisionCard" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="1"/>
+                                                <ThicknessAnimation Storyboard.TargetName="RightCard" To="0 0 0 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.5" />
+                                                <DoubleAnimation Storyboard.TargetName="LeftCard" To="422" Storyboard.TargetProperty="(Border.Width)" Duration="0:0:0.5" />
+                                                <ThicknessAnimation Storyboard.TargetName="LeftCard" To="0 0 0 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.5" />
+                                                <DoubleAnimation Storyboard.TargetName="LogoImage2" Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:0.2"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger.Actions>
+                                </EventTrigger>
+                            </Button.Triggers>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <Border  x:Name="LeftCard"  Panel.ZIndex="-1" Width="422">
+                <Grid Grid.Column="0" >
+                    <Border CornerRadius="2 0 0 2" Padding="24 17 24 31" Margin="0 0 0 0" Background="{StaticResource BackgroundColorBrush}"  Width="422" Height="309">
+                        <StackPanel Orientation="Vertical" Grid.Column="0">
+
+                            <!--Contact button and CPR-->
+                            <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="0 0 0 17.6">
+                                <Button Style="{StaticResource ContactButton}" Margin="0 0 8 0"/>
+                                <TextBlock Text="{Binding SelectedCard.Cpr}" FontFamily="{StaticResource LatoRegular}" FontSize="25" VerticalAlignment="Bottom" Foreground="{StaticResource DarkTextColorBrush}"/>
+                            </StackPanel>
+
+                            <!--Diagnosis-->
+                            <TextBlock Text="Diagnose" FontSize="15" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource DarkTextColorBrush}" Height="24.9"/>
+                            <Border Height="1" Background="{StaticResource DarkTextColorBrush}" />
+                            <TextBlock Text="{Binding SelectedCard.Diagnose}" Margin="0 5 0 0" FontSize="15" TextWrapping="Wrap" FontFamily="{StaticResource LatoRegular}" 
+                                   Foreground="{StaticResource DarkTextColorBrush}" Height="61"/>
+
+                            <!--Referral cause-->
+                            <TextBlock Text="Henvisningsårsag" FontSize="15" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource DarkTextColorBrush}"
+                                   Margin="0 27.6 0 0" Height="24.9"/>
+                            <Border Height="1" Background="{StaticResource DarkTextColorBrush}" />
+                            <TextBlock Margin="0 5 0 0" Text="Text.." FontSize="15" Height="61" TextWrapping="Wrap" FontFamily="{StaticResource LatoRegular}" Foreground="{StaticResource DarkTextColorBrush}"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+
+            </Border>
+
+            
+            
+
+            <Border x:Name="RightCard" Grid.Column="2"  Panel.ZIndex="-1">
+                <Grid Width="216" Height="328" Margin="0 0 0 0">
+                    <!--Doctor, room and letters-->
+                    <Border Padding="24 28 24 37" CornerRadius="0 1 1 0" Background="{StaticResource SecondaryColorBrush}">
+                        <StackPanel Grid.Column="2">
+                            <TextBlock Text="Læge:" FontSize="13" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource BackgroundColorBrush}"/>
+                            <TextBlock Text="Dr. Acula" FontSize="13" TextWrapping="Wrap" Margin="0 1 0 20" FontFamily="{StaticResource LatoBold}" 
+                                   Foreground="{StaticResource BackgroundColorBrush}" />
+
+                            <TextBlock Text="Rum:" FontSize="13" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource BackgroundColorBrush}"/>
+                            <TextBlock Text="EMG1" FontSize="13" Margin="0 1 0 20" TextWrapping="Wrap" FontFamily="{StaticResource LatoRegular}" 
+                                   Foreground="{StaticResource BackgroundColorBrush}" />
+
+                            <TextBlock Text="Brev(e):"  FontSize="13" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource BackgroundColorBrush}"/>
+                            <TextBlock Text="1.   Indkaldelse indenfor behandlingsgaranti.
+                                 2.   Pjece: EMG undersøgelse.
+                                 3.   Patientrettigheder." FontSize="13" TextWrapping="Wrap" FontFamily="{StaticResource LatoRegular}" 
+                            Foreground="{StaticResource BackgroundColorBrush}" />
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Border>
+            
         </Grid>
     </Grid>
 </UserControl>

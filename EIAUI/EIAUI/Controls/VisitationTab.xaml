@@ -16,7 +16,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Border x:Name="Tab1" Grid.Row="0" Width="220" Height="35" Background="Transparent" HorizontalAlignment="Left" Panel.ZIndex="1">
+        <Border x:Name="Tab1" Grid.Row="0" Width="200" Height="35" Background="Transparent" HorizontalAlignment="Left" Panel.ZIndex="1">
             <Grid>
                 <Path x:Name="TabPath1" StrokeThickness="0.5"
                               Margin="0 0 0 0"
@@ -26,31 +26,46 @@
                               StrokeLineJoin="Round"
                               >
                 </Path>
+                
+                <Grid >
 
-                <TextBlock Margin="-20 0 0 0" Text="Visitationer" FontSize="14" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource PrimaryColorBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="6*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="3*" />
+
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="1" Margin="-20 0 0 0" Text="Visitationer" FontSize="14" FontWeight="SemiBold"  FontFamily="{StaticResource LatoBold}" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <Ellipse x:Name="Ellipse1" Grid.Column="3" Height="20" Width="20" Fill="{StaticResource AccentColorBrush}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Grid.Column="3" Text="{Binding NumberOfActiveVisitations}" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0 0 0 0" Foreground="White" />
+                </Grid>
+
 
             </Grid>
             <Border.Triggers>
-                        <EventTrigger RoutedEvent="MouseDown">
-                            <EventTrigger.Actions>
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <Int32Animation Storyboard.TargetName="Tab1" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="1"/>
-                                        <Int32Animation Storyboard.TargetName="Content1" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="1"/>
-                                        <Int32Animation Storyboard.TargetName="Tab2" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="0"/>
-                                        <Int32Animation Storyboard.TargetName="Content2" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="0"/>
-                                        <ColorAnimation Storyboard.TargetName="TabPath1" To="{StaticResource ActiveTabColor}" Duration="0:0:0" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" />
-                                        <ColorAnimation Storyboard.TargetName="TabPath2" To="{StaticResource InactiveTabColor}" Duration="0:0:0" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger.Actions>
-                        </EventTrigger>
-                    </Border.Triggers>
+                <EventTrigger RoutedEvent="MouseDown">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <Int32Animation Storyboard.TargetName="Tab1" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="1"/>
+                                <Int32Animation Storyboard.TargetName="Content1" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="1"/>
+                                <Int32Animation Storyboard.TargetName="Tab2" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="0"/>
+                                <Int32Animation Storyboard.TargetName="Content2" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="0"/>
+                                <ColorAnimation Storyboard.TargetName="TabPath1" To="{StaticResource ActiveTabColor}" Duration="0:0:0" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" />
+                                <ColorAnimation Storyboard.TargetName="TabPath2" To="{StaticResource InactiveTabColor}" Duration="0:0:0" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" />
+                                <ColorAnimation Storyboard.TargetName="Ellipse1" To="{StaticResource AccentColor}" Duration="0:0:0" Storyboard.TargetProperty="(Ellipse.Fill).(SolidColorBrush.Color)" />
+                                <ColorAnimation Storyboard.TargetName="Ellipse2" To="{StaticResource LightTextColor}" Duration="0:0:0" Storyboard.TargetProperty="(Ellipse.Fill).(SolidColorBrush.Color)" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Border.Triggers>
         </Border>
-        
-        <!--
-        
-        -->
+
+
         <Grid x:Name="Content1" Grid.Row="1" Width="400" Height="800" Background="{StaticResource ActiveTabColorBrush}" Panel.ZIndex="1" Margin="0 -3 0 0">
             <Border Background="{StaticResource PrimaryColorBrush}" Height="0.5" VerticalAlignment="Top" Width="205" HorizontalAlignment="Right" />
             <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0, 10, 0, 0" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="1" BorderBrush="{StaticResource PrimaryColorBrush}" Width="380">
@@ -71,11 +86,16 @@
 
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <Grid>
-                                <local:OverviewCard Padding="0 6" />
-                            </Grid>
+                            <StackPanel>
+                                <local:OverviewCard Padding="0" />
+                                <!--<Border Height="0.5" Background="{StaticResource BorderLineColorBrush}" Margin="0 0 0 0.1" />-->
+                            </StackPanel>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
+
+                    <!--<ListBox.Effect>
+                        <DropShadowEffect ShadowDepth="0" Opacity="0.6" BlurRadius="10" />
+                    </ListBox.Effect>-->
 
                 </ListBox>
             </ScrollViewer>
@@ -109,7 +129,60 @@
                 </ListBox>
             </ScrollViewer>-->
 
-            <Popup IsOpen="{Binding IsCardSelected, Mode=OneWay}" HorizontalOffset="-700" VerticalOffset="-600" Grid.ColumnSpan="2">
+            <Popup 
+                IsOpen="{Binding IsCardSelected, Mode=OneWay}" 
+                HorizontalOffset="-700" 
+                VerticalOffset="-600" 
+                Grid.ColumnSpan="2"
+                AllowsTransparency="True"
+                >
+
+                <!--<Popup.RenderTransform>
+                    --><!-- giving the transform a name tells the framework not to freeze it --><!--
+                    <RotateTransform x:Name="noFreeze" />
+                </Popup.RenderTransform>
+
+                <Popup.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    Storyboard.TargetProperty="(Popup.RenderTransform).(RotateTransform.Angle)"
+                                    To="-360" Duration="0:0:1" RepeatBehavior="Forever" />  
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Popup.Triggers>-->
+
+                <!--<Popup.Style>
+                    <Style TargetType="{x:Type Popup}" >
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding CardIsClosed, Mode=OneWay}"  Value="True">
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation
+                                                Storyboard.TargetProperty="Width"
+                                                From="0" To="1000" Duration="0:0:1" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </DataTrigger.EnterActions>
+                            </DataTrigger>
+
+                            <DataTrigger Binding="{Binding CardIsClosed, Mode=OneWay}"  Value="False">
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation
+                                                Storyboard.TargetProperty="HorizontalOffset"
+                                                From="-700" To="400" Duration="0:0:1" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </DataTrigger.EnterActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Popup.Style>-->
 
                 <!--<Popup.Style>
                     <Style>
@@ -132,7 +205,16 @@
                 </Popup.Style>-->
 
 
-                <local:VisitationCardFinal />
+                <Border Margin="30" UseLayoutRounding="True" >
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="0" Opacity="0.8" BlurRadius="30" RenderingBias="Quality" />
+                    </Border.Effect>
+
+                    <StackPanel Orientation="Horizontal" Background="Transparent" HorizontalAlignment="Right">
+                        <local:VisitationCardPart2  />
+                    </StackPanel>
+                </Border>
+
 
             </Popup>
 
@@ -148,7 +230,23 @@
                               StrokeLineJoin="Round"
                               >
                 </Path>
-                <TextBlock Text="Historik" FontSize="14" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource PrimaryColorBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+                <Grid >
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="6*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="3*" />
+
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="1" Text="Historik" FontSize="14" FontFamily="{StaticResource LatoBold}" FontWeight="SemiBold" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <Ellipse x:Name="Ellipse2" Grid.Column="3" Height="22" Width="22" Fill="{StaticResource LightTextColorBrush}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Grid.Column="3" Text="{Binding NumberOfHistoryVisitations, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0 0 0 0" Foreground="White" />
+
+                </Grid>
 
             </Grid>
             <Border.Triggers>
@@ -162,23 +260,49 @@
                                 <Int32Animation Storyboard.TargetName="Content1" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="0"/>
                                 <ColorAnimation Storyboard.TargetName="TabPath2" To="{StaticResource ActiveTabColor}" Duration="0:0:0" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" />
                                 <ColorAnimation Storyboard.TargetName="TabPath1" To="{StaticResource InactiveTabColor}" Duration="0:0:0" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" />
+                                <ColorAnimation Storyboard.TargetName="Ellipse2" To="{StaticResource AccentColor}" Duration="0:0:0" Storyboard.TargetProperty="(Ellipse.Fill).(SolidColorBrush.Color)" />
+                                <ColorAnimation Storyboard.TargetName="Ellipse1" To="{StaticResource LightTextColor}" Duration="0:0:0" Storyboard.TargetProperty="(Ellipse.Fill).(SolidColorBrush.Color)" />
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger.Actions>
                 </EventTrigger>
             </Border.Triggers>
         </Border>
-        
+
         <Grid x:Name="Content2" Grid.Row="1" Width="400" Height="800" Background="{StaticResource ActiveTabColorBrush}" Panel.ZIndex="0" Margin="0 -3 0 0">
             <Border Background="{StaticResource PrimaryColorBrush}" Height="0.5" VerticalAlignment="Top" Width="192" HorizontalAlignment="Left" />
             <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0, 10, 0, 0" Width="390">
-                <ListBox ItemsSource="{Binding HistoryVisitationCards}" HorizontalAlignment="Center" BorderThickness="0" Background="{StaticResource ActiveTabColorBrush}">
+                <ListBox ItemsSource="{Binding HistoryVisitationCards}" HorizontalAlignment="Center" Height="Auto" BorderThickness="0" Background="{StaticResource ActiveTabColorBrush}">
+
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="IsSelected" Value="{Binding Content.IsSelected, Mode=TwoWay, RelativeSource={RelativeSource Self}}"/>
+                            <Setter Property="Background" Value="Red" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="ListBoxItem">
+                                        <ContentPresenter/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <local:OverviewCard Padding="0 5" />
+                            <Grid>
+                                <local:OverviewCard Padding="0" />
+                            </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
+
+                    <!--<ListBox.Effect>
+                        <DropShadowEffect ShadowDepth="0" Opacity="0.6" BlurRadius="10" />
+                    </ListBox.Effect>-->
+
                 </ListBox>
+
+
 
             </ScrollViewer>
         </Grid>
@@ -195,8 +319,8 @@
         </BeginStoryboard>
     </EventTrigger>
 </Path.Triggers>-->
-    
-    
+
+
 <!--
      <Border Background="{StaticResource GreenColorBrush}" CornerRadius="1" Height="200" Width="600">
     <Border.Effect>
