@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="EIAUI.Controls.TranslatorPopup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EIAUI.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="600">
+    <Grid>
+        <Border Width="578" Height="190">
+            <Grid>
+                <StackPanel Orientation="Vertical">
+                    <Border CornerRadius="2 2 0 0" Height="104" Padding="46 28 16 28" Background="{StaticResource PrimaryColorBrush}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="424" />
+                                <ColumnDefinition Width="16" />
+                                <ColumnDefinition Width="76" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0" Orientation="Vertical">
+
+                                <TextBlock Foreground="{StaticResource BackgroundColorBrush}" Height="25" 
+                                       FontFamily="{StaticResource LatoBlack}" FontSize="15" TextWrapping="Wrap"
+                                       Text="Jeg vil anbefale at du booker en eriteansk tolk til Ismael Sahib."/>
+
+                                <TextBlock Foreground="{StaticResource BackgroundColorBrush}" Height="25"
+                                       FontSize="15"
+                                       Text="Vil du ringe nu eller gemme den til senere?"/>
+                            </StackPanel>
+
+                            <Button Grid.Column="2"  Height="32" 
+                                Style="{StaticResource SaveButton}" />
+                        </Grid>
+                    </Border>
+
+                    <Border Height="86" CornerRadius="0 0 2 2" Padding="24 20 24 16" Background="{StaticResource SecondaryColorBrush}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0" Orientation="Vertical">
+                                <TextBlock Text="Aalborg Tolkeservice" FontWeight="SemiBold" FontFamily="{StaticResource LatoBold}" FontSize="15" Foreground="{StaticResource BackgroundColorBrush}" Width="207" Margin="0 4 0 3"/>
+                                <TextBlock Text="Niels Ebbesens Gade 19"  FontSize="15" Foreground="{StaticResource BackgroundColorBrush}"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1" Orientation="Vertical">
+                                <TextBlock Text="Telefonnumer:" FontWeight="SemiBold" FontFamily="{StaticResource LatoBold}" FontSize="15" Foreground="{StaticResource BackgroundColorBrush}" Margin="0 4 0 3" HorizontalAlignment="Center" />
+                                <TextBlock Text="+45 71 56 88 90" HorizontalAlignment="Center" FontFamily="{StaticResource LatoBold}" FontSize="15" Foreground="{StaticResource BackgroundColorBrush}" />
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2" Orientation="Vertical">
+                                <TextBlock Text="Åbningstider:" TextAlignment="Right" FontWeight="SemiBold" FontFamily="{StaticResource LatoBold}" FontSize="15" Foreground="{StaticResource BackgroundColorBrush}" Margin="0 4 0 3" />
+                                <TextBlock Text="08:00 - 13:00" HorizontalAlignment="Right" FontFamily="{StaticResource LatoRegular}" FontSize="15" Foreground="{StaticResource BackgroundColorBrush}" />
+                            </StackPanel>
+                       
+                        </Grid>
+                    </Border>
+                </StackPanel>
+                
+                <Image Source="enversion-logo1.PNG" Grid.Column="0"
+                   Height="108" Width="92" HorizontalAlignment="Left" Margin="-47,-54,0,136"/>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

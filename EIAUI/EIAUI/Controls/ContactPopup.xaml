@@ -30,12 +30,12 @@
                     </StackPanel>
 
                         <Button Grid.Column="2"  Height="32" 
-                                Style="{StaticResource GemButton}" />
+                                Style="{StaticResource SaveButton}" />
                 </Grid>
             </Border>
 
                 <Border Height="61" CornerRadius="0 0 4 4" Padding="24 20 24 16" Background="{StaticResource SecondaryColorBrush}">
-                    <StackPanel Orientation="Horizontal" Background="{StaticResource SecondaryColorBrush}">
+                    <StackPanel Orientation="Horizontal" >
                         <TextBlock Text="Torben Hvededrink" VerticalAlignment="Center" FontWeight="SemiBold" FontFamily="{StaticResource LatoBold}" FontSize="15" Foreground="{StaticResource BackgroundColorBrush}" Width="207" Margin="0,4,0,3"/>
                         <TextBlock Text="+45 71 56 88 90" VerticalAlignment="Center" FontWeight="SemiBold" FontFamily="{StaticResource LatoBold}" FontSize="15" Foreground="{StaticResource BackgroundColorBrush}" Width="111" />
                         <TextBlock Text="mega.fucking.lang.email@gmail.com" VerticalAlignment="Center" FontWeight="SemiBold" TextAlignment="Right" FontFamily="{StaticResource LatoBold}" FontSize="15" Foreground="{StaticResource BackgroundColorBrush}" Width="211" Margin="0,4,0,3" />

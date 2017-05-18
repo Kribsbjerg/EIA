@@ -193,8 +193,8 @@
         </Style.Triggers>
     </Style>
     
-    <!--Notification button-->
-    <Style TargetType="{x:Type Button}" x:Key="NotificationButton" BasedOn="{StaticResource BaseStyle}">
+    <!--Save button-->
+    <Style TargetType="{x:Type Button}" x:Key="SaveButton" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
         <Setter Property="Background" Value="{StaticResource PrimaryColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
@@ -205,8 +205,7 @@
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}"
                             BorderThickness="1" BorderBrush="{StaticResource BackgroundColorBrush}" CornerRadius="1" >
-
-                        <TextBlock FontFamily="{StaticResource LatoBold}" FontSize="12" Text=" " HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock FontFamily="{StaticResource LatoBold}" FontSize="12" Text="GEM" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
                     </Border>
                 </ControlTemplate>
@@ -217,9 +216,5 @@
                 <Setter Property="Cursor" Value="Hand" />
             </Trigger>
         </Style.Triggers>
-    </Style>
-
-    <Style TargetType="{x:Type Button}" x:Key="GemButton" BasedOn="{StaticResource NotificationButton}">
-        <Setter Property="TextBlock.Text" Value="GEM" />
     </Style>
 </ResourceDictionary>

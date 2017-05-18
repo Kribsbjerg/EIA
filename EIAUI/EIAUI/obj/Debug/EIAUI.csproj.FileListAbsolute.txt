@@ -222,3 +222,5 @@ C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationCardFina
 C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\VisitationTab.baml
 C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\ContactPopup.g.cs
 C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\ContactPopup.baml
+C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\TranslatorPopup.g.cs
+C:\Users\Kris\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\TranslatorPopup.baml

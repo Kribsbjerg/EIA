@@ -82,6 +82,9 @@
     <Compile Include="Controls\OverviewCard.xaml.cs">
       <DependentUpon>OverviewCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\TranslatorPopup.xaml.cs">
+      <DependentUpon>TranslatorPopup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TreatmentCategory.xaml.cs">
       <DependentUpon>TreatmentCategory.xaml</DependentUpon>
     </Compile>
@@ -134,6 +137,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\OverviewCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TranslatorPopup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
