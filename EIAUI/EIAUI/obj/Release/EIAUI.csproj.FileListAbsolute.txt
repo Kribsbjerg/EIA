@@ -1,0 +1,17 @@
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Release\ComboboxTest\Comboboxtest.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Release\Controls\HistoryCardList.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Release\Controls\OverviewCard.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Release\Controls\TreatmentCategory.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Release\Controls\VisitationAlt.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Release\Controls\VisitationCardFinal.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Release\Controls\VisitationCardParts\VisitationCardPart1.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Release\Controls\VisitationCardParts\VisitationCardPart2.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Release\Controls\VisitationCardParts\VisitationCardPart3.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Release\Controls\VisitationCard_v2.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Release\Controls\VisitationTab.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Release\MainWindow.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Release\NotificationMessage.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Release\App.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Release\EIAUI_MarkupCompile.cache
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Release\EIAUI_MarkupCompile.lref

@@ -193,6 +193,36 @@
         </Style.Triggers>
     </Style>
     
+    <!-- Close Search Button -->
+
+    <Style TargetType="{x:Type Button}" x:Key="CloseSearch" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
+        <Setter Property="Background" Value="{StaticResource RedColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
+
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}" Background="{StaticResource PrimaryColorBrush}" CornerRadius="12" Height="24" Width="24">
+                        <Border.Effect>
+                            <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
+                        </Border.Effect>
+                        <TextBlock FontFamily="{StaticResource MaterialIcon}" Text="&#xf136;" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="Hand" />
+            </Trigger>
+        </Style.Triggers>
+
+    </Style>
+
+    
     <!--Save button-->
     <Style TargetType="{x:Type Button}" x:Key="SaveButton" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />

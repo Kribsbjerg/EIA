@@ -11,6 +11,9 @@
     <Color x:Key="SecondaryColor">#397189</Color>
     <SolidColorBrush x:Key="SecondaryColorBrush" Color="{StaticResource SecondaryColor}" />
 
+    <Color x:Key="AccentColor">#7E8329</Color>
+    <SolidColorBrush x:Key="AccentColorBrush" Color="{StaticResource AccentColor}" />
+
     <!-- Tab Colors -->
     <Color x:Key="ActiveTabColor">#f5f5f5</Color>
     <SolidColorBrush x:Key="ActiveTabColorBrush" Color="{StaticResource ActiveTabColor}" />
