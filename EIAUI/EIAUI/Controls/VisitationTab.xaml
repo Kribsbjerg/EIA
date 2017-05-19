@@ -132,9 +132,10 @@
             <Popup 
                 IsOpen="{Binding IsCardSelected, Mode=OneWay}" 
                 HorizontalOffset="-700" 
-                VerticalOffset="-600" 
+                VerticalOffset="-700" 
                 Grid.ColumnSpan="2"
                 AllowsTransparency="True"
+                PopupAnimation="Scroll"
                 >
 
                 <!--<Popup.RenderTransform>

@@ -28,7 +28,7 @@
                         <Border Padding="{Binding OuterMarginSizeThickness}">
 
                             <Border.Effect>
-                                <DropShadowEffect ShadowDepth="0" Opacity="0.6" BlurRadius="10" />
+                                <DropShadowEffect Opacity="0.7" BlurRadius="20" />
                             </Border.Effect>
 
                             <!-- Main Window outline -->

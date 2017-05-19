@@ -14,21 +14,31 @@ namespace EIAUI
     {
         private VisitationOverviewViewModel _selectedCard;
 
+        private VisitationOverviewViewModel _dummyCard = new VisitationOverviewViewModel() { Cpr = "" };
+
+        private int indexOfCard;
+
         public VisitationCardListViewModel()
         {
-            ApproveVisitation = new RelayCommand(() => ApproveToNextCard());
+            ApproveVisitation = new RelayCommand(() => ApproveCard());
             DeclineVisitation = new RelayCommand(() => DeclineToNextCard());
             MinimizeVisitationCard = new RelayCommand(() => MinimizeCard());
-            
-        }
+            SaveNote = new RelayParameterCommand(s => SaveSecretaryNote((string)s));
+            GetNextCard = new RelayCommand(() => NextCard());
 
+        }
+        
         public ICommand ApproveVisitation { get; set; }
+
+        public ICommand GetNextCard { get; set; }
 
         public ICommand DeclineVisitation { get; set; }
 
         public ICommand MinimizeVisitationCard { get; set; }
 
         public ICommand TabChange { get; set; }
+
+        public ICommand SaveNote { get; set; }
 
         public string SearchWord { get; set; } = "";
 
@@ -44,9 +54,11 @@ namespace EIAUI
 
         public IEnumerable<IGrouping<string, VisitationOverviewViewModel>> DiagnosisGroup => ActiveVisitationCards.GroupBy(c => c.TreatmentType);
 
-        public bool IsCardSelected => SelectedCard != null;
+        public bool IsCardSelected { get; set; }
 
         public bool CardIsClosed { get; set; }
+
+        public bool IsNotDialogMode { get; set; }
 
         public VisitationOverviewViewModel SelectedCard
         {
@@ -55,43 +67,53 @@ namespace EIAUI
             {
                 CardIsClosed = true;
                 _selectedCard = value;
+                IsCardSelected = true;
                 ChangeSelectedCardInList(ActiveVisitationCards); 
             }
         }
 
         #region Private Methods
 
-        private void MinimizeCard()
+        private void SaveSecretaryNote(string s)
         {
-            CardIsClosed = false;
-            SelectedCard = null;
+            _selectedCard.SecretaryNote = s;
+            // Should save to pinned list here for now it just deletes the card
+            DeclineToNextCard();
+
         }
 
-        private void ApproveToNextCard()
+        private void MinimizeCard()
         {
-            int indexOfCard = ActiveVisitationCards.IndexOf(SelectedCard);
+            SelectedCard = null;
+            CardIsClosed = false;
+            IsCardSelected = false;
+        }
+
+        private void ApproveCard()
+        {
+            indexOfCard = ActiveVisitationCards.IndexOf(SelectedCard);
             MoveCardToHistory();
+            NumberOfActiveVisitations--;
+            NumberOfHistoryVisitations++;
+        }
+
+        private void NextCard()
+        {
             SelectedCard = ActiveVisitationCards[indexOfCard];
-            NumberOfActiveVisitations = ActiveVisitationCards.Count;
-            NumberOfHistoryVisitations = HistoryVisitationCards.Count;
+            ChangeSelectedCardInList(HistoryVisitationCards);
         }
 
         private void DeclineToNextCard()
         {
-            int indexOfCard = ActiveVisitationCards.IndexOf(SelectedCard);
+            indexOfCard = ActiveVisitationCards.IndexOf(SelectedCard);
             ActiveVisitationCards.Remove(_selectedCard);
-            ChangeSelectedCardInList(HistoryVisitationCards);
-            SelectedCard = ActiveVisitationCards[indexOfCard];
-            NumberOfActiveVisitations = ActiveVisitationCards.Count;
-            NumberOfHistoryVisitations = HistoryVisitationCards.Count;
+            NumberOfActiveVisitations--;
         }
 
         private void MoveCardToHistory()
         {
             HistoryVisitationCards.Add(_selectedCard);
-
             ActiveVisitationCards.Remove(_selectedCard);
-            ChangeSelectedCardInList(HistoryVisitationCards);
         }
 
         private void ChangeSelectedCardInList(ObservableCollection<VisitationOverviewViewModel> t)

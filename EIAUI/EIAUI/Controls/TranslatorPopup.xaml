@@ -30,7 +30,7 @@
                             </StackPanel>
 
                             <Button Grid.Column="2"  Height="32" 
-                                Style="{StaticResource SaveButton}" />
+                                 /> <!--Style="{StaticResource SaveButton}"-->
                         </Grid>
                     </Border>
 
@@ -60,8 +60,8 @@
                         </Grid>
                     </Border>
                 </StackPanel>
-                
-                <Image Source="enversion-logo1.PNG" Grid.Column="0"
+
+                <Image Source="pack://application:,,,/Images/Logo/enversion-logo.png" Grid.Column="0"
                    Height="108" Width="92" HorizontalAlignment="Left" Margin="-47,-54,0,136"/>
             </Grid>
         </Border>

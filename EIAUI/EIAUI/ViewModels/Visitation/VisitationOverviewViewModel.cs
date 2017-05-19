@@ -10,7 +10,22 @@ namespace EIAUI
     /// </summary>
     public class VisitationOverviewViewModel : BaseViewModel
     {
+
+        #region Constructors
+
+        public VisitationOverviewViewModel()
+        {
+            OpenNoteField = new RelayCommand(() => ChangeNoteFieldState());
+        }
+
+        #endregion
+
+
+        public ICommand OpenNoteField { get; set; }
+
+
         #region Public Properties
+
 
         /// <summary>
         /// The CPR number of the patient being referred
@@ -31,6 +46,25 @@ namespace EIAUI
         /// The suggested treatment type of the system
         /// </summary>
         public string TreatmentType { get; set; }
+
+        public bool NeedsTranslator { get; set; }
+
+        public string TranslatorLanguage { get; set; }
+
+        public bool IsPinned { get; set; }
+
+        public bool IsNoteOpen { get; set; }
+
+        public string SecretaryNote { get; set; }
+
+        #endregion
+
+        #region Private Methods
+
+        private void ChangeNoteFieldState()
+        {
+            IsNoteOpen = !IsNoteOpen;
+        }
 
         #endregion
     }

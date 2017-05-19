@@ -24,7 +24,7 @@ namespace EIAUI
         /// <summary>
         /// The margin around the window to allow for a drop shadow
         /// </summary>
-        private int _outerMarginSize = 10; //10;
+        private int _outerMarginSize = 20; //10;
 
         /// <summary>
         /// The radius of the edges of the windows
@@ -45,7 +45,7 @@ namespace EIAUI
         {
             _window = window;
 
-            //_window.Topmost = true;
+            _window.Topmost = true;
 
             // Listen out for the window resizing
             _window.StateChanged += (sender, e) =>

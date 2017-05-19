@@ -61,7 +61,8 @@ namespace EIAUI
                 {
                     Cpr = "4",
                     Diagnose = "Noget langt og besværligt der fylder flere linjer som vist her",
-                    TreatmentType = "Something 1"
+                    TreatmentType = "Something 1",
+                    NeedsTranslator = true
                 },
 
                 new VisitationOverviewViewModel()
@@ -232,6 +233,9 @@ namespace EIAUI
                     TreatmentType = "Something 3"
                 },
             };
+
+            NumberOfActiveVisitations = ActiveVisitationCards.Count;
+            NumberOfHistoryVisitations = HistoryVisitationCards.Count;
 
         }
 
