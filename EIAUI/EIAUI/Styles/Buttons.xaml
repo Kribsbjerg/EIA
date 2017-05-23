@@ -332,7 +332,80 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-    
-    
 
+    <!--Postpone button-->
+    <Style TargetType="{x:Type Button}" x:Key="PostponeButton" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
+        <Setter Property="Background" Value="{StaticResource PrimaryColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BackgroundColorBrush}" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}"
+                            BorderThickness="1" BorderBrush="{StaticResource BackgroundColorBrush}" CornerRadius="1" >
+                        <TextBlock FontFamily="{StaticResource LatoBold}" FontSize="12" Text="UDSÆT"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="Hand" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <!--Show button-->
+    <Style TargetType="{x:Type Button}" x:Key="ShowButton" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
+        <Setter Property="Background" Value="{StaticResource PrimaryColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BackgroundColorBrush}" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}"
+                            BorderThickness="1" BorderBrush="{StaticResource BackgroundColorBrush}" CornerRadius="1" >
+                        <TextBlock FontFamily="{StaticResource LatoBold}" FontSize="12" Text="VIS"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="Hand" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--Call button-->
+    <Style TargetType="{x:Type Button}" x:Key="CallButton" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
+        <Setter Property="Background" Value="{StaticResource PrimaryColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource BackgroundColorBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BackgroundColorBrush}" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}"
+                            BorderThickness="1" BorderBrush="{StaticResource BackgroundColorBrush}" CornerRadius="1" >
+                        <TextBlock FontFamily="{StaticResource LatoBold}" FontSize="12" Text="RING"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="Hand" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
 </ResourceDictionary>
