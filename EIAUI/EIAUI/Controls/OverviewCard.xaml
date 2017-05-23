@@ -6,7 +6,7 @@
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:local="clr-namespace:EIAUI"
              mc:Ignorable="d" 
-             Height="70" Width="340"
+             Height="60" Width="340"
              x:Name="Overviewcard">
 
     <UserControl.Resources>
@@ -14,7 +14,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ContentControl}">
-                        <Border x:Name="background" Margin="3 0 3 0">
+                        <Border x:Name="background">
                             <Border.Style>
                                 <Style TargetType="Border">
                                     <Setter Property="Background" Value="White" />
@@ -26,14 +26,14 @@
                                 </Style>
                             </Border.Style>
 
-                            <Border.Effect>
+                            <!--<Border.Effect>
                                 <DropShadowEffect ShadowDepth="1" Opacity="0.4" BlurRadius="10" />
-                            </Border.Effect>
+                            </Border.Effect>-->
 
                             <Grid x:Name="container" Background="Transparent">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition />
                                     <RowDefinition Height="Auto" />
+                                    <RowDefinition />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="2*" />
@@ -41,7 +41,7 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
 
-                                <StackPanel Grid.Row="0" Grid.Column="1" Margin="0 5 0 5" VerticalAlignment="Center">
+                                <StackPanel Grid.Row="1" Grid.Column="1" Margin="0 5 0 5" VerticalAlignment="Center">
                                     <TextBlock Text="{Binding Cpr}" x:Name="text1" FontSize="13" FontFamily="{StaticResource LatoBlack}" Margin="0 0 0 2">
                                         <TextBlock.Style>
                                             <Style TargetType="{x:Type TextBlock}">
@@ -68,7 +68,7 @@
                                     </TextBlock>
                                 </StackPanel>
 
-                                <Border Grid.Row="1" Grid.ColumnSpan="3" Height="1" Background="{StaticResource BorderLineColorBrush}" />
+                                <Border Grid.Row="0" Grid.ColumnSpan="3" Height="1" Background="{StaticResource BorderLineColorBrush}" />
 
                             </Grid>
                         </Border>

@@ -74,6 +74,7 @@
     <Compile Include="ComboboxTest\Comboboxtest.xaml.cs">
       <DependentUpon>Comboboxtest.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BoolToVisibilityConverter.cs" />
     <Compile Include="Controls\HistoryCardList.xaml.cs">
       <DependentUpon>HistoryCardList.xaml</DependentUpon>
     </Compile>
@@ -110,6 +111,7 @@
     <Compile Include="Controls\VisitationTab.xaml.cs">
       <DependentUpon>VisitationTab.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FileHandler.cs" />
     <Compile Include="HotKey.cs" />
     <Compile Include="NotificationMessage.xaml.cs">
       <DependentUpon>NotificationMessage.xaml</DependentUpon>
@@ -126,6 +128,10 @@
     <Compile Include="ViewModels\WindowViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayCommand.cs" />
     <Page Include="ComboboxTest\Comboboxtest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ContactPopup.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

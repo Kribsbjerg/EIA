@@ -32,7 +32,7 @@
                     <!--Treatment-->
                     <TextBlock Text="Behandling" FontSize="15" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource BackgroundColorBrush}" />
                     <Border Height="1" Background="{StaticResource BackgroundColorBrush}" Margin="0 5"/>
-                    <TextBlock Text="EMG Undersøgelse" FontSize="15" TextWrapping="Wrap" FontFamily="{StaticResource LatoRegular}" Foreground="{StaticResource BackgroundColorBrush}" Height="61"/>
+                    <TextBlock Text="{Binding SelectedCard.TreatmentType}" FontSize="15" TextWrapping="Wrap" FontFamily="{StaticResource LatoRegular}" Foreground="{StaticResource BackgroundColorBrush}" Height="61"/>
 
                     <Grid Margin="0 29 0 0">
                         <Grid.ColumnDefinitions>
@@ -45,14 +45,14 @@
                             <TextBlock Text="Dato" FontSize="15" FontFamily="{StaticResource LatoBold}" 
                                                Foreground="{StaticResource BackgroundColorBrush}" />
                             <Border Height="1" Background="{StaticResource BackgroundColorBrush}" Margin="0 5"/>
-                            <TextBlock Text="{Binding TreatmentTime}" FontSize="15" FontFamily="{StaticResource LatoRegular}" Foreground="{StaticResource BackgroundColorBrush}"/>
+                            <TextBlock Text="{Binding SelectedCard.Date}" FontSize="15" FontFamily="{StaticResource LatoRegular}" Foreground="{StaticResource BackgroundColorBrush}"/>
                         </StackPanel>
 
                         <StackPanel Grid.Column="1" Orientation="Vertical"  Margin="0,0,0,-1.5" HorizontalAlignment="Right">
                             <TextBlock Text="Tidspunkt" FontSize="15" FontFamily="{StaticResource LatoBold}" 
                                    Foreground="{StaticResource BackgroundColorBrush}"/>
                             <Border Height="1" Background="{StaticResource BackgroundColorBrush}" Margin="0 5"/>
-                            <TextBlock Text="10:45" FontSize="15" FontFamily="{StaticResource LatoRegular}" Foreground="{StaticResource BackgroundColorBrush}"/>
+                            <TextBlock Text="{Binding SelectedCard.Time}" FontSize="15" FontFamily="{StaticResource LatoRegular}" Foreground="{StaticResource BackgroundColorBrush}"/>
                         </StackPanel>
                     </Grid>
 
@@ -99,7 +99,8 @@
                 </StackPanel>
             </Border>
 
-            <!-- Next Dialog -->
+            <!-- Next Dialog after approve -->
+
             <Border Grid.Column="1" x:Name="NextCard" Panel.ZIndex="0" Background="{StaticResource PrimaryColorBrush}" Width="304" Height="328" Padding="24" CornerRadius="2 0 0 2">
                 <Grid  Background="{StaticResource PrimaryColorBrush}">
 
@@ -159,6 +160,8 @@
                 </Grid>
             </Border>
 
+            <!-- Next dialog after decline -->
+
             <Border Grid.Column="1" x:Name="DeclineCard" Panel.ZIndex="0" Background="{StaticResource PrimaryColorBrush}" Width="304" Height="328" Padding="24" CornerRadius="2 0 0 2">
                 <Grid  Background="{StaticResource PrimaryColorBrush}">
 
@@ -217,6 +220,85 @@
                                 </EventTrigger>
                             </Button.Triggers>
                         </Button>
+
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- After note is saved -->
+
+            <Border Grid.Column="1" x:Name="AfterNoteCard" Panel.ZIndex="0" Background="{StaticResource PrimaryColorBrush}" Width="304" Height="328" Padding="24" CornerRadius="2 0 0 2">
+
+                <!--<Border.Style>
+                    <Style TargetType="{x:Type Border}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding SelectedCard.NoteReceived}" Value="True">
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <Int32Animation Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="2"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </DataTrigger.EnterActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>-->
+
+                <Grid  Background="{StaticResource PrimaryColorBrush}">
+
+                    <!-- Logo -->
+                    <Image x:Name="LogoImage3" Opacity="0.0" Source="pack://application:,,,/Images/Logo/enversion-logo.png" Width="60" Height="60" Margin="-300 -320 0 0"/>
+
+                    <StackPanel Margin="0 100 0 0">
+
+                        <TextBlock Text="Jeg har stadig: " FontSize="15" FontFamily="{StaticResource LatoRegular}" 
+                                               Foreground="{StaticResource BackgroundColorBrush}" TextAlignment="Center" />
+                        <TextBlock Text="{Binding NumberOfActiveVisitations}" FontSize="15" FontFamily="{StaticResource LatoBold}" 
+                                               Foreground="{StaticResource BackgroundColorBrush}" TextAlignment="Center" />
+                        <TextBlock Text="forslag klar til dig, skal vi fortsætte?" FontSize="15" FontFamily="{StaticResource LatoRegular}" 
+                                               Foreground="{StaticResource BackgroundColorBrush}" TextAlignment="Center" />
+                    </StackPanel>
+
+                    <!--Next/Close buttons-->
+                    <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 26.6 0 0">
+                        <Button Style="{StaticResource CloseNextVisitationButton}" Command="{Binding MinimizeVisitationCard}" Margin="0 0 8 0" Height="32" Width="64" >
+                            <Button.Triggers>
+                                <EventTrigger RoutedEvent="Button.Click">
+                                    <EventTrigger.Actions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <Int32Animation Storyboard.TargetName="DecisionCard" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="1"/>
+                                                <ThicknessAnimation Storyboard.TargetName="RightCard" To="0 0 0 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.5" />
+                                                <DoubleAnimation Storyboard.TargetName="LeftCard" To="422" Storyboard.TargetProperty="(Border.Width)" Duration="0:0:0.5" />
+                                                <ThicknessAnimation Storyboard.TargetName="LeftCard" To="0 0 0 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.5" />
+                                                <DoubleAnimation Storyboard.TargetName="LogoImage" Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:0.2"/>
+                                                <Int32Animation Storyboard.TargetName="AfterNoteCard" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="0"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger.Actions>
+                                </EventTrigger>
+                            </Button.Triggers>
+                        </Button>
+
+                        <Button Style="{StaticResource NextButton}" Command="{Binding GetNextCard}" Height="32" Width="92" >
+                            <Button.Triggers>
+                                <EventTrigger RoutedEvent="Button.Click">
+                                    <EventTrigger.Actions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <Int32Animation Storyboard.TargetName="DecisionCard" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="1"/>
+                                                <ThicknessAnimation Storyboard.TargetName="RightCard" To="0 0 0 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.5" />
+                                                <DoubleAnimation Storyboard.TargetName="LeftCard" To="422" Storyboard.TargetProperty="(Border.Width)" Duration="0:0:0.5" />
+                                                <ThicknessAnimation Storyboard.TargetName="LeftCard" To="0 0 0 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.5" />
+                                                <DoubleAnimation Storyboard.TargetName="LogoImage" Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:0.2"/>
+                                                <Int32Animation Storyboard.TargetName="AfterNoteCard" Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="0"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger.Actions>
+                                </EventTrigger>
+                            </Button.Triggers>
+                        </Button>
                     </StackPanel>
                 </Grid>
             </Border>
@@ -242,14 +324,12 @@
                             <TextBlock Text="Henvisningsårsag" FontSize="15" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource DarkTextColorBrush}"
                                    Margin="0 27.6 0 0" Height="24.9"/>
                             <Border Height="1" Background="{StaticResource DarkTextColorBrush}" />
-                            <TextBlock Margin="0 5 0 0" Text="Text.." FontSize="15" Height="61" TextWrapping="Wrap" FontFamily="{StaticResource LatoRegular}" Foreground="{StaticResource DarkTextColorBrush}"/>
+                            <TextBlock Margin="0 5 0 0" Text="{Binding SelectedCard.ReferralCause}" FontSize="15" Height="61" TextWrapping="Wrap" FontFamily="{StaticResource LatoRegular}" Foreground="{StaticResource DarkTextColorBrush}"/>
                         </StackPanel>
                     </Border>
                 </Grid>
 
             </Border>
-
-
 
 
             <Border x:Name="RightCard" Grid.Column="2"  Panel.ZIndex="-1">
@@ -258,7 +338,7 @@
                     <Border Padding="24 28 24 37" CornerRadius="0 1 1 0" Background="{StaticResource SecondaryColorBrush}">
                         <StackPanel Grid.Column="2">
                             <TextBlock Text="Læge:" FontSize="13" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource BackgroundColorBrush}"/>
-                            <TextBlock Text="Dr. Acula" FontSize="13" TextWrapping="Wrap" Margin="0 1 0 20" FontFamily="{StaticResource LatoBold}" 
+                            <TextBlock Text="{Binding SelectedCard.Doctor}" FontSize="13" TextWrapping="Wrap" Margin="0 1 0 20" FontFamily="{StaticResource LatoBold}" 
                                    Foreground="{StaticResource BackgroundColorBrush}" />
 
                             <TextBlock Text="Rum:" FontSize="13" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource BackgroundColorBrush}"/>
@@ -276,25 +356,26 @@
                 </Grid>
             </Border>
 
+            <Popup x:Name="PinPopup" IsOpen="{Binding SelectedCard.IsNoteOpen}" StaysOpen="False" VerticalOffset="-580" HorizontalOffset="-100" AllowsTransparency="True">
+                <Border Margin="30" UseLayoutRounding="True" >
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="0" Opacity="0.8" BlurRadius="30" RenderingBias="Quality" />
+                    </Border.Effect>
+                    <local:PinPopup />
+                </Border>
+            </Popup>
+
+            <Popup IsOpen="{Binding SelectedCard.NeedsTranslator}" HorizontalOffset="-100" AllowsTransparency="True" >
+                <Border Margin="40" UseLayoutRounding="True" >
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="0" Opacity="0.8" BlurRadius="30" RenderingBias="Quality" />
+                    </Border.Effect>
+                    <local:TranslatorPopup />
+                </Border>
+            </Popup>
+
         </Grid>
 
-        <Popup x:Name="PinPopup" IsOpen="{Binding SelectedCard.IsNoteOpen}" StaysOpen="False" VerticalOffset="-580" HorizontalOffset="-100" AllowsTransparency="True">
-            <Border Margin="30" UseLayoutRounding="True" >
-                <Border.Effect>
-                    <DropShadowEffect ShadowDepth="0" Opacity="0.8" BlurRadius="30" RenderingBias="Quality" />
-                </Border.Effect>
-                <local:PinPopup />
-            </Border>
-        </Popup>
-
-        <Popup IsOpen="{Binding SelectedCard.NeedsTranslator}" HorizontalOffset="-100" AllowsTransparency="True" >
-            <Border Margin="40" UseLayoutRounding="True" >
-                <Border.Effect>
-                    <DropShadowEffect ShadowDepth="0" Opacity="0.8" BlurRadius="30" RenderingBias="Quality" />
-                </Border.Effect>
-                <local:TranslatorPopup />
-            </Border>
-        </Popup>
-
     </Grid>
+
 </UserControl>

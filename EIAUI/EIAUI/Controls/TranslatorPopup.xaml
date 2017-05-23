@@ -30,7 +30,7 @@
                             </StackPanel>
 
                             <Button Grid.Column="2"  Height="32" 
-                                 /> <!--Style="{StaticResource SaveButton}"-->
+                                    Style="{StaticResource SaveButton}" /> 
                         </Grid>
                     </Border>
 

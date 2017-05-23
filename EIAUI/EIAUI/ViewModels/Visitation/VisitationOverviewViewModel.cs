@@ -47,6 +47,14 @@ namespace EIAUI
         /// </summary>
         public string TreatmentType { get; set; }
 
+        public string ReferralCause { get; set; }
+
+        public string Date { get; set; }
+
+        public string Time { get; set; }
+
+        public string Doctor { get; set; }
+
         public bool NeedsTranslator { get; set; }
 
         public string TranslatorLanguage { get; set; }
@@ -55,7 +63,11 @@ namespace EIAUI
 
         public bool IsNoteOpen { get; set; }
 
+        public bool NoteReceived { get; set; }
+
         public string SecretaryNote { get; set; }
+        
+        public string Category { get; set; } 
 
         #endregion
 

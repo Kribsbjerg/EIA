@@ -36,11 +36,10 @@
 
                                 <!-- Opacity mask for corners on grid -->
                                 <Border x:Name="Container"
-                                        Background="{StaticResource BackgroundColorBrush}"
-                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=1}" />
+                                        Background="{StaticResource BackgroundColorBrush}" />
 
                                 <!-- Main window with resizable outline margin -->
-                                <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=1}"
+                                <Border 
                                         Background="White">
                                     
                                 </Border>
@@ -54,7 +53,7 @@
                                     <Grid.RowDefinitions>
 
                                         <!-- Title Bar -->
-                                        <RowDefinition Height="140" />
+                                        <RowDefinition Height="120" />
 
                                         <!-- Window Content -->
                                         <RowDefinition Height="auto" />
@@ -77,7 +76,7 @@
                                         <Button Grid.Column="0" Command="{Binding MinimizeCommand}" Content=">" Style="{StaticResource WindowControlButton}" />
 
                                         <!-- Logo -->
-                                        <Image Grid.Column="1" Source="Images/Logo/enversion-logo.png" Margin="0 10 0 10"/>
+                                        <Image Grid.Column="1" Source="Images/Logo/enversion-logo.png" Margin="0 15 0 15" />
 
                                         <!-- Search Button -->
                                         <Button Grid.Column="2" Focusable="False" Height="50" Content="&#xf1c3;" Style="{StaticResource WindowControlButton}">
@@ -93,36 +92,7 @@
 
                                         <!-- Tab Content -->
 
-                                        <!--<Grid x:Name="Content1" Grid.Row="1" Width="400" Height="800" Background="{StaticResource ActiveTabColorBrush}" Panel.ZIndex="1" Margin="0 -3 0 0">
-                                            <Border Background="{StaticResource PrimaryColorBrush}" Height="0.5" VerticalAlignment="Top" Width="205" HorizontalAlignment="Right" />
 
-                                            <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0, 10, 0, 0" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="1" BorderBrush="{StaticResource PrimaryColorBrush}" Width="380">
-                                                <ListBox ItemsSource="{Binding DiagnosisGroup}" SelectedItem="{Binding SelectedCard}" HorizontalAlignment="Center" BorderThickness="0" Background="{StaticResource ActiveTabColorBrush}" >
-                                                    <ListBox.ItemContainerStyle>
-                                                        <Style TargetType="ListBoxItem">
-                                                            <Setter Property="IsSelected" Value="{Binding Content.IsSelected, Mode=TwoWay, RelativeSource={RelativeSource Self}}"/>
-                                                            <Setter Property="Background" Value="Red" />
-                                                            <Setter Property="Template">
-                                                                <Setter.Value>
-                                                                    <ControlTemplate TargetType="ListBoxItem">
-                                                                        <ContentPresenter />
-                                                                    </ControlTemplate>
-                                                                </Setter.Value>
-                                                            </Setter>
-                                                        </Style>
-                                                    </ListBox.ItemContainerStyle>
-
-                                                    <ItemsControl.ItemTemplate>
-                                                        <DataTemplate>
-                                                            <Grid >
-                                                                <local:TreatmentCategory />
-                                                            </Grid>
-                                                        </DataTemplate>
-                                                    </ItemsControl.ItemTemplate>
-
-                                                </ListBox>
-                                            </ScrollViewer>
-                                        </Grid>-->
 
                                         <local:VisitationTab />
 
@@ -236,20 +206,6 @@
                                         </UserControl>
 
                                     </Grid>
-                                    
-                                    
-
-                                    <!--<TabControl Grid.Row="2" FontSize="15"  HorizontalAlignment="Center" Style="{StaticResource TabControlStyle}" DataContext="{Binding VisitationCardListViewModel}">
-                                        <TabItem Header="Visitationer"  Width="130">
-                                            <local:VisitationCardList VerticalAlignment="Top"/>
-                                        </TabItem>
-                                        <TabItem Header="Pin" Width="130" >
-                                            <TextBlock Text="Hello there! Here are the pinned visitations" />
-                                        </TabItem>
-                                        <TabItem Header="Historik" Width="130" >
-                                            <local:HistoryCardList VerticalAlignment="Top"/>
-                                        </TabItem>
-                                    </TabControl>-->
 
                                 </Grid>
 
@@ -359,3 +315,46 @@
         </Setter>
     </Style>
     -->
+
+<!--<Grid x:Name="Content1" Grid.Row="1" Width="400" Height="800" Background="{StaticResource ActiveTabColorBrush}" Panel.ZIndex="1" Margin="0 -3 0 0">
+                                            <Border Background="{StaticResource PrimaryColorBrush}" Height="0.5" VerticalAlignment="Top" Width="205" HorizontalAlignment="Right" />
+
+                                            <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0, 10, 0, 0" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="1" BorderBrush="{StaticResource PrimaryColorBrush}" Width="380">
+                                                <ListBox ItemsSource="{Binding DiagnosisGroup}" SelectedItem="{Binding SelectedCard}" HorizontalAlignment="Center" BorderThickness="0" Background="{StaticResource ActiveTabColorBrush}" >
+                                                    <ListBox.ItemContainerStyle>
+                                                        <Style TargetType="ListBoxItem">
+                                                            <Setter Property="IsSelected" Value="{Binding Content.IsSelected, Mode=TwoWay, RelativeSource={RelativeSource Self}}"/>
+                                                            <Setter Property="Background" Value="Red" />
+                                                            <Setter Property="Template">
+                                                                <Setter.Value>
+                                                                    <ControlTemplate TargetType="ListBoxItem">
+                                                                        <ContentPresenter />
+                                                                    </ControlTemplate>
+                                                                </Setter.Value>
+                                                            </Setter>
+                                                        </Style>
+                                                    </ListBox.ItemContainerStyle>
+
+                                                    <ItemsControl.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <Grid >
+                                                                <local:TreatmentCategory />
+                                                            </Grid>
+                                                        </DataTemplate>
+                                                    </ItemsControl.ItemTemplate>
+
+                                                </ListBox>
+                                            </ScrollViewer>
+                                        </Grid>-->
+
+<!--<TabControl Grid.Row="2" FontSize="15"  HorizontalAlignment="Center" Style="{StaticResource TabControlStyle}" DataContext="{Binding VisitationCardListViewModel}">
+                                        <TabItem Header="Visitationer"  Width="130">
+                                            <local:VisitationCardList VerticalAlignment="Top"/>
+                                        </TabItem>
+                                        <TabItem Header="Pin" Width="130" >
+                                            <TextBlock Text="Hello there! Here are the pinned visitations" />
+                                        </TabItem>
+                                        <TabItem Header="Historik" Width="130" >
+                                            <local:HistoryCardList VerticalAlignment="Top"/>
+                                        </TabItem>
+                                    </TabControl>-->

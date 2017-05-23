@@ -231,3 +231,5 @@ C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\bin\Debug\ko\Microsoft.Express
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\bin\Debug\ru\Microsoft.Expression.Interactions.resources.dll
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\bin\Debug\zh-Hans\Microsoft.Expression.Interactions.resources.dll
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\bin\Debug\zh-Hant\Microsoft.Expression.Interactions.resources.dll
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\ContactPopup.g.cs
+C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\obj\Debug\Controls\ContactPopup.baml
