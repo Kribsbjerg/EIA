@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace EIAUI.Controls.NotificationMessages
 {
     /// <summary>
-    /// Interaction logic for AcuteVisitationMessage.xaml
+    /// Interaction logic for NotificationMessage.xaml
     /// </summary>
-    public partial class AcuteVisitationMessage : UserControl
+    public partial class NotificationMessage : Window
     {
-        public AcuteVisitationMessage()
+        public NotificationMessage()
         {
             InitializeComponent();
         }
