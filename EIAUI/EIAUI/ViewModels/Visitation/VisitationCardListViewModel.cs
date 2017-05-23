@@ -14,10 +14,6 @@ namespace EIAUI
     {
         private VisitationOverviewViewModel _selectedCard;
 
-        private VisitationOverviewViewModel _dummyCard = new VisitationOverviewViewModel() { Cpr = "" };
-
-        private string Categorystring;
-
         private int indexOfCard;
 
         public VisitationCardListViewModel()
@@ -27,7 +23,10 @@ namespace EIAUI
             MinimizeVisitationCard = new RelayCommand(() => MinimizeCard());
             SaveNote = new RelayParameterCommand(s => SaveSecretaryNote((string)s));
             GetNextCard = new RelayCommand(() => NextCard());
-            ActivateCombo = new RelayParameterCommand(s => ActivateComboTab((string)s));
+            //ActivateCombo = new RelayParameterCommand(s => ActivateComboTab((string)s));
+            ActiveListButton = new RelayCommand(() => ChangeActiveListState());
+            PinnedListButton = new RelayCommand(() => ChangePinnedListState());
+            AcuteListButton = new RelayCommand(() => ChangeAcuteListState());
         }
         
         public ICommand ApproveVisitation { get; set; }
@@ -44,6 +43,12 @@ namespace EIAUI
 
         public ICommand ActivateCombo { get; set; }
 
+        public ICommand ActiveListButton { get; set; }
+
+        public ICommand PinnedListButton { get; set; }
+
+        public ICommand AcuteListButton { get; set; }
+
         public string SearchWord { get; set; } = "";
 
         public int NumberOfActiveVisitations { get; set; }
@@ -52,11 +57,17 @@ namespace EIAUI
 
         public ObservableCollection<VisitationOverviewViewModel> ActiveVisitationCards { get; set; }
 
-
+        public ObservableCollection<VisitationOverviewViewModel> AcuteVisitationCards { get; set; }
 
         public ObservableCollection<VisitationOverviewViewModel> HistoryVisitationCards { get; set; }
 
-        public ObservableCollection<VisitationOverviewViewModel> PinnedCards { get; set; }
+        public ObservableCollection<VisitationOverviewViewModel> PinnedVisitationCards { get; set; }
+
+        public bool ActiveListActive { get; set; } = true;
+
+        public bool AcuteListActive { get; set; }
+
+        public bool PinnedListActive { get; set; }
 
         public IEnumerable<VisitationOverviewViewModel> SearchResult => ActiveVisitationCards.Where(c => c.Cpr.Contains(SearchWord));
 
@@ -84,27 +95,48 @@ namespace EIAUI
 
         #region Private Methods
 
-        private void ActivateComboTab(string s)
+        //private void ActivateComboTab(string s)
+        //{
+        //    Categorystring = s;
+
+        //    Dictionary<string, ObservableCollection<VisitationOverviewViewModel>> TempGrouping = ActiveVisitationCards
+        //                                                                                                .OrderBy(x => x.Category != "Akutte Visitationer")
+        //                                                                                                .ThenBy(x => x.Category != "Gemte Visitationer")
+        //                                                                                                .ThenBy(x => x.Category)
+        //                                                                                                .GroupBy(c => c.Category)
+        //                                                                                                .OrderBy(x => x.Key != "Akutte Visitationer")
+        //                                                                                                .ThenBy(x => x.Key != "Gemte Visitationer")
+        //                                                                                                .ThenBy(x => x.Key)
+        //                                                                                                .ToDictionary(group => group.Key, group => new ObservableCollection<VisitationOverviewViewModel>(group.ToList()));
+
+        //    foreach (var item in TempGrouping)
+        //    {
+        //        if(!item.Key.Equals(s))
+        //            item.Value.Clear();
+        //    }
+
+        //    GroupedVisitations = TempGrouping;
+        //}
+
+        private void ChangeActiveListState()
         {
-            Categorystring = s;
+            ActiveListActive = !ActiveListActive;
+            PinnedListActive = false;
+            AcuteListActive = false;
+        }
 
-            Dictionary<string, ObservableCollection<VisitationOverviewViewModel>> TempGrouping = ActiveVisitationCards
-                                                                                                        .OrderBy(x => x.Category != "Akutte Visitationer")
-                                                                                                        .ThenBy(x => x.Category != "Gemte Visitationer")
-                                                                                                        .ThenBy(x => x.Category)
-                                                                                                        .GroupBy(c => c.Category)
-                                                                                                        .OrderBy(x => x.Key != "Akutte Visitationer")
-                                                                                                        .ThenBy(x => x.Key != "Gemte Visitationer")
-                                                                                                        .ThenBy(x => x.Key)
-                                                                                                        .ToDictionary(group => group.Key, group => new ObservableCollection<VisitationOverviewViewModel>(group.ToList()));
+        private void ChangePinnedListState()
+        {
+            PinnedListActive = !PinnedListActive;
+            ActiveListActive = false;
+            AcuteListActive = false;
+        }
 
-            foreach (var item in TempGrouping)
-            {
-                if(!item.Key.Equals(s))
-                    item.Value.Clear();
-            }
-
-            GroupedVisitations = TempGrouping;
+        private void ChangeAcuteListState()
+        {
+            AcuteListActive = !AcuteListActive;
+            PinnedListActive = false;
+            ActiveListActive = false;
         }
 
         private void SaveSecretaryNote(string s)
@@ -113,10 +145,10 @@ namespace EIAUI
             _selectedCard.NoteReceived = true;
             _selectedCard.IsNoteOpen = false;
             // Should save to pinned list here for now it just deletes the card
-            //PinnedCards.Add(_selectedCard);
+            PinnedVisitationCards.Add(_selectedCard);
             indexOfCard = ActiveVisitationCards.IndexOf(_selectedCard);
             _selectedCard.Category = "Gemte Visitationer";
-            ActivateComboTab(Categorystring);
+            //ActivateComboTab(Categorystring);
             NextCard();
         }
 
@@ -142,7 +174,7 @@ namespace EIAUI
             indexOfCard = ActiveVisitationCards.IndexOf(SelectedCard);
             ActiveVisitationCards.Remove(_selectedCard);
             NumberOfActiveVisitations--;
-            ActivateComboTab(Categorystring);
+            //ActivateComboTab(Categorystring);
         }
 
         private void NextCard()
@@ -159,7 +191,7 @@ namespace EIAUI
         {
             HistoryVisitationCards.Add(_selectedCard);
             ActiveVisitationCards.Remove(_selectedCard);
-            ActivateComboTab(Categorystring);
+            //ActivateComboTab(Categorystring);
             //GroupedVisitations = ActiveVisitationCards.GroupBy(c => c.TreatmentType).ToDictionary(group => group.Key, group => new ObservableCollection<VisitationOverviewViewModel>(group.ToList()));
         }
 

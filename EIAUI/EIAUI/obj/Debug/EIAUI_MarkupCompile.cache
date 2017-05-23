@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\App.xaml
-23-502101626
+25-170665979
 
-33890347045
+351486646565
 19467835393
-ComboboxTest\Comboboxtest.xaml;Controls\ContactPopup.xaml;Controls\HistoryCardList.xaml;Controls\OverviewCard.xaml;Controls\PinPopup.xaml;Controls\TranslatorPopup.xaml;Controls\TreatmentCategory.xaml;Controls\VisitationAlt.xaml;Controls\VisitationCardFinal.xaml;Controls\VisitationCardParts\VisitationCardPart1.xaml;Controls\VisitationCardParts\VisitationCardPart2.xaml;Controls\VisitationCardParts\VisitationCardPart3.xaml;Controls\VisitationCard_v2.xaml;Controls\VisitationTab.xaml;MainWindow.xaml;NotificationMessage.xaml;Styles\Scrollbar.xaml;Styles\Colours.xaml;Styles\Buttons.xaml;Styles\Popups.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;
+ComboboxTest\Comboboxtest.xaml;Controls\AcuteList.xaml;Controls\ContactPopup.xaml;Controls\HistoryCardList.xaml;Controls\OverviewCard.xaml;Controls\PinnedList.xaml;Controls\PinPopup.xaml;Controls\TranslatorPopup.xaml;Controls\ActiveList.xaml;Controls\VisitationAlt.xaml;Controls\VisitationCardFinal.xaml;Controls\VisitationCardParts\VisitationCardPart1.xaml;Controls\VisitationCardParts\VisitationCardPart2.xaml;Controls\VisitationCardParts\VisitationCardPart3.xaml;Controls\VisitationCard_v2.xaml;Controls\VisitationTab.xaml;MainWindow.xaml;NotificationMessage.xaml;Styles\Scrollbar.xaml;Styles\Colours.xaml;Styles\Buttons.xaml;Styles\Popups.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;
 
 False
 

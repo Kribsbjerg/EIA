@@ -219,7 +219,7 @@
         
     </Window.Resources>
 
-    <Window.Triggers>
+    <!--<Window.Triggers>
         <EventTrigger RoutedEvent="Window.Loaded">
             <BeginStoryboard>
                 <Storyboard >
@@ -227,7 +227,7 @@
                 </Storyboard>
             </BeginStoryboard>
         </EventTrigger>
-    </Window.Triggers>
+    </Window.Triggers>-->
 
     <Window.InputBindings>
         <KeyBinding Key="F" Modifiers="Ctrl"  Command="{Binding SearchCommand}"  />

@@ -75,11 +75,17 @@
       <DependentUpon>Comboboxtest.xaml</DependentUpon>
     </Compile>
     <Compile Include="BoolToVisibilityConverter.cs" />
+    <Compile Include="Controls\AcuteList.xaml.cs">
+      <DependentUpon>AcuteList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\HistoryCardList.xaml.cs">
       <DependentUpon>HistoryCardList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\OverviewCard.xaml.cs">
       <DependentUpon>OverviewCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PinnedList.xaml.cs">
+      <DependentUpon>PinnedList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\PinPopup.xaml.cs">
       <DependentUpon>PinPopup.xaml</DependentUpon>
@@ -87,8 +93,8 @@
     <Compile Include="Controls\TranslatorPopup.xaml.cs">
       <DependentUpon>TranslatorPopup.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\TreatmentCategory.xaml.cs">
-      <DependentUpon>TreatmentCategory.xaml</DependentUpon>
+    <Compile Include="Controls\ActiveList.xaml.cs">
+      <DependentUpon>ActiveList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\VisitationAlt.xaml.cs">
       <DependentUpon>VisitationAlt.xaml</DependentUpon>
@@ -131,6 +137,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\AcuteList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\ContactPopup.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -143,6 +153,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\PinnedList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\PinPopup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -151,7 +165,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\TreatmentCategory.xaml">
+    <Page Include="Controls\ActiveList.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -107,8 +107,11 @@
                     <!-- Logo -->
                     <Image x:Name="LogoImage" Opacity="0.0" Source="pack://application:,,,/Images/Logo/enversion-logo.png" Width="60" Height="60" Margin="-300 -320 0 0"/>
 
-                    <StackPanel Margin="0 100 0 0">
+                    <StackPanel Margin="0 60 0 0">
 
+                        <TextBlock Text="Tak, det sørger jeg for at få booket." TextWrapping="WrapWithOverflow" FontSize="15" FontFamily="{StaticResource LatoRegular}" 
+                                               Foreground="{StaticResource BackgroundColorBrush}" TextAlignment="Center" Margin="0 0 0 20" />
+                        
                         <TextBlock Text="Jeg har stadig: " FontSize="15" FontFamily="{StaticResource LatoRegular}" 
                                                Foreground="{StaticResource BackgroundColorBrush}" TextAlignment="Center" />
                         <TextBlock Text="{Binding NumberOfActiveVisitations}" FontSize="15" FontFamily="{StaticResource LatoBold}" 

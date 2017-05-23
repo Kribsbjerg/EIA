@@ -18,9 +18,9 @@ namespace EIAUI
     /// <summary>
     /// Interaction logic for TreatmentCategory.xaml
     /// </summary>
-    public partial class TreatmentCategory : UserControl
+    public partial class ActiveList : UserControl
     {
-        public TreatmentCategory()
+        public ActiveList()
         {
             InitializeComponent();
         }
