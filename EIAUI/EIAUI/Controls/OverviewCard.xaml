@@ -54,7 +54,7 @@
                                             </Style>
                                         </TextBlock.Style>
                                     </TextBlock>
-                                    <TextBlock Text="{Binding Diagnose}" x:Name="text2" FontSize="12" TextTrimming="CharacterEllipsis" Height="20">
+                                    <TextBlock Text="{Binding TreatmentType}" x:Name="text2" FontSize="12" TextTrimming="CharacterEllipsis" Height="20">
                                         <TextBlock.Style>
                                             <Style TargetType="{x:Type TextBlock}">
                                                 <Setter Property="Foreground" Value="{StaticResource DarkTextColorBrush}" />

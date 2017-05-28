@@ -62,10 +62,12 @@ namespace EIAUI
             // SeachCommand + new RelayCommand(() => );
             // NotificationCommand + new RelayCommand(() => );
             // UserCommand + new RelayCommand(() => );
+            MinimizeCommandFromNotification = new RelayCommand(() => MinimizeFromNotification());
             MinimizeCommand = new RelayCommand(() => SlideOutAndMinimizeAnimation()); //_window.WindowState = WindowState.Minimized
             MaximizeCommand = new RelayCommand(() => _window.WindowState ^= WindowState.Maximized);
             CloseCommand = new RelayCommand(() => _window.Close());
             SearchCommand = new RelayCommand(() => ActivateSearchDialog());
+            SlideInWindow = new RelayCommand(() => ShowAndSlideInAnimation());
 
             ni.Icon = new Icon("Main.ico");
             ni.Click +=
@@ -80,7 +82,6 @@ namespace EIAUI
         private void ActivateSearchDialog()
         {
             SearchActivated = !SearchActivated;
-
         }
 
         private void OnHotKeyHandler(HotKey hotKey)
@@ -161,6 +162,8 @@ namespace EIAUI
 
         public bool SearchActivated { get; set; }
 
+        public bool IsMorningNotificationOpen { get; set; } = true;
+
         #endregion
 
         #region Commands
@@ -195,9 +198,19 @@ namespace EIAUI
         /// </summary>
         public ICommand CloseCommand { get; set; }
 
+        public ICommand SlideInWindow { get; set; }
+
+        public ICommand MinimizeCommandFromNotification { get; set; }
+
         #endregion
 
         #region Animation Methods
+
+        private void MinimizeFromNotification()
+        {
+            _window.WindowState = WindowState.Minimized;
+            IsMorningNotificationOpen = false;
+        }
 
         private async void SlideOutAndMinimizeAnimation()
         {
@@ -223,6 +236,7 @@ namespace EIAUI
 
         private async void ShowAndSlideInAnimation()
         {
+            IsMorningNotificationOpen = false;
             _window.Show();
             _window.WindowState = WindowState.Normal;
             _window.Activate();

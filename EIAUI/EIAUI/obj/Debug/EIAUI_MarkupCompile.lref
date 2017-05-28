@@ -4,6 +4,9 @@ FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\ComboboxTest\Comboboxtest.xam
 FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\Controls\AcuteList.xaml;;
 FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\Controls\ContactPopup.xaml;;
 FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\Controls\HistoryCardList.xaml;;
+FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\Controls\NotificationMessages\AcuteVisitationMessage.xaml;;
+FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\Controls\NotificationMessages\MorningMessage.xaml;;
+FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\Controls\NotificationMessages\TranslatorMessage.xaml;;
 FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\Controls\OverviewCard.xaml;;
 FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\Controls\PinnedList.xaml;;
 FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\Controls\PinPopup.xaml;;
@@ -17,7 +20,6 @@ FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\Controls\VisitationCardParts\
 FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\Controls\VisitationCard_v2.xaml;;
 FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\Controls\VisitationTab.xaml;;
 FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\MainWindow.xaml;;
-FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\NotificationMessage.xaml;;
 FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\Styles\Scrollbar.xaml;;
 FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\Styles\Colours.xaml;;
 FC:\Users\RuneMøberg\Source\Repos\EIA\EIAUI\EIAUI\Styles\Buttons.xaml;;

@@ -32,24 +32,24 @@
                         <ColumnDefinition Width="1.5*" />
                         <ColumnDefinition Width="10*" />
                         <ColumnDefinition Width="*" />
-                        <!--<ColumnDefinition Width="*" />-->
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
                     <Border Grid.Column="0">
-                        <TextBlock Text="X" TextAlignment="Center" VerticalAlignment="Center" />
+                        <TextBlock Text="" TextAlignment="Center" VerticalAlignment="Center" />
                     </Border>
 
                     <Border Grid.Column="1">
-                        <TextBlock Text="Åbne visitationer" FontFamily="{StaticResource LatoBold}" VerticalAlignment="Center" />
+                        <TextBlock Text="Visitationsforslag" FontWeight="SemiBold" FontFamily="{StaticResource LatoBold}" VerticalAlignment="Center" />
                     </Border>
 
                     <Border Grid.Column="2">
                         <TextBlock Text="v" VerticalAlignment="Center" TextAlignment="Center" />
                     </Border>
 
-                    <!--<Border Grid.Column="3">
-                        <TextBlock Text="{Binding Value.Count}" VerticalAlignment="Center" TextAlignment="Center" />
-                    </Border>-->
+                    <Border Grid.Column="3">
+                        <TextBlock Text="{Binding NumberOfRemainingVisitations}" VerticalAlignment="Center" TextAlignment="Center" Padding="0 0 5 0" />
+                    </Border>
 
                 </Grid>
 

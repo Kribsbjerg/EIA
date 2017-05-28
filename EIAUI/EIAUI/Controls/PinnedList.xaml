@@ -32,24 +32,26 @@
                         <ColumnDefinition Width="1.5*" />
                         <ColumnDefinition Width="10*" />
                         <ColumnDefinition Width="*" />
-                        <!--<ColumnDefinition Width="*" />-->
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <Border Grid.Column="0">
-                        <TextBlock Text="X" TextAlignment="Center" VerticalAlignment="Center" />
+                    <Border Grid.Column="0" Padding="0 0 5 0">
+                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" >
+                            <Path Data="M16,12V4H17V2H7V4H8V12L6,14V16H11.2V22H12.8V16H18V14L16,12Z" Fill="{StaticResource DarkTextColorBrush}" />
+                        </Grid>
                     </Border>
 
                     <Border Grid.Column="1">
-                        <TextBlock Text="Gemte Visitationer" FontFamily="{StaticResource LatoBold}" VerticalAlignment="Center" />
+                        <TextBlock Text="Gemte Visitationer" FontWeight="SemiBold" FontFamily="{StaticResource LatoBold}" VerticalAlignment="Center" />
                     </Border>
 
                     <Border Grid.Column="2">
                         <TextBlock Text="v" VerticalAlignment="Center" TextAlignment="Center" />
                     </Border>
 
-                    <!--<Border Grid.Column="3">
-                        <TextBlock Text="{Binding Value.Count}" VerticalAlignment="Center" TextAlignment="Center" />
-                    </Border>-->
+                    <Border Grid.Column="3">
+                        <TextBlock Text="{Binding NumberOfPinnedVisitations}" VerticalAlignment="Center" TextAlignment="Center" />
+                    </Border>
 
                 </Grid>
 
@@ -96,7 +98,12 @@
 
 
             <ListBox x:Name="TreatmentList"   
-                 Grid.Row="1" ItemsSource="{Binding PinnedVisitationCards, Mode=OneWay}"  SelectedItem="{Binding ElementName=TabContent, Path=DataContext.SelectedCard, Mode=TwoWay}" HorizontalAlignment="Center" BorderThickness="0" Width="350">
+                 Grid.Row="1" 
+                     ItemsSource="{Binding PinnedVisitationCards, Mode=OneWay}" 
+                     SelectedItem="{Binding ElementName=TabContent, Path=DataContext.SelectedCard, Mode=TwoWay}" 
+                     HorizontalAlignment="Center" BorderThickness="0" Width="350"
+                      Visibility="{Binding PinnedListActive, 
+                          Converter={StaticResource bvc}}">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
                         <Setter Property="IsSelected" Value="{Binding Content.IsSelected, Mode=TwoWay, RelativeSource={RelativeSource Self}}"/>

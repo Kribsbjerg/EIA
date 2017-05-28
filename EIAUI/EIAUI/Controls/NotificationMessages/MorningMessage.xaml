@@ -1,12 +1,18 @@
-﻿<UserControl x:Class="EIAUI.Controls.NotificationMessages.MorningMessage"
+﻿<UserControl x:Class="EIAUI.MorningMessage"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:EIAUI.Controls.NotificationMessages"
+             xmlns:local="clr-namespace:EIAUI"
              mc:Ignorable="d" 
-             d:DesignHeight="150" d:DesignWidth="450">
-    <Border CornerRadius="2" Padding="46 16 16 16" Height="104" Width="447" Background="{StaticResource PrimaryColorBrush}">
+             Height="220"
+             Width="550">
+    <Border CornerRadius="2" Padding="46 16 16 16" Height="104" Width="447" Background="{StaticResource PrimaryColorBrush}" Margin="50">
+
+        <Border.Effect>
+            <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
+        </Border.Effect>
+
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="301" />
@@ -18,13 +24,13 @@
             <!--Text-->
             <StackPanel Grid.Column="0" Orientation="Vertical" Margin="0 11 0 0">
                 <TextBlock Text="Godmorgen!" Foreground="{StaticResource BackgroundColorBrush}" FontFamily="{StaticResource LatoBlack}" FontSize="15" Height="25"/>
-                <TextBlock Text="Jeg har klargjort 23 visitationsforslag." Foreground="{StaticResource BackgroundColorBrush}" FontFamily="{StaticResource LatoRegular}" FontSize="15" Height="25"/>
+                <TextBlock Text="Jeg har klargjort 20 visitationsforslag." Foreground="{StaticResource BackgroundColorBrush}" FontFamily="{StaticResource LatoRegular}" FontSize="15" Height="25"/>
             </StackPanel>
             
             <!--Buttons-->
             <StackPanel Grid.Column="2" Orientation="Vertical">
-                <Button Style="{StaticResource ShowButton}" Height="32" Margin="0 0 0 8"/>
-                <Button Style="{StaticResource PostponeButton}" Height="32" />
+                <Button Command="{Binding SlideInWindow}" Style="{StaticResource ShowButton}" Height="32" Margin="0 0 0 8"/>
+                <Button Command="{Binding MinimizeCommandFromNotification}" Style="{StaticResource PostponeButton}" Height="32" />
             </StackPanel>
             
             <!--Logo-->

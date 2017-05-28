@@ -29,6 +29,7 @@
                         </StackPanel>
                         <StackPanel Grid.Column="2" Orientation="Vertical">
                             <Button Height="32" Margin="0 30 0 8" Command="{Binding SaveNote}" CommandParameter="{Binding Text, ElementName=NoteInput}" Style="{StaticResource SaveButton}" >
+
                                 <i:Interaction.Triggers>
                                     <i:EventTrigger EventName="Click">
                                         <ei:ChangePropertyAction 
@@ -38,7 +39,7 @@
                                 </i:Interaction.Triggers>
                             </Button>
 
-                            <Button Height="32" Style="{StaticResource CloseNoteButton}" />
+                            <Button Command="{Binding ActivateNoteDialog}" Height="32" Style="{StaticResource CloseNoteButton}" />
                             
                         </StackPanel>
                     </Grid>

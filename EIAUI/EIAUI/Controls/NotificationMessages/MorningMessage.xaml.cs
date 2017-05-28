@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace EIAUI.Controls.NotificationMessages
+namespace EIAUI
 {
     /// <summary>
     /// Interaction logic for MorningMessage.xaml

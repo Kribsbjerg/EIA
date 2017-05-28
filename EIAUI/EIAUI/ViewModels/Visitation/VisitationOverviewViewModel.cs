@@ -67,13 +67,17 @@ namespace EIAUI
 
         public string SecretaryNote { get; set; }
         
-        public string Category { get; set; } 
+        public string Category { get; set; }
 
+        public bool IsActive { get; set; } = true;
+
+        public string TextToDisplay { get; set; }
+        
         #endregion
 
         #region Private Methods
 
-        private void ChangeNoteFieldState()
+        public void ChangeNoteFieldState()
         {
             IsNoteOpen = !IsNoteOpen;
         }

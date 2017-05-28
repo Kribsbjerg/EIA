@@ -29,42 +29,51 @@ namespace EIAUI
             FileHandler patientDocument = new FileHandler(@"../../../Data.csv");
 
             ActiveVisitationCards = new ObservableCollection<VisitationOverviewViewModel>();
+            AcuteVisitationCards = new ObservableCollection<VisitationOverviewViewModel>();
 
             IEnumerable<string[]> referralList = patientDocument.GetCellsInLinesOfFile(';').Skip(1);
 
             foreach (string[] referral in referralList)
             {
-                ActiveVisitationCards.Add
-                    (
-                        new VisitationOverviewViewModel()
-                        {
-                            Cpr = referral[0],
-                            Diagnose = referral[2],
-                            ReferralCause = referral[3],
-                            TreatmentType = referral[4],
-                            Date = referral[5],
-                            Time = referral[6],
-                            Doctor = referral[7],
-                            Category = referral[12],
-                            
-                        }
-                    );
+                
+                    ActiveVisitationCards.Add
+                        (
+                            new VisitationOverviewViewModel()
+                            {
+                                Cpr = referral[0],
+                                Diagnose = referral[2],
+                                ReferralCause = referral[3],
+                                TreatmentType = referral[4],
+                                TextToDisplay = referral[4],
+                                Date = referral[5],
+                                Time = referral[6],
+                                Doctor = referral[7],
+                                NeedsTranslator = referral[10].Equals("1"),
+                                Category = referral[12],
+                            }
+                        );
+
+            }
+
+            foreach (var visitation in ActiveVisitationCards)
+            {
+                if (visitation.Category.Equals("1"))
+                {
+                    AcuteVisitationCards.Add(visitation);
+                }
+            }
+
+            foreach (var visitation in AcuteVisitationCards)
+            {
+                ActiveVisitationCards.Remove(visitation);
             }
 
             HistoryVisitationCards = new ObservableCollection<VisitationOverviewViewModel>();
 
-            NumberOfActiveVisitations = ActiveVisitationCards.Count;
             NumberOfHistoryVisitations = HistoryVisitationCards.Count;
-            GroupedVisitations = ActiveVisitationCards
-                                    .OrderBy(x => x.Category != "Akutte Visitationer")
-                                    .ThenBy(x => x.Category != "Gemte Visitationer")
-                                    .ThenBy(x => x.Category)
-                                    .GroupBy(c => c.Category)
-                                    .OrderBy(x => x.Key != "Akutte Visitationer")
-                                    .ThenBy(x => x.Key != "Gemte Visitationer")
-                                    .ThenBy(x => x.Key)
-                                    .ToDictionary(group => group.Key, group => new ObservableCollection<VisitationOverviewViewModel>());
-
+            NumberOfAcuteVisitations = AcuteVisitationCards.Count;
+            NumberOfRemainingVisitations = ActiveVisitationCards.Count;
+            NumberOfActiveVisitations = ActiveVisitationCards.Count + AcuteVisitationCards.Count;
         }
 
         #endregion

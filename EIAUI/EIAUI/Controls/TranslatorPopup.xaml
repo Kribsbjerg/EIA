@@ -18,19 +18,17 @@
                                 <ColumnDefinition Width="76" />
                             </Grid.ColumnDefinitions>
 
+                            
                             <StackPanel Grid.Column="0" Orientation="Vertical">
 
                                 <TextBlock Foreground="{StaticResource BackgroundColorBrush}" Height="25" 
                                        FontFamily="{StaticResource LatoBlack}" FontSize="15" TextWrapping="Wrap"
-                                       Text="Jeg vil anbefale at du booker en eriteansk tolk til Ismael Sahib."/>
+                                       Text="Jeg vil anbefale at du booker en arabisk tolk til Ismael Sahib. "/>
 
-                                <TextBlock Foreground="{StaticResource BackgroundColorBrush}" Height="25"
-                                       FontSize="15"
-                                       Text="Vil du ringe nu eller gemme den til senere?"/>
+                                
                             </StackPanel>
 
-                            <Button Grid.Column="2"  Height="32" 
-                                    Style="{StaticResource SaveButton}" /> 
+                            
                         </Grid>
                     </Border>
 
@@ -60,10 +58,21 @@
                         </Grid>
                     </Border>
                 </StackPanel>
-
                 <Image Source="pack://application:,,,/Images/Logo/enversion-logo.png" Grid.Column="0"
                    Height="108" Width="92" HorizontalAlignment="Left" Margin="-47,-54,0,136"/>
             </Grid>
         </Border>
     </Grid>
 </UserControl>
+
+    
+    <!--  
+        <Button Grid.Column="2"  Height="32" 
+                                    Style="{StaticResource SaveButton}"
+                                    
+                                    />
+    
+    <TextBlock Foreground="{StaticResource BackgroundColorBrush}" Height="25"
+                                       FontSize="15"
+                                       Text="Vil du ringe nu eller gemme den til senere?"/>
+    -->

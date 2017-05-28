@@ -32,24 +32,24 @@
                         <ColumnDefinition Width="1.5*" />
                         <ColumnDefinition Width="10*" />
                         <ColumnDefinition Width="*" />
-                        <!--<ColumnDefinition Width="*" />-->
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
                     <Border Grid.Column="0">
-                        <TextBlock Text="X" TextAlignment="Center" VerticalAlignment="Center" />
+                        <TextBlock Text="&#xf1f4;" FontFamily="{StaticResource MaterialIcon}" Foreground="{StaticResource DarkTextColorBrush}" FontSize="18" TextAlignment="Center" VerticalAlignment="Center" />
                     </Border>
 
                     <Border Grid.Column="1">
-                        <TextBlock Text="Akutte Visitationer" FontFamily="{StaticResource LatoBold}" VerticalAlignment="Center" />
+                        <TextBlock Text="Akutte Visitationer" FontFamily="{StaticResource LatoBold}" FontWeight="SemiBold" VerticalAlignment="Center" />
                     </Border>
 
                     <Border Grid.Column="2">
                         <TextBlock Text="v" VerticalAlignment="Center" TextAlignment="Center" />
                     </Border>
 
-                    <!--<Border Grid.Column="3">
-                        <TextBlock Text="{Binding Value.Count}" VerticalAlignment="Center" TextAlignment="Center" />
-                    </Border>-->
+                    <Border Grid.Column="3">
+                        <TextBlock Text="{Binding NumberOfAcuteVisitations}" VerticalAlignment="Center" TextAlignment="Center" />
+                    </Border>
 
                 </Grid>
 
@@ -96,7 +96,13 @@
 
 
             <ListBox x:Name="TreatmentList"   
-                 Grid.Row="1" ItemsSource="{Binding AcuteVisitationCards, Mode=OneWay}"  SelectedItem="{Binding ElementName=TabContent, Path=DataContext.SelectedCard, Mode=TwoWay}" HorizontalAlignment="Center" BorderThickness="0" Width="350">
+                 Grid.Row="1" 
+                     ItemsSource="{Binding AcuteVisitationCards, Mode=TwoWay}"  
+                     SelectedItem="{Binding ElementName=TabContent, Path=DataContext.SelectedCard, Mode=TwoWay}" 
+                     HorizontalAlignment="Center" BorderThickness="0" Width="350"
+                      Visibility="{Binding AcuteListActive, 
+                          Converter={StaticResource bvc}}"
+                     >
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
                         <Setter Property="IsSelected" Value="{Binding Content.IsSelected, Mode=TwoWay, RelativeSource={RelativeSource Self}}"/>

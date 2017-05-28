@@ -66,7 +66,7 @@
         </Border>
 
 
-        <Grid x:Name="Content1" Grid.Row="1" Width="400" Height="800" Background="{StaticResource ActiveTabColorBrush}" Panel.ZIndex="1" Margin="0 -3 0 0">
+        <Grid x:Name="Content1" Grid.Row="1" Width="400" Height="900" Background="{StaticResource ActiveTabColorBrush}" Panel.ZIndex="1" Margin="0 -3 0 0">
             <!--<Border Background="{StaticResource PrimaryColorBrush}" Height="0.5" VerticalAlignment="Top" Width="205" HorizontalAlignment="Right" />
             <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0, 10, 0, 0" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="1" BorderBrush="{StaticResource PrimaryColorBrush}" Width="380">
                 <ListBox ItemsSource="{Binding ActiveVisitationCards}" SelectedItem="{Binding SelectedCard}" Focusable="{Binding IsNotDialogMode}" HorizontalAlignment="Center" BorderThickness="0" Background="{StaticResource ActiveTabColorBrush}" >
@@ -103,8 +103,8 @@
                 HorizontalAlignment="Center" 
                 BorderThickness="0" Background="{StaticResource ActiveTabColorBrush}" 
                 Width="380"
-                Margin="-10 0 5 0"
-                Padding="0 10 0 0">
+                Margin="-10 5 5 0"
+                Padding="0 0 0 0">
 
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
@@ -319,10 +319,10 @@
             </Border.Triggers>
         </Border>
 
-        <Grid x:Name="Content2" Grid.Row="1" Width="400" Height="800" Background="{StaticResource ActiveTabColorBrush}" Panel.ZIndex="0" Margin="0 -3 0 0">
+        <Grid x:Name="Content2" Grid.Row="1" Width="400" Height="900" Background="{StaticResource ActiveTabColorBrush}" Panel.ZIndex="0" Margin="0 -3 0 0">
             <Border Background="{StaticResource PrimaryColorBrush}" Height="0.5" VerticalAlignment="Top" Width="192" HorizontalAlignment="Left" />
             <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0, 10, 0, 0" Width="390">
-                <ListBox ItemsSource="{Binding HistoryVisitationCards}" HorizontalAlignment="Center" Height="Auto" BorderThickness="0" Background="{StaticResource ActiveTabColorBrush}">
+                <ListBox ItemsSource="{Binding HistoryVisitationCards}" HorizontalAlignment="Center" BorderThickness="0" Background="{StaticResource ActiveTabColorBrush}">
 
                     <ListBox.ItemContainerStyle>
                         <Style TargetType="ListBoxItem">
@@ -357,6 +357,10 @@
             </ScrollViewer>
         </Grid>
 
+        <Popup IsOpen="{Binding ShowAcuteNotification}" HorizontalOffset="0" VerticalOffset="890" AllowsTransparency="True">
+            <local:AcuteVisitationMessage />
+        </Popup>
+        
     </Grid>
 </UserControl>
 

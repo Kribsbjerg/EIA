@@ -1,21 +1,21 @@
 ﻿CPR-Nummer;Navn + Efternavn;Diagnose ;Henvisningsårsag;Behandlingstype ;Dato;Tid;Læge;Rum;Brev;Tolk;Sporg;Kategori ;Ring
-1512125353;Mohamed Mostafa;CTS;Smerter i begge hænder;CTS ;4. Juli 2017;12:30;Erik Jensen ;;;True; Persisk;MEP ;False
-1101772564;Helle Møller;CTS;Smerter i begge hænder;CTS ;28. September 2017;09:30;Bente Jørgesen ;;;False;;ENG  ;False
-2206566643;Jeppe Svendsen;Syndroma canalis carpi bilateralis;Højre og venstre hånds fingre, der sover i hvile, kan vanskeligt holde ved bilrat med begge hænder;CTS - nerveledningsundersøgelse;18. Oktober 2017;09:30;Bente Jørgesen ;;;False;;ENG  ;False
-0412882920;Mathilde Mikkelsen ;Syndroma canalis carpi bilateralis;Højre og venstre hånds fingre, der sover i hvile, kan vanskeligt holde ved bilrat med begge hænder;CTS - nerveledningsundersøgelse;10. December 2017;09:30;Erik Jensen ;;;False;;MEP ;False
-1705813936;Fie Knudsen;DG560;Snurrende fornemmelse i fingre bilat.;CTS bilat. - nerveledingsundersøgelse;9. September 2017;07:30;Nick Rasmussen ;;;False ;;EMG ;False
-1010722035;Morten Jørgensen;DG560;Snurrende fornemmelse i fingre bilat.;CTS bilat. - nerveledingsundersøgelse;6. November 2017;07:30;Jens Balle;;;False;;ENG  ;False
-3009290176;Borte Larsen ;Karpaltunnelsyndrom;Smerter i fingre;ENG - CTS Nerveledningsundersøgelse;26. Maj 2017;10:00;Nick Rasmussen ;;;False ;;Akut;False
-2111680147;Preben Jørgensen;Karpaltunnelsyndrom;Smerter i fingre;ENG - CTS Nerveledningsundersøgelse;26. Oktober 2017;15:00;Jens Balle;;;False ;;Akut;False
-1204844194;Stine Kristensen;Obs. polyneuropati;Brændende smerter i begge underben;Nerveledningsundersøgelse - neuropati;4. December 2017;12:00;Bente Jørgesen ;;;False;;SEP  ;False
-2012516119;Peter Andersen ;Obs. polyneuropati;Brændende smerter i begge underben;Nerveledningsundersøgelse - neuropati;22. Juni 2017;10:00;Nick Rasmussen ;;;False;;VEP ;False
-1105643827;Casper Bach;Neuropati i ve. underekstremitet;Brændende smertende fornemmelse ve. lår;Nerveledningsundersøgelse - neuropati;8. September 2017;10:30;Jens Balle;;;False;;EEG;False
-1201120021;Mads Dahl ;Neuropati i ve. underekstremitet;Brændende smertende fornemmelse ve. lår;Nerveledningsundersøgelse - neuropati;27. Juli 2017;11:30;Bente Jørgesen ;;;False;;EMG ;True
-1408914949;Hans Kirkegaard;DZ033 Obs. pga mistanke om sygdom i nervesystem;Smerter i højre underben med brændende fornemmelse ligeledes under foden ;Neuropati - lang undersøgelse 2 ben;19. September 2017;14:30;Erik Jensen ;;;False;;ENG  ;False
-1709613910;Jonna Petersen;DZ033 Obs. pga mistanke om sygdom i nervesystem;Smerter i højre underben med brændende fornemmelse ligeledes under foden ;Neuropati - lang undersøgelse 2 ben;16. Oktober 2017;08:00;Erik Jensen ;;;False;;EEG;False
-2305924132;Mui Nguyen;DM059 – Tarsal tunnel syndrom;ENG med henblik på føleforstyrrelser venstre fods tæer;Tarsal  - nerveledningsundersøgelse;12. December 1017;14:00;Jens Balle;;;True;Vietnamesisk;VEP ;False
-0703673294;Lis Larsen;DM059 – Tarsal tunnel syndrom;ENG med henblik på føleforstyrrelser venstre fods tæer;Tarsal  - nerveledningsundersøgelse;3. Juli 2017;12:30;Bente Jørgesen ;;;False;;SEP  ;False
-2208440423;Emil Rasmussen;Ekstremitetssmerter DM796 ;Smerter og uro i hø.underarm samt fingre ;Ulnaris - lang nerveledningsundersøgelse;15. November 2017;10:00;Bente Jørgesen ;;;False ;;EMG ;False
-0801824822;Amanda Juhl;Ekstremitetssmerter DM796 ;Smerter og uro i hø.underarm samt fingre ;Ulnaris - lang nerveledningsundersøgelse;23. November 2017;10:30;Jens Balle;;;False;;EMG ;False
-2005551071;Adrian Møller;Paræstesier  bilat. hænder;Smerter med udstråling til ve. arm samt paræstesier i begge hænder;Ulnaris - lang nerveledningsundersøgelse;17. Juli 2017;08:00;Jens Balle;;;False;;VEP ;False
-1902743723;Malthe Sørensen ;Paræstesier  bilat. hænder;Smerter med udstråling til ve. arm samt paræstesier i begge hænder;Ulnaris - lang nerveledningsundersøgelse;21. Oktober 2017;08:00;Nick Rasmussen ;;;False;;VEP ;False
+3009290176;Borte Larsen ;Karpaltunnelsyndrom;Smerter i fingre;ENG - CTS Nerveledningsundersøgelse;26. Maj 2017;10:00;Nick Rasmussen ;;;0;;0;False
+1105643827;Casper Bach;Neuropati i ve. underekstremitet;Brændende smertende fornemmelse ve. lår;Nerveledningsundersøgelse - neuropati;8. September 2017;10:30;Jens Balle;;;0;;0;False
+1204844194;Stine Kristensen;Obs. polyneuropati;Brændende smerter i begge underben;Nerveledingsundersøgelse - neuropati;4. December 2017;12:00;Bente Jørgesen ;;;0;;1;False
+1705813936;Fie Knudsen;DG560;Snurrende fornemmelse i fingre bilat.;CTS bilat. - nerveledingsundersøgelse;9. September 2017;07:30;Nick Rasmussen ;;;0;;0;False
+1512125353;Mohamed Mostafa;CTS;Smerter i begge hænder;Tarsal  - nerveledningsundersøgelse;4. Juli 2017;12:30;Erik Jensen ;;;0; Persisk;0;False
+2005551071;Adrian Møller;Paræstesier  bilat. hænder;Smerter med udstråling til ve. arm samt paræstesier i begge hænder;Ulnaris - nerveledningsundersøgelse lang;17. Juli 2017;08:00;Jens Balle;;;0;;0;False
+2206566643;Jeppe Svendsen;Syndroma canalis carpi bilateralis;Højre og venstre hånds fingre, der sover i hvile, kan vanskeligt holde ved bilrat med begge hænder;CTS - nerveledningsundersøgelse;18. Oktober 2017;09:30;Bente Jørgesen ;;;0;;0;False
+2208440423;Emil Rasmussen;Ekstremitetssmerter DM796 ;Smerter og uro i hø.underarm samt fingre ;Ulnaris - lang nerveledningsundersøgelse;15. November 2017;10:00;Bente Jørgesen ;;;0;;0;False
+2305924132;Mui Nguyen;DM059 – Tarsal tunnel syndrom;ENG med henblik på føleforstyrrelser venstre fods tæer;Tarsal  - nerveledningsundersøgelse;12. December 1017;14:00;Jens Balle;;;0;Vietnamesisk;0;False
+1408914949;Hans Kirkegaard;DZ033 Obs. pga mistanke om sygdom i nervesystem;Smerter i højre underben med brændende fornemmelse ligeledes under foden ;Neuropati - lang undersøgelse 2 ben;19. September 2017;14:30;Erik Jensen ;;;0;;0;False
+2111680147;Preben Jørgensen;Karpaltunnelsyndrom;Smerter i fingre;ENG - CTS Nerveledningsundersøgelse;26. Oktober 2017;15:00;Jens Balle;;;0;;0;False
+1201120021;Mads Dahl ;Neuropati i ve. underekstremitet;Brændende smertende fornemmelse ve. lår;Nerveledningsundersøgelse - neuropati;27. Juli 2017;11:30;Bente Jørgesen ;;;0;;0;True
+2012516119;Peter Andersen ;Obs. polyneuropati;Brændende smerter i begge underben;Nerveledingsundersøgelse - neuropati;22. Juni 2017;10:00;Nick Rasmussen ;;;1;;0;False
+1101772564;Helle Møller;CTS;Smerter i begge hænder;CTS ;28. September 2017;09:30;Bente Jørgesen ;;;0;;0;False
+1010722035;Morten Jørgensen;DG560;Snurrende fornemmelse i fingre bilat.;CTS bilat. - nerveledingsundersøgelse;6. November 2017;07:30;Jens Balle;;;0;;0;False
+1902743723;Malthe Sørensen ;Paræstesier  bilat. hænder;Smerter med udstråling til ve. arm samt paræstesier i begge hænder;Ulnaris - nerveledningsundersøgelse lang;21. Oktober 2017;08:00;Nick Rasmussen ;;;0;;1;False
+0412882920;Mathilde Mikkelsen ;Syndroma canalis carpi bilateralis;Højre og venstre hånds fingre, der sover i hvile, kan vanskeligt holde ved bilrat med begge hænder;CTS - nerveledningsundersøgelse;10. December 2017;09:30;Erik Jensen ;;;0;;0;False
+0801824822;Amanda Juhl;Ekstremitetssmerter DM796 ;Smerter og uro i hø.underarm samt fingre ;Ulnaris - lang nerveledningsundersøgelse;23. November 2017;10:30;Jens Balle;;;0;;0;False
+0703673294;Lis Larsen;DM059 – Tarsal tunnel syndrom;ENG med henblik på føleforstyrrelser venstre fods tæer;Tarsal  - nerveledningsundersøgelse;3. Juli 2017;12:30;Bente Jørgesen ;;;0;;0;False
+1709613910;Jonna Petersen;DZ033 Obs. pga mistanke om sygdom i nervesystem;Smerter i højre underben med brændende fornemmelse ligeledes under foden ;Neuropati - lang undersøgelse 2 ben;16. Oktober 2017;08:00;Erik Jensen ;;;0;;0;False

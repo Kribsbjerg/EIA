@@ -11,10 +11,10 @@
         x:Name="AppWindow"
         Title="MainWindow" 
         Width="400"
-        Height="1080"
+        Height="1050"
         MaxWidth="400"
         MaxHeight="1080"
-        Left="1320"
+        Left="1920"
         WindowStartupLocation="Manual" 
         Top="0">
 
@@ -209,6 +209,13 @@
 
                                 </Grid>
 
+                                <Popup IsOpen="{Binding IsMorningNotificationOpen}"
+                                       HorizontalOffset="-350" 
+                                       VerticalOffset="-250" 
+                                       AllowsTransparency="True">
+                                    <local:MorningMessage />
+                                </Popup>
+                                
                             </Grid>
                         </Border>
                     </ControlTemplate>

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace EIAUI
 {
     /// <summary>
-    /// Interaction logic for NotificationMessage.xaml
+    /// Interaction logic for PinnedList.xaml
     /// </summary>
-    public partial class AcuteVisitationMessage : UserControl
+    public partial class PinnedList : UserControl
     {
-        public AcuteVisitationMessage()
+        public PinnedList()
         {
             InitializeComponent();
         }

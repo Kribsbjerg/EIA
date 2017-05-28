@@ -9,6 +9,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="1000">
 
+    <UserControl.Resources>
+        <local:BoolToVisibilityConverter x:Key="bvc" />
+    </UserControl.Resources>
+
     <Grid d:DataContext="{x:Static local:VisitationCardDesignModel.Instance}" >
         <Grid Width="930" Height="400">
             <Grid.ColumnDefinitions>
@@ -25,7 +29,7 @@
 
                     <!--Pin and minimize buttons-->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 0 22">
-                        <Button x:Name="PinButton" Command="{Binding SelectedCard.OpenNoteField}" Style="{StaticResource PinButton}" Width="32" Height="32" Margin="0 0 16 0" ClickMode="Press" />
+                        <Button Visibility="{Binding SelectedCard.IsActive, Converter={StaticResource bvc}}" x:Name="PinButton" Command="{Binding ActivateNoteDialog}" Style="{StaticResource PinButton}" Width="32" Height="32" Margin="0 0 16 0" ClickMode="Press" />
                         <Button Style="{StaticResource MinimizeVisitationButton}" Command="{Binding MinimizeVisitationCard}" Width="32" Height="32" />
                     </StackPanel>
 
@@ -57,7 +61,7 @@
                     </Grid>
 
                     <!--Approve/disapprove buttons-->
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 26.6 0 0">
+                    <StackPanel Visibility="{Binding SelectedCard.IsActive, Converter={StaticResource bvc}}" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 26.6 0 0">
                         <Button Style="{StaticResource DisapproveVisitationButton}" Command="{Binding DeclineVisitation}" Margin="0 0 8 0" Height="32" Width="64">
                             <Button.Triggers>
                                 <EventTrigger RoutedEvent="Button.Click">
@@ -186,6 +190,8 @@
 
                     <!--Next/Close buttons-->
                     <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 26.6 0 0">
+                        
+                        <!-- Close next button -->
                         <Button Style="{StaticResource CloseNextVisitationButton}" Command="{Binding MinimizeVisitationCard}" Margin="0 0 8 0" Height="32" Width="64" >
                             <Button.Triggers>
                                 <EventTrigger RoutedEvent="Button.Click">
@@ -197,7 +203,7 @@
                                                 <ThicknessAnimation Storyboard.TargetName="RightCard" To="0 0 0 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.5" />
                                                 <DoubleAnimation Storyboard.TargetName="LeftCard" To="422" Storyboard.TargetProperty="(Border.Width)" Duration="0:0:0.5" />
                                                 <ThicknessAnimation Storyboard.TargetName="LeftCard" To="0 0 0 0" Storyboard.TargetProperty="Margin" Duration="0:0:0.5" />
-                                                <DoubleAnimation Storyboard.TargetName="LogoImage" Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:0.2"/>
+                                                <DoubleAnimation Storyboard.TargetName="LogoImage2" Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:0.2"/>
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </EventTrigger.Actions>
@@ -205,6 +211,7 @@
                             </Button.Triggers>
                         </Button>
 
+                        <!-- Get next button -->
                         <Button Style="{StaticResource NextButton}" Command="{Binding GetNextCard}" Height="32" Width="92" >
                             <Button.Triggers>
                                 <EventTrigger RoutedEvent="Button.Click">
@@ -231,22 +238,6 @@
             <!-- After note is saved -->
 
             <Border Grid.Column="1" x:Name="AfterNoteCard" Panel.ZIndex="0" Background="{StaticResource PrimaryColorBrush}" Width="304" Height="328" Padding="24" CornerRadius="2 0 0 2">
-
-                <!--<Border.Style>
-                    <Style TargetType="{x:Type Border}">
-                        <Style.Triggers>
-                            <DataTrigger Binding="{Binding SelectedCard.NoteReceived}" Value="True">
-                                <DataTrigger.EnterActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <Int32Animation Duration="0:0:0" Storyboard.TargetProperty="(Panel.ZIndex)" To="2"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </DataTrigger.EnterActions>
-                            </DataTrigger>
-                        </Style.Triggers>
-                    </Style>
-                </Border.Style>-->
 
                 <Grid  Background="{StaticResource PrimaryColorBrush}">
 
@@ -345,13 +336,11 @@
                                    Foreground="{StaticResource BackgroundColorBrush}" />
 
                             <TextBlock Text="Rum:" FontSize="13" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource BackgroundColorBrush}"/>
-                            <TextBlock Text="EMG1" FontSize="13" Margin="0 1 0 20" TextWrapping="Wrap" FontFamily="{StaticResource LatoRegular}" 
+                            <TextBlock Text="" FontSize="13" Margin="0 1 0 20" TextWrapping="Wrap" FontFamily="{StaticResource LatoRegular}" 
                                    Foreground="{StaticResource BackgroundColorBrush}" />
 
                             <TextBlock Text="Brev(e):"  FontSize="13" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource BackgroundColorBrush}"/>
-                            <TextBlock Text="1.   Indkaldelse indenfor behandlingsgaranti.
-                                             2.   Pjece: EMG undersøgelse.
-                                             3.   Patientrettigheder." 
+                            <TextBlock Text="" 
                                        FontSize="13" TextWrapping="Wrap" FontFamily="{StaticResource LatoRegular}" 
                             Foreground="{StaticResource BackgroundColorBrush}" />
                         </StackPanel>
