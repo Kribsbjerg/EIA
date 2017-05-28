@@ -2,7 +2,7 @@
 
 namespace ClassesForProjectEIA
 {
-    public class Person
+    public abstract class Person
     {
         #region Private Members
 

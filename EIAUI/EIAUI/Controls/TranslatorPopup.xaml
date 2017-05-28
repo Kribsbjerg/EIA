@@ -18,17 +18,17 @@
                                 <ColumnDefinition Width="76" />
                             </Grid.ColumnDefinitions>
 
-                            
+
                             <StackPanel Grid.Column="0" Orientation="Vertical">
 
                                 <TextBlock Foreground="{StaticResource BackgroundColorBrush}" Height="25" 
                                        FontFamily="{StaticResource LatoBlack}" FontSize="15" TextWrapping="Wrap"
                                        Text="Jeg vil anbefale at du booker en arabisk tolk til Ismael Sahib. "/>
 
-                                
+
                             </StackPanel>
 
-                            
+
                         </Grid>
                     </Border>
 
@@ -54,7 +54,7 @@
                                 <TextBlock Text="Åbningstider:" TextAlignment="Right" FontWeight="SemiBold" FontFamily="{StaticResource LatoBold}" FontSize="15" Foreground="{StaticResource BackgroundColorBrush}" Margin="0 4 0 3" />
                                 <TextBlock Text="08:00 - 13:00" HorizontalAlignment="Right" FontFamily="{StaticResource LatoRegular}" FontSize="15" Foreground="{StaticResource BackgroundColorBrush}" />
                             </StackPanel>
-                       
+
                         </Grid>
                     </Border>
                 </StackPanel>
@@ -64,15 +64,3 @@
         </Border>
     </Grid>
 </UserControl>
-
-    
-    <!--  
-        <Button Grid.Column="2"  Height="32" 
-                                    Style="{StaticResource SaveButton}"
-                                    
-                                    />
-    
-    <TextBlock Foreground="{StaticResource BackgroundColorBrush}" Height="25"
-                                       FontSize="15"
-                                       Text="Vil du ringe nu eller gemme den til senere?"/>
-    -->

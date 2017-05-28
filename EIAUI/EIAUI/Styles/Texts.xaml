@@ -35,7 +35,6 @@
         <Setter Property="Padding" Value="2" />
     </Style>
 
-    <!--En smule stjålet fra WPF manden -->
     <Style TargetType="{x:Type TextBox}" x:Key="NoteInputField" BasedOn="{StaticResource BaseStyle}">
 
         <Setter Property="FontSize" Value="15" />

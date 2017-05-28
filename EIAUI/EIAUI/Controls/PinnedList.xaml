@@ -66,37 +66,6 @@
 
             </Border>
 
-            <!--<Button Grid.Row="0" x:Name="Button"
-                
-                Content="{Binding Key, Mode=OneWay}"
-                Command="{Binding DataContext.ActivateCombo, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}"      
-                CommandParameter="{Binding Key}"                
-                >
-            <Button.Style>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
-                    <Setter Property="Background" Value="White" />
-                    <Setter Property="Foreground" Value="{StaticResource DarkTextColorBrush}" />
-                    <Setter Property="BorderBrush" Value="{StaticResource BackgroundColorBrush}" />
-                    <Setter Property="Height" Value="40" />
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="{x:Type Button}">
-                                
-                                
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Cursor" Value="Hand" />
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-        </Button>-->
-
-
             <ListBox x:Name="TreatmentList"   
                  Grid.Row="1" 
                      ItemsSource="{Binding PinnedVisitationCards, Mode=OneWay}" 

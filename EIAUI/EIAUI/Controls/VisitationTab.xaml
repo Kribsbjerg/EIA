@@ -26,7 +26,7 @@
                               StrokeLineJoin="Round"
                               >
                 </Path>
-                
+
                 <Grid >
 
                     <Grid.ColumnDefinitions>
@@ -67,33 +67,6 @@
 
 
         <Grid x:Name="Content1" Grid.Row="1" Width="400" Height="900" Background="{StaticResource ActiveTabColorBrush}" Panel.ZIndex="1" Margin="0 -3 0 0">
-            <!--<Border Background="{StaticResource PrimaryColorBrush}" Height="0.5" VerticalAlignment="Top" Width="205" HorizontalAlignment="Right" />
-            <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0, 10, 0, 0" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="1" BorderBrush="{StaticResource PrimaryColorBrush}" Width="380">
-                <ListBox ItemsSource="{Binding ActiveVisitationCards}" SelectedItem="{Binding SelectedCard}" Focusable="{Binding IsNotDialogMode}" HorizontalAlignment="Center" BorderThickness="0" Background="{StaticResource ActiveTabColorBrush}" >
-                    <ListBox.ItemContainerStyle>
-                        <Style TargetType="ListBoxItem">
-                            <Setter Property="IsSelected" Value="{Binding Content.IsSelected, Mode=TwoWay, RelativeSource={RelativeSource Self}}"/>
-                            <Setter Property="Background" Value="Red" />
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="ListBoxItem">
-                                        <ContentPresenter/>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </ListBox.ItemContainerStyle>
-
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel>
-                                <local:OverviewCard Padding="0" />
-                            </StackPanel>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-
-                </ListBox>
-            </ScrollViewer>-->
 
             <Border Background="{StaticResource PrimaryColorBrush}" Height="0.5" VerticalAlignment="Top" Width="205" HorizontalAlignment="Right" />
 
@@ -131,54 +104,6 @@
                 </ListBoxItem>
             </ListBox>
 
-
-            <!--<ItemsControl ItemsSource="{Binding PinnedCards}">
-
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Grid >
-                            <local:TreatmentCategory Padding="0 5" />
-                        </Grid>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-                
-            </ItemsControl>-->    
-            
-            <!--<ScrollViewer x:Name="scrollviewer" VerticalScrollBarVisibility="Auto" Margin="0, 10, 0, 0" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="1" BorderBrush="{StaticResource PrimaryColorBrush}" Width="380">-->
-                <!--<ListBox ScrollViewer.VerticalScrollBarVisibility="Auto" 
-                         ScrollViewer.CanContentScroll="False" 
-                         ItemsSource="{Binding GroupedVisitations}" 
-                         HorizontalAlignment="Center" 
-                         BorderThickness="0" Background="{StaticResource ActiveTabColorBrush}" 
-                         Width="380"
-                         Margin="-10 0 5 0"
-                         Padding="0 10 0 0">
-                    <ListBox.ItemContainerStyle>
-                        <Style TargetType="ListBoxItem">
-                            <Setter Property="IsSelected" Value="{Binding Content.IsSelected, Mode=TwoWay, RelativeSource={RelativeSource Self}}"/>
-
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="ListBoxItem">
-                                        <ContentPresenter />
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </ListBox.ItemContainerStyle>
-
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Grid >
-                            <local:TreatmentCategory Padding="0 5" />
-                            </Grid>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-
-                </ListBox>-->
-
-                <!--</ScrollViewer>-->
-
             <Popup 
                 IsOpen="{Binding IsCardSelected, Mode=OneWay}" 
                 HorizontalOffset="-700" 
@@ -186,74 +111,6 @@
                 Grid.ColumnSpan="2"
                 AllowsTransparency="True"
                 >
-
-                <!--<Popup.RenderTransform>
-                    --><!-- giving the transform a name tells the framework not to freeze it --><!--
-                    <RotateTransform x:Name="noFreeze" />
-                </Popup.RenderTransform>
-
-                <Popup.Triggers>
-                    <EventTrigger RoutedEvent="Loaded">
-                        <BeginStoryboard>
-                            <Storyboard>
-                                <DoubleAnimation
-                                    Storyboard.TargetProperty="(Popup.RenderTransform).(RotateTransform.Angle)"
-                                    To="-360" Duration="0:0:1" RepeatBehavior="Forever" />  
-                            </Storyboard>
-                        </BeginStoryboard>
-                    </EventTrigger>
-                </Popup.Triggers>-->
-
-                <!--<Popup.Style>
-                    <Style TargetType="{x:Type Popup}" >
-                        <Style.Triggers>
-                            <DataTrigger Binding="{Binding CardIsClosed, Mode=OneWay}"  Value="True">
-                                <DataTrigger.EnterActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <DoubleAnimation
-                                                Storyboard.TargetProperty="Width"
-                                                From="0" To="1000" Duration="0:0:1" />
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </DataTrigger.EnterActions>
-                            </DataTrigger>
-
-                            <DataTrigger Binding="{Binding CardIsClosed, Mode=OneWay}"  Value="False">
-                                <DataTrigger.EnterActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <DoubleAnimation
-                                                Storyboard.TargetProperty="HorizontalOffset"
-                                                From="-700" To="400" Duration="0:0:1" />
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </DataTrigger.EnterActions>
-                            </DataTrigger>
-                        </Style.Triggers>
-                    </Style>
-                </Popup.Style>-->
-
-                <!--<Popup.Style>
-                    <Style>
-                        <Style.Triggers>
-                            <DataTrigger Binding="{Binding IsCardSelected, Mode=OneWay}" Value="True">
-                                <DataTrigger.EnterActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <DoubleAnimation Storyboard.TargetProperty="HorizontalOffset" From="0" To="-800" Duration="0:0:1" />
-                                            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="IsOpen">
-                                                <DiscreteBooleanKeyFrame KeyTime="00:00:00.00" Value="True" />
-                                            </BooleanAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </DataTrigger.EnterActions>
-                            </DataTrigger>
-                            
-                        </Style.Triggers>
-                    </Style>
-                </Popup.Style>-->
-
 
                 <Border Margin="30" UseLayoutRounding="True" >
                     <Border.Effect>
@@ -346,13 +203,7 @@
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
 
-                    <!--<ListBox.Effect>
-                        <DropShadowEffect ShadowDepth="0" Opacity="0.6" BlurRadius="10" />
-                    </ListBox.Effect>-->
-
                 </ListBox>
-
-
 
             </ScrollViewer>
         </Grid>
@@ -360,104 +211,6 @@
         <Popup IsOpen="{Binding ShowAcuteNotification}" HorizontalOffset="0" VerticalOffset="890" AllowsTransparency="True">
             <local:AcuteVisitationMessage />
         </Popup>
-        
+
     </Grid>
 </UserControl>
-
-<!--<Path.Triggers>
-    <EventTrigger RoutedEvent="MouseDown">
-        <BeginStoryboard>
-            <Storyboard >
-                <ColorAnimation From="White" To="LightGray" Duration="0:0:0" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" />
-            </Storyboard>
-        </BeginStoryboard>
-    </EventTrigger>
-</Path.Triggers>-->
-
-
-<!--
-     <Border Background="{StaticResource GreenColorBrush}" CornerRadius="1" Height="200" Width="600">
-    <Border.Effect>
-
-        <DropShadowEffect ShadowDepth="1" Opacity="0.4" />
-    </Border.Effect>
-
-    <StackPanel Background="{StaticResource BackgroundColorBrush}" Orientation="Vertical" Margin="9 0 0 0">
-
-        <Grid Margin="10 7 0 0">
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="0.03*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="0.03*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-
-            <StackPanel Orientation="Vertical" Grid.Column="0">
-                <TextBlock Text="{Binding SelectedCard.Cpr}" FontFamily="{StaticResource LatoBold}" FontSize="18"/>
-                <TextBlock Text="Diagnose" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource MediumTextColorBrush}"
-                                   Padding="0 6 0 0"/>
-                <Border Height="1" Background="{StaticResource MediumTextColorBrush}" Margin="0 2 6 4"/>
-                <TextBlock Text="{Binding Diagnose}" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" 
-                                   Foreground="{StaticResource LightTextColorBrush}"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Vertical" Grid.Column="2" Margin="0 0 5 0">
-                <TextBlock Text="Henvisningsårsag" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource MediumTextColorBrush}"
-                                   Margin="0 28 0 0"/>
-                <Border Height="1" Background="{StaticResource MediumTextColorBrush}" Margin="0 2 6 4"/>
-                <TextBlock Text="{Binding ReferralCause}" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource LightTextColorBrush}"/>
-            </StackPanel>
-
-            <StackPanel Grid.Column="4">
-                <Grid Margin="0 6 10 5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" Text="Fordelingsgaranti:" FontFamily="{StaticResource LatoBold}" 
-                                       Foreground="{StaticResource MediumTextColorBrush}" FontSize="9" Padding="0 2 5 0" />
-                    <TextBlock Grid.Column="1" FontFamily="{StaticResource MaterialIcon}" 
-                                       Text="&#xf26b;" TextAlignment="Center"  Foreground="{StaticResource GreenColorBrush}" />
-                    <TextBlock Grid.Column="2" Text="Behandlingsgaranti:" FontFamily="{StaticResource LatoBold}" 
-                                       Foreground="{StaticResource MediumTextColorBrush}" FontSize="9" Padding="5 2 5 0" />
-                    <TextBlock Grid.Column="3" FontFamily="{StaticResource MaterialIcon}" 
-                                       Text="&#xf26b;" TextAlignment="Center" Foreground="{StaticResource GreenColorBrush}" />
-                </Grid>
-
-                <TextBlock Text="Behandlingstype" Padding="0 4 0 0" FontFamily="{StaticResource LatoBlack}" Foreground="{StaticResource MediumTextColorBrush}"/>
-                <Border Height="1" Background="{StaticResource MediumTextColorBrush}" Margin="0 2 10 4" />
-                <TextBlock Text="{Binding TreatmentType}" TextWrapping="Wrap" FontFamily="{StaticResource LatoBold}" 
-                                   Foreground="{StaticResource LightTextColorBrush}" />
-
-                <TextBlock Text="Dato og Tidspunkt" Margin="0 10 0 0" FontFamily="{StaticResource LatoBlack}" 
-                                   Foreground="{StaticResource MediumTextColorBrush}" />
-                <Border Height="1" Background="{StaticResource MediumTextColorBrush}" Margin="0 2 10 4"/>
-                <TextBlock Text="{Binding TreatmentTime}" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource LightTextColorBrush}" />
-
-            </StackPanel>
-        </Grid>
-
-        <Border Margin="0 20 0 0" Background="{StaticResource LightTextColorBrush}" Height="1"/>
-
-        <Grid Margin="10 9 10 0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="0.20*" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="0.20*" />
-            </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" Text="{Binding SpecialConditions}" VerticalAlignment="Center" FontFamily="{StaticResource LatoBold}" 
-                               Foreground="{StaticResource LightTextColorBrush}" FontStyle="Italic" />
-            <Button Grid.Column="1" Content="Accepter" Command="{Binding ApproveVisitation}" />
-            <Border Grid.Column="2" Margin="3" />
-            <Button x:Name="ThisButton" Grid.Column="3" Content="Afvis">
-            </Button>
-        </Grid>
-    </StackPanel>
-    </Border>
-
-    -->

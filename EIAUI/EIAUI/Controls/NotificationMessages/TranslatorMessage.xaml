@@ -10,9 +10,11 @@
         <Border CornerRadius="2" Padding="46 16 16 16" Height="104" Width="447" Background="{StaticResource PrimaryColorBrush}">
             <Grid>
                 <Grid.ColumnDefinitions>
+                    <!--Text space-->
                     <ColumnDefinition Width="301" />
                     <!--Whitespace-->
                     <ColumnDefinition Width="*" />
+                    <!--Buttons space-->
                     <ColumnDefinition Width="76" />
                 </Grid.ColumnDefinitions>
 

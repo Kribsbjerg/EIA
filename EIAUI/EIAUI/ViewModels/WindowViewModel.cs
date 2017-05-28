@@ -47,21 +47,14 @@ namespace EIAUI
 
             _window.Topmost = true;
 
-            // Listen out for the window resizing
             _window.StateChanged += (sender, e) =>
             {
-                // Fire off events for all properties that are affected by a resize
-                //OnPropertyChanged(nameof(ResizeBorderThickness));
                 OnPropertyChanged(nameof(OuterMarginSize));
                 OnPropertyChanged(nameof(OuterMarginSizeThickness));
                 OnPropertyChanged(nameof(WindowRadius));
                 OnPropertyChanged(nameof(WindowCornerRadius));
             };
 
-            // Create commands
-            // SeachCommand + new RelayCommand(() => );
-            // NotificationCommand + new RelayCommand(() => );
-            // UserCommand + new RelayCommand(() => );
             MinimizeCommandFromNotification = new RelayCommand(() => MinimizeFromNotification());
             MinimizeCommand = new RelayCommand(() => SlideOutAndMinimizeAnimation()); //_window.WindowState = WindowState.Minimized
             MaximizeCommand = new RelayCommand(() => _window.WindowState ^= WindowState.Maximized);

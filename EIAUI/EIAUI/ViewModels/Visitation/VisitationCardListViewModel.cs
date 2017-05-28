@@ -186,8 +186,6 @@ namespace EIAUI
 
         private void NextCard()
         {
-            // Make logic for every situation - Deselect if done with category
-            //if(GroupedVisitations[Categorystring].Count == 2 && indexOfCard == 1)
             try
             {
                 SelectedCard = ActiveVisitationCards[indexOfCard];
@@ -208,8 +206,6 @@ namespace EIAUI
             _selectedCard.TextToDisplay = _selectedCard.TreatmentType;
             HistoryVisitationCards.Add(_selectedCard);
             ActiveVisitationCards.Remove(_selectedCard);
-            //ActivateComboTab(Categorystring);
-            //GroupedVisitations = ActiveVisitationCards.GroupBy(c => c.TreatmentType).ToDictionary(group => group.Key, group => new ObservableCollection<VisitationOverviewViewModel>(group.ToList()));
         }
 
         private void NotificationRaiser()

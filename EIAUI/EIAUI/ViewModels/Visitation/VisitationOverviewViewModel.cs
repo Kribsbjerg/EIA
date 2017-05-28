@@ -20,9 +20,7 @@ namespace EIAUI
 
         #endregion
 
-
         public ICommand OpenNoteField { get; set; }
-
 
         #region Public Properties
 

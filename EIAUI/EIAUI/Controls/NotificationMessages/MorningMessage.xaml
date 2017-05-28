@@ -15,9 +15,11 @@
 
         <Grid>
             <Grid.ColumnDefinitions>
+                <!--Text space-->
                 <ColumnDefinition Width="301" />
                 <!--Whitespace-->
                 <ColumnDefinition Width="*" />
+                <!--Buttons space-->
                 <ColumnDefinition Width="76" />
             </Grid.ColumnDefinitions>
 

@@ -26,10 +26,6 @@
                                 </Style>
                             </Border.Style>
 
-                            <!--<Border.Effect>
-                                <DropShadowEffect ShadowDepth="1" Opacity="0.4" BlurRadius="10" />
-                            </Border.Effect>-->
-
                             <Grid x:Name="container" Background="Transparent">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
@@ -74,7 +70,7 @@
                         </Border>
 
                         <ControlTemplate.Triggers>
-                            
+
                             <EventTrigger RoutedEvent="MouseEnter">
                                 <BeginStoryboard>
                                     <Storyboard>
@@ -100,17 +96,9 @@
     </UserControl.Resources>
 
 
-        <ContentControl d:DataContext="{x:Static local:VisitationOverviewDesignModel.Instance}"
+    <ContentControl d:DataContext="{x:Static local:VisitationOverviewDesignModel.Instance}"
                     Style="{StaticResource ContentStyle}" />
 
 
 
 </UserControl>
- 
-    <!--
-        
-        <Border.Triggers>
-    <DataTrigger Binding="{Binding IsSelected}" Value="True">
-        <Setter Property="Background" Value="Black" />
-    </DataTrigger>
-    </Border.Triggers> -->
